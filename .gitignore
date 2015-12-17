@@ -2,10 +2,12 @@
 ## Unity
 #################
 
+/KeenKayla/Library
+/KeenKayla/Temp
 /Library
 /Temp
-/*.csproj
-/*.sln
+*.csproj
+*.sln
 *.userprefs
 *.unityproj
 *.DotSettings

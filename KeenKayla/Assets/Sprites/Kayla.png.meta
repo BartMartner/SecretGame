@@ -67,7 +67,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -77,7 +77,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -102,7 +102,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
   alphaIsTransparency: 1
@@ -118,8 +118,9 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_1
       rect:
         serializedVersion: 2
@@ -128,8 +129,9 @@ TextureImporter:
         width: 17
         height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_2
       rect:
         serializedVersion: 2
@@ -138,8 +140,9 @@ TextureImporter:
         width: 19
         height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_3
       rect:
         serializedVersion: 2
@@ -148,8 +151,9 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_4
       rect:
         serializedVersion: 2
@@ -158,8 +162,9 @@ TextureImporter:
         width: 20
         height: 29
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_5
       rect:
         serializedVersion: 2
@@ -168,8 +173,9 @@ TextureImporter:
         width: 23
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_6
       rect:
         serializedVersion: 2
@@ -178,8 +184,9 @@ TextureImporter:
         width: 22
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_7
       rect:
         serializedVersion: 2
@@ -188,8 +195,9 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_8
       rect:
         serializedVersion: 2
@@ -198,8 +206,9 @@ TextureImporter:
         width: 22
         height: 28
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_9
       rect:
         serializedVersion: 2
@@ -208,8 +217,9 @@ TextureImporter:
         width: 14
         height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_10
       rect:
         serializedVersion: 2
@@ -218,8 +228,9 @@ TextureImporter:
         width: 22
         height: 27
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_11
       rect:
         serializedVersion: 2
@@ -228,8 +239,9 @@ TextureImporter:
         width: 24
         height: 21
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_12
       rect:
         serializedVersion: 2
@@ -238,8 +250,9 @@ TextureImporter:
         width: 28
         height: 24
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_13
       rect:
         serializedVersion: 2
@@ -248,8 +261,9 @@ TextureImporter:
         width: 16
         height: 25
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_14
       rect:
         serializedVersion: 2
@@ -258,8 +272,9 @@ TextureImporter:
         width: 23
         height: 25
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_15
       rect:
         serializedVersion: 2
@@ -268,8 +283,9 @@ TextureImporter:
         width: 16
         height: 29
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_16
       rect:
         serializedVersion: 2
@@ -278,8 +294,9 @@ TextureImporter:
         width: 17
         height: 27
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_17
       rect:
         serializedVersion: 2
@@ -288,8 +305,9 @@ TextureImporter:
         width: 32
         height: 30
       alignment: 9
-      pivot: {x: .323743343, y: .507230878}
+      pivot: {x: 0.32374334, y: 0.5072309}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_18
       rect:
         serializedVersion: 2
@@ -298,8 +316,9 @@ TextureImporter:
         width: 30
         height: 31
       alignment: 9
-      pivot: {x: .304762006, y: .513995528}
+      pivot: {x: 0.304762, y: 0.5139955}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_19
       rect:
         serializedVersion: 2
@@ -308,8 +327,9 @@ TextureImporter:
         width: 22
         height: 29
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_20
       rect:
         serializedVersion: 2
@@ -318,8 +338,9 @@ TextureImporter:
         width: 17
         height: 40
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_21
       rect:
         serializedVersion: 2
@@ -328,8 +349,9 @@ TextureImporter:
         width: 17
         height: 40
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_22
       rect:
         serializedVersion: 2
@@ -338,8 +360,9 @@ TextureImporter:
         width: 13
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_23
       rect:
         serializedVersion: 2
@@ -348,8 +371,9 @@ TextureImporter:
         width: 13
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_24
       rect:
         serializedVersion: 2
@@ -358,8 +382,9 @@ TextureImporter:
         width: 13
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_25
       rect:
         serializedVersion: 2
@@ -368,8 +393,9 @@ TextureImporter:
         width: 13
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_26
       rect:
         serializedVersion: 2
@@ -378,8 +404,9 @@ TextureImporter:
         width: 13
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_27
       rect:
         serializedVersion: 2
@@ -388,8 +415,9 @@ TextureImporter:
         width: 15
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_28
       rect:
         serializedVersion: 2
@@ -398,8 +426,9 @@ TextureImporter:
         width: 15
         height: 27
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_29
       rect:
         serializedVersion: 2
@@ -408,8 +437,9 @@ TextureImporter:
         width: 15
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_30
       rect:
         serializedVersion: 2
@@ -418,8 +448,9 @@ TextureImporter:
         width: 17
         height: 27
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_31
       rect:
         serializedVersion: 2
@@ -428,8 +459,9 @@ TextureImporter:
         width: 17
         height: 26
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_32
       rect:
         serializedVersion: 2
@@ -438,8 +470,9 @@ TextureImporter:
         width: 17
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_33
       rect:
         serializedVersion: 2
@@ -448,8 +481,9 @@ TextureImporter:
         width: 28
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_34
       rect:
         serializedVersion: 2
@@ -458,8 +492,9 @@ TextureImporter:
         width: 17
         height: 37
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_35
       rect:
         serializedVersion: 2
@@ -468,8 +503,9 @@ TextureImporter:
         width: 16
         height: 37
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_36
       rect:
         serializedVersion: 2
@@ -478,8 +514,9 @@ TextureImporter:
         width: 21
         height: 18
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_37
       rect:
         serializedVersion: 2
@@ -488,8 +525,9 @@ TextureImporter:
         width: 18
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_38
       rect:
         serializedVersion: 2
@@ -498,8 +536,9 @@ TextureImporter:
         width: 19
         height: 21
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_39
       rect:
         serializedVersion: 2
@@ -508,8 +547,9 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_40
       rect:
         serializedVersion: 2
@@ -518,8 +558,9 @@ TextureImporter:
         width: 14
         height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_41
       rect:
         serializedVersion: 2
@@ -528,8 +569,9 @@ TextureImporter:
         width: 14
         height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_42
       rect:
         serializedVersion: 2
@@ -538,8 +580,9 @@ TextureImporter:
         width: 18
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_43
       rect:
         serializedVersion: 2
@@ -548,8 +591,9 @@ TextureImporter:
         width: 18
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_44
       rect:
         serializedVersion: 2
@@ -558,8 +602,9 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_45
       rect:
         serializedVersion: 2
@@ -568,8 +613,9 @@ TextureImporter:
         width: 16
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_46
       rect:
         serializedVersion: 2
@@ -578,8 +624,9 @@ TextureImporter:
         width: 18
         height: 31
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_47
       rect:
         serializedVersion: 2
@@ -588,8 +635,9 @@ TextureImporter:
         width: 18
         height: 28
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_48
       rect:
         serializedVersion: 2
@@ -598,8 +646,9 @@ TextureImporter:
         width: 15
         height: 23
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_49
       rect:
         serializedVersion: 2
@@ -608,8 +657,9 @@ TextureImporter:
         width: 18
         height: 20
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_50
       rect:
         serializedVersion: 2
@@ -618,8 +668,9 @@ TextureImporter:
         width: 18
         height: 22
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_51
       rect:
         serializedVersion: 2
@@ -628,8 +679,9 @@ TextureImporter:
         width: 18
         height: 22
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_52
       rect:
         serializedVersion: 2
@@ -638,8 +690,9 @@ TextureImporter:
         width: 15
         height: 19
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_53
       rect:
         serializedVersion: 2
@@ -648,8 +701,9 @@ TextureImporter:
         width: 19
         height: 24
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_54
       rect:
         serializedVersion: 2
@@ -658,8 +712,9 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_55
       rect:
         serializedVersion: 2
@@ -668,8 +723,9 @@ TextureImporter:
         width: 20
         height: 22
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_56
       rect:
         serializedVersion: 2
@@ -678,8 +734,9 @@ TextureImporter:
         width: 13
         height: 33
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_57
       rect:
         serializedVersion: 2
@@ -688,8 +745,9 @@ TextureImporter:
         width: 13
         height: 33
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_58
       rect:
         serializedVersion: 2
@@ -698,8 +756,9 @@ TextureImporter:
         width: 13
         height: 33
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Kayla_59
       rect:
         serializedVersion: 2
@@ -708,8 +767,10 @@ TextureImporter:
         width: 19
         height: 33
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

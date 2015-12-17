@@ -58,8 +58,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool _looking;
+
     public bool attacking;
-    private bool _attackHeld;  
 
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
 
@@ -107,6 +108,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Player.instance.state != DamagableState.Alive)
+        {
+            return;
+        }
+
         _playerPosition = transform.position;
 
         groundedCheck.UpdateRaycasts(_playerPosition);
@@ -124,6 +130,7 @@ public class PlayerController : MonoBehaviour
         #region Looking
         if (Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
         {
+            _looking = true;
             var camPos = cameraFocus.transform.localPosition;
             camPos.y = Mathf.Clamp(camPos.y + Time.deltaTime * Mathf.Sign(_yAxis), -1, 1);
             cameraFocus.transform.localPosition = camPos;
@@ -140,6 +147,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            _looking = false;
             _animator.SetBool("LookingDown", false);
             _animator.SetBool("LookingUp", false);
         }
@@ -163,7 +171,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (!_isHit && (!attacking || !groundedCheck.onGround))
+        if (!_looking && !_isHit && (!attacking || !groundedCheck.onGround))
         {
             if (_xAxis != 0)
             {
@@ -305,10 +313,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnDeath()
     {
+        cameraFocus.transform.parent = null;
         collider2D.enabled = false;
-        rigidbody2D.gravityScale = 0;
-        rigidbody2D.velocity = Vector3.zero;
-        rigidbody2D.isKinematic = true;
+        //rigidbody2D.gravityScale = 0;
+        rigidbody2D.velocity = Vector3.up * 5 + Vector3.right * 1.3f;
+        //rigidbody2D.isKinematic = true;
     }
 
     public void OnDestroy()

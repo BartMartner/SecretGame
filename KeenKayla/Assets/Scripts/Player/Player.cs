@@ -40,6 +40,7 @@ public class Player : Damagable
     {
         base.Die();
         animator.SetBool("Dead", true);
+        PlayerController.instance.OnDeath();
     }
 
     public bool ValidBlock(GameObject source)

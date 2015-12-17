@@ -134,6 +134,9 @@ public class MainCamera : MonoBehaviour
             }
         }
 
+        cameraPosition.x = Mathf.Round(32 * cameraPosition.x) / 32f;
+        cameraPosition.y = Mathf.Round(32 * cameraPosition.y) / 32f;
+
         if (tweening || playerPosition != previousPlayerPosition)
         {
             // Here we clamp the desired position into the area declared in the limit variables.
@@ -151,7 +154,7 @@ public class MainCamera : MonoBehaviour
         // and now we're updating the camera position using what came of all the calculations above.
         transform.position = cameraPosition + _shakeOffset;
 
-        previousPlayerPosition = playerPosition;
+        previousPlayerPosition = playerPosition;           
 
         // This draws the camera boundary rectangle
         if (showDebugBoxes) DrawDebugBox();

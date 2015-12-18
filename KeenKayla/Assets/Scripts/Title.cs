@@ -13,7 +13,7 @@ public class Title : MonoBehaviour
     private IEnumerator FadeOut()
     {
         _lastPlayerPosition = Player.instance.transform.position;
-        while (_lastPlayerPosition.x == Player.instance.transform.position.x)
+        while (Mathf.Abs(_lastPlayerPosition.x - Player.instance.transform.position.x) < 1)
         {
             yield return null;
         }

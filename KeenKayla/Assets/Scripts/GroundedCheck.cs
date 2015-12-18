@@ -42,11 +42,11 @@ public class GroundedCheck : MonoBehaviour
         }
     }
 
-    public void UpdateRaycasts(Vector3 position)
+    public void UpdateRaycasts()
     {
         var offset = _halfHeight * 0.5f;
         var deltaToBottom = (_halfHeight - offset);
-        var origin = position + Vector3.down * offset;
+        var origin = transform.position + Vector3.down * offset;
         var distance = deltaToBottom + (_halfHeight * 1.5f);
 
         rightRayHit = Physics2D.Raycast(origin + _rightOffset, Vector3.down, distance, groundLayer);

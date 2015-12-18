@@ -29,6 +29,11 @@ public class PoisonSlug : Enemy
     {
         base.Update();
 
+        if(state != DamagableState.Alive)
+        {
+            return;
+        }
+
         if (!_pooping)
         {
             if (transform.position != _targetPosition)

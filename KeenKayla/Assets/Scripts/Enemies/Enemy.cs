@@ -7,6 +7,7 @@ public class Enemy : Damagable
 
     protected virtual void Awake()
     {
+        base.Awake();
         _animator = GetComponentInChildren<Animator>();
     }
 }

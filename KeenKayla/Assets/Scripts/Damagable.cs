@@ -58,6 +58,7 @@ public class Damagable : MonoBehaviour
 
         maxHealth = health;
         _damageColor = new Color(0.333f, 0.01f, 0.01f);
+        groundedCheck = GetComponentInChildren<GroundedCheck>();
     }
 
     protected virtual void Start()
@@ -209,7 +210,7 @@ public class Damagable : MonoBehaviour
 
     public virtual void OnDeath()
     {
-        StartCoroutine(FadeOut(1, true));
+        //StartCoroutine(FadeOut(1, true));
     }
 
     //TODO: string for property

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: be000d00400f81c4fa88fb657496e8fa
-timeCreated: 1450328263
+timeCreated: 1450403129
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -120,8 +120,8 @@ TextureImporter:
         y: 1
         width: 30
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Bounder_6
@@ -131,8 +131,8 @@ TextureImporter:
         y: 1
         width: 30
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Bounder_7
@@ -142,8 +142,8 @@ TextureImporter:
         y: 1
         width: 29
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     new public Rigidbody2D rigidbody2D;
     new public BoxCollider2D collider2D;
-    private Vector3 _playerPosition;
 
     private AudioSource _audiosource;    
 
@@ -101,7 +100,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        _playerPosition = transform.position;
         _audiosource = Player.instance.audioSource;
     }
 
@@ -113,9 +111,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        _playerPosition = transform.position;
-
-        groundedCheck.UpdateRaycasts(_playerPosition);
+        groundedCheck.UpdateRaycasts();
 
         if (_disableMovement)
         {

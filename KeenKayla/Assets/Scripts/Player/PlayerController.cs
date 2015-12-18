@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
     private float _xAxis;
     private float _yAxis;
 
+    public bool pogo;
+
     private void Awake()
     {
         instance = this;
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
         _yAxis = Input.GetAxis("Vertical");
 
         #region Looking
-        if (Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
+        if (!pogo && Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
         {
             _looking = true;
             var camPos = cameraFocus.transform.localPosition;
@@ -223,7 +225,6 @@ public class PlayerController : MonoBehaviour
             {
                 rigidbody2D.gravityScale = 1;
                 _jumping = false;
-                Debug.Log("Jump Height: " + (transform.position.y - (_jumpCap - _jumpCeiling)));
             }
         }
         else
@@ -244,8 +245,7 @@ public class PlayerController : MonoBehaviour
                 {
                     _audiosource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
                 }
-
-                _jumpCap = transform.position.y + _jumpCeiling;
+                
                 rigidbody2D.gravityScale = 0;
                 _canJump = false;
                 _jumping = true;
@@ -256,6 +256,11 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
+        if(pogo && groundedCheck.onGround)
+        {
+            velocity.y += 3;
+        }
+
         rigidbody2D.velocity = velocity;
 
         UpdateAnimator();
@@ -263,6 +268,11 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        if (!attacking && Input.GetButtonDown("Pogo"))
+        {
+            pogo = !pogo;
+        }
+
         if (Input.GetButtonDown("Attack"))
         {
             if (_canAct && !attacking)
@@ -278,10 +288,12 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("Grounded", groundedCheck.onGround);
         _animator.SetBool("Shooting", attacking);
         _animator.SetFloat("VelocityY", rigidbody2D.velocity.y);
+        _animator.SetBool("Pogo", pogo);
     }
 
     private IEnumerator Attack()
     {
+        pogo = false;
         attacking = true;
         ProjectileManager.instance.Shoot(projectileStats, shootPoint.transform.position, transform.right);
         yield return new WaitForSeconds(0.25f);

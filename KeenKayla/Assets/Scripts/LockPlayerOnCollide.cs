@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovingPlatform : MonoBehaviour
+public class LockPlayerOnCollide : MonoBehaviour
 {
     private Vector3 _lastPosition;
     private bool _playerPresent;
 
     public void LateUpdate()
     {
-        if(_playerPresent)
+        if (_playerPresent)
         {
             PlayerController.instance.transform.position += transform.position - _lastPosition;
         }
@@ -25,4 +25,6 @@ public class MovingPlatform : MonoBehaviour
     {
         _playerPresent = false;
     }
+
+    
 }

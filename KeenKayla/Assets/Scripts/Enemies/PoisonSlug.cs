@@ -74,6 +74,7 @@ public class PoisonSlug : Enemy
     public override void Die()
     {
         base.Die();
+        StopAllCoroutines();
 
         _damagePlayerTrigger.gameObject.SetActive(false);
 

@@ -1,9 +1,21 @@
 fileFormatVersion: 2
 guid: ed0a0398558a5ef419258ed3363aae03
-timeCreated: 1450317688
+timeCreated: 1450409377
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Platform_0
+    21300002: Platform_1
+    21300004: Platform_2
+    21300006: Platform_3
+    21300008: Platform_4
+    21300010: Platform_5
+    21300012: Platform_6
+    21300014: Platform_7
+    21300016: Platform_8
+    21300018: Platform_9
+    21300020: Platform_10
+    21300022: Platform_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +50,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +61,139 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Platform_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 52
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 7
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 7
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 7
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 5
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 5
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 53
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 53
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_8
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1
+        width: 54
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 54
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Platform_11
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

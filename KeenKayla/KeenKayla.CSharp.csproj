@@ -62,10 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bounder.cs" />
-    <Compile Include="Assets\MovingPlatform.cs" />
-    <Compile Include="Assets\PosionPuddle.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
+    <Compile Include="Assets\Scripts\Bounder.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Camera\MainCamera.cs" />
     <Compile Include="Assets\Scripts\ChildDamagable.cs" />
@@ -80,16 +78,17 @@
     <Compile Include="Assets\Scripts\GroundedCheck.cs" />
     <Compile Include="Assets\Scripts\InputExtension.cs" />
     <Compile Include="Assets\Scripts\LayerConstants.cs" />
-    <Compile Include="Assets\Scripts\LevelObjects\ArrowTrapTrigger.cs" />
-    <Compile Include="Assets\Scripts\LevelObjects\Mover.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\PitTrigger.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\Roller.cs" />
     <Compile Include="Assets\Scripts\LightManager.cs" />
+    <Compile Include="Assets\Scripts\LockPlayerOnCollide.cs" />
     <Compile Include="Assets\Scripts\LookAt.cs" />
+    <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\NoPushing.cs" />
     <Compile Include="Assets\Scripts\PickUps\ConsumablePickup.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PosionPuddle.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileSpawnEffect.cs" />
@@ -97,11 +96,11 @@
     <Compile Include="Assets\Scripts\Projectiles\Shooter.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Saving\SaveGameManager.cs" />
+    <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\UI\BossBar.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\TitleScreen.cs" />
     <Compile Include="Assets\Scripts\Utilities.cs" />
-    <Compile Include="Assets\Title.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@ public class Bounder : Enemy
     private float _directionX;
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
     private float _timer;
-    private float _time = 1.25f;    
+    private float _time = 1.25f;
 
     protected override void Awake()
     {
@@ -43,7 +43,7 @@ public class Bounder : Enemy
             {
                 SetupJump();
             }
-        }   
+        }
     }
 
     public void SetupJump()
@@ -75,6 +75,19 @@ public class Bounder : Enemy
         base.Die();
         _rigidbody2D.isKinematic = false;
         gameObject.layer = LayerMask.NameToLayer("Enemy");
-        _animator.SetTrigger("Death1");        
+        _animator.SetTrigger("Death1");
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(state == DamagableState.Dead)
+        {
+            _rigidbody2D.isKinematic = true;
+            var collider = GetComponent<Collider2D>();
+            if(collider)
+            {
+                collider.enabled = false;
+            }
+        }
     }
 }

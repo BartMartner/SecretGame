@@ -18,12 +18,18 @@ public class LockPlayerOnCollide : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        _playerPresent = true;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            _playerPresent = true;
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-        _playerPresent = false;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            _playerPresent = false;
+        }
     }
 
     

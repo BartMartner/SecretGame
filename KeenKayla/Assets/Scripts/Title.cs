@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Title : MonoBehaviour
 {
     private Vector2 _lastPlayerPosition;
+    public Image Hud;
 		
     private void Start()
     {
+        Hud.gameObject.SetActive(false);
         StartCoroutine(FadeOut());
     }
 
@@ -30,6 +33,8 @@ public class Title : MonoBehaviour
             }
             yield return null;
         }
+
+        Hud.gameObject.SetActive(true);
 
         Destroy(gameObject);
     }

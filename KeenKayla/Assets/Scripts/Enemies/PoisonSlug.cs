@@ -25,14 +25,9 @@ public class PoisonSlug : Enemy
         StartCoroutine(Poop());
     }
 
-    protected override void Update()
+    protected override void UpdateAlive()
     {
-        base.Update();
-
-        if(state != DamagableState.Alive)
-        {
-            return;
-        }
+        base.UpdateAlive();
 
         if (!_pooping)
         {
@@ -77,6 +72,18 @@ public class PoisonSlug : Enemy
         StopAllCoroutines();
 
         _damagePlayerTrigger.gameObject.SetActive(false);
+
+        var rigidbody2D = GetComponent<Rigidbody2D>();
+        if (rigidbody2D)
+        {
+            rigidbody2D.isKinematic = true;
+        }
+
+        var collider = GetComponent<Collider2D>();
+        if (collider)
+        {
+            collider.enabled = false;
+        }
 
         if (Random.value < 0.5)
         {

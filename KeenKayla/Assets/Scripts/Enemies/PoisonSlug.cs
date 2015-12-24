@@ -94,4 +94,27 @@ public class PoisonSlug : Enemy
             _animator.SetTrigger("Death2");
         }        
     }
+
+    public void OnDrawGizmosSelected()
+    {
+        var _boxCollider = GetComponentInChildren<BoxCollider2D>();
+        var left = transform.position - _direction * wanderRange;
+        var right = transform.position + _direction * wanderRange;
+        Debug.DrawLine(left, right);
+        Vector3 topLeft, topRight, bottomLeft, bottomRight;
+        topLeft = topRight = bottomLeft = bottomRight = Vector3.zero;
+
+        topLeft.y += _boxCollider.size.y * 0.5f;
+        topRight.y += _boxCollider.size.y * 0.5f;
+        bottomLeft.y -= _boxCollider.size.y * 0.5f;
+        bottomRight.y -= _boxCollider.size.y * 0.5f;
+
+        topLeft.x -= _boxCollider.size.x * 0.5f;
+        topRight.x += _boxCollider.size.x * 0.5f;
+        bottomLeft.x -= _boxCollider.size.x * 0.5f;
+        bottomRight.x += _boxCollider.size.x * 0.5f;
+
+        Debug.DrawLine(left + topLeft, left + bottomLeft);
+        Debug.DrawLine(right + topRight, right + bottomRight);
+    }
 }

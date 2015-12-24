@@ -154,6 +154,11 @@ public class MainCamera : MonoBehaviour
         // and now we're updating the camera position using what came of all the calculations above.
         transform.position = cameraPosition + _shakeOffset;
 
+        var snap = transform.position;
+        snap.x = Mathf.Round(32 * snap.x)/32;
+        snap.y = Mathf.Round(32 * snap.y)/32;
+        transform.position = snap;
+
         previousPlayerPosition = playerPosition;           
 
         // This draws the camera boundary rectangle

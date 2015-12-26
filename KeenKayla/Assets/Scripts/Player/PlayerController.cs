@@ -6,11 +6,11 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     public GameObject cameraFocus;
-    public ProjectileStats projectileStats;
     public float acceleration;
     public float maxVelocity = 10;
     private float _defaultAcceleration;
     private float _defaultMaxVelocity;
+    private ProjectileStats _projectileStats;
     public SpriteRenderer playerRenderer;
     public GameObject shootPoint;
 
@@ -98,6 +98,8 @@ public class PlayerController : MonoBehaviour
         {
             groundedCheck = GetComponent<GroundedCheck>();
         }
+
+        _projectileStats = Constants.GreenBolts;
     }
 
     private void Start()
@@ -295,7 +297,7 @@ public class PlayerController : MonoBehaviour
     {
         pogo = false;
         attacking = true;
-        ProjectileManager.instance.Shoot(projectileStats, shootPoint.transform.position, transform.right);
+        ProjectileManager.instance.Shoot(_projectileStats, shootPoint.transform.position, transform.right);
         yield return new WaitForSeconds(0.25f);
         attacking = false;
     }

@@ -9,6 +9,16 @@ using System.IO;
 public class SaveGameData
 {
     public DateTime lastSaved;
+    public Inventory inventory;
+}
+
+[Serializable]
+public class Inventory
+{
+    public List<PowerUpType> powerUpsCollected;
+    public int currentBombs;
+    public int maxBombs;
+    public float maxHealth;
 }
 
 public class SaveGameManager : MonoBehaviour

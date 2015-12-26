@@ -10,25 +10,17 @@ public enum ItemType
     Artifacts = 4,
 }
 
-public enum WeaponType
+public enum PowerUpType
 {
-    Sword = 0,
-    Spear = 1,
-    Unarmed = 2,
+    PogoStick = 0,
+    MaruMari = 1,
 }
 
-public enum EnergyType
+public enum LazeMods
 {
-    Health = 0,
-    Stamina = 1,
-    Devotion = 2,
+    RedLazer = 0,
 }
 
-public enum ItemSlotType
-{
-    Belt = 0,
-    Stash = 1,
-}
 public enum Team
 {
     None = 0,
@@ -47,6 +39,8 @@ public enum ProjectileType
 {
     Generic = 0,
     BlasterBolt = 1,
+    RedBlasterBolt = 2,
+    PurpleBlasterBolt = 3,
 }
 
 public enum EnvironmentType

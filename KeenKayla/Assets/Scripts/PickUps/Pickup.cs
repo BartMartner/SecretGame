@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour
     {
         if (collision.collider.gameObject.layer == LayerConstants.Player)
         {
-            Destroy(gameObject);
+            OnPickup();
         }
     }
 
@@ -15,7 +15,12 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.layer == LayerConstants.Player)
         {
-            Destroy(gameObject);
+            OnPickup();       
         }
+    }
+
+    public virtual void OnPickup()
+    {
+        Destroy(gameObject);
     }
 }

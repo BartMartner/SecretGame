@@ -11,6 +11,7 @@ public class ProjectileStats
     public float speed = 8;
     public float lifeSpan = 10;
     public float gravity = 0;
+    public bool homing;
     public AnimationCurve motionPattern;
     public bool lockRotation;
     public bool ignoreTerrain;

@@ -8,6 +8,8 @@ public class ProjectileManager : MonoBehaviour
     public static ProjectileManager instance;
     
     public Projectile blasterBoltPrefab;
+    public Projectile redBlasterBoltPrefab;
+    public Projectile purpleBlasterBoltPrefab;
     public int projectilesToInstantiate = 20;
 
     private Dictionary<ProjectileType, List<Projectile>> _projectiles = new Dictionary<ProjectileType, List<Projectile>>();
@@ -34,6 +36,12 @@ public class ProjectileManager : MonoBehaviour
         {
             case ProjectileType.BlasterBolt:
                 newProjectile = Instantiate(blasterBoltPrefab) as Projectile;
+                break;
+            case ProjectileType.RedBlasterBolt:
+                newProjectile = Instantiate(redBlasterBoltPrefab) as Projectile;
+                break;
+            case ProjectileType.PurpleBlasterBolt:
+                newProjectile = Instantiate(purpleBlasterBoltPrefab) as Projectile;
                 break;
         }
 

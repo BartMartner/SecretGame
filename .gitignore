@@ -2,10 +2,10 @@
 ## Unity
 #################
 
-/KeenKayla/Library
-/KeenKayla/Temp
-/Library
-/Temp
+/KeenKayla/Library/
+/KeenKayla/Temp/
+/Library/
+/Temp/
 *.csproj
 *.sln
 *.userprefs
@@ -99,3 +99,6 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+KeenKayla/Library/ScriptMapper
+KeenKayla/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+KeenKayla/Library/assetDatabase3

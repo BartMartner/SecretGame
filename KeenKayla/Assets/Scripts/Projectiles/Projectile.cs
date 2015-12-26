@@ -56,6 +56,31 @@ public class Projectile : MonoBehaviour
         }
         else
         {
+            if(_stats.homing > 0)
+            {
+                Vector3 newDirection;
+                if(_stats.team == Team.Enemy)
+                {
+                    newDirection = (Player.instance.transform.position - transform.position).normalized;
+                }
+                else
+                {
+                    float sqrMagnitude;
+                    Damagable closest = EnemyManager.instance.GetClosest(transform.position, out sqrMagnitude);
+                    if (_stats.team == Team.None)
+                    {
+                        if ((Player.instance.transform.position - transform.position).sqrMagnitude < sqrMagnitude)
+                        {
+                            closest = Player.instance;
+                        }
+                    }
+
+                    newDirection = (closest.transform.position - transform.position).normalized;
+                }
+
+                _direction = Vector3.Lerp(_direction, newDirection, _stats.homing);
+            }
+
             if(_stats.gravity > 0 && _direction.y > -1)
             {
                 _direction.y -= _stats.gravity * Time.deltaTime;

@@ -5,6 +5,10 @@ public class Player : Damagable
 {
     public static Player instance;
 
+
+    public int currentBombs;
+    public int maxBombs;
+
     public LayerMask playerLayerMask;
     private PlayerController _controller;
 

@@ -9,16 +9,11 @@ using System.IO;
 public class SaveGameData
 {
     public DateTime lastSaved;
-    public Inventory inventory;
-}
-
-[Serializable]
-public class Inventory
-{
-    public List<PowerUpType> powerUpsCollected;
     public int currentBombs;
-    public int maxBombs;
-    public float maxHealth;
+    public float currentHealth;
+    public List<int> bombUpgradesCollected = new List<int>();
+    public List<int> healthUpgradesCollected = new List<int>();
+    public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
 }
 
 public class SaveGameManager : MonoBehaviour
@@ -50,14 +45,14 @@ public class SaveGameManager : MonoBehaviour
 
     public void LoadGame()
     {
-        if (File.Exists(_saveGameFilePath))
-        {
-            var bf = new BinaryFormatter();
-            var file = File.Open(_saveGameFilePath, FileMode.Open);
-            saveGameData = (SaveGameData)bf.Deserialize(file);
-            file.Close();
-        }
-        else
+        //if (File.Exists(_saveGameFilePath))
+        //{
+        //    var bf = new BinaryFormatter();
+        //    var file = File.Open(_saveGameFilePath, FileMode.Open);
+        //    saveGameData = (SaveGameData)bf.Deserialize(file);
+        //    file.Close();
+        //}
+        //else
         {
             NewGame();
         }

@@ -34,7 +34,10 @@ public class Title : MonoBehaviour
             yield return null;
         }
 
-        Hud.gameObject.SetActive(true);
+        if (Hud)
+        {
+            Hud.gameObject.SetActive(true);
+        }
 
         Destroy(gameObject);
     }

@@ -74,6 +74,9 @@ public class PlayerController : MonoBehaviour
     private float _xAxis;
     private float _yAxis;
 
+    public bool hasPogo;
+    public bool hasMorphBall;
+
     public bool pogo;
 
     private void Awake()
@@ -99,7 +102,7 @@ public class PlayerController : MonoBehaviour
             groundedCheck = GetComponent<GroundedCheck>();
         }
 
-        _projectileStats = Constants.GreenBolts;
+        RefreshPowerUps();
     }
 
     private void Start()
@@ -270,7 +273,7 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
-        if (!attacking && Input.GetButtonDown("Pogo"))
+        if (!attacking && hasPogo && Input.GetButtonDown("Pogo"))
         {
             pogo = !pogo;
         }
@@ -333,5 +336,33 @@ public class PlayerController : MonoBehaviour
     public void OnDestroy()
     {
         instance = null;
+    }
+
+    public void RefreshPowerUps()
+    {
+        _projectileStats = Constants.GreenBolts;
+        bool hasPurple = false;
+        foreach (var powerUp in SaveGameManager.instance.saveGameData.powerUpsCollected)
+        {
+            switch (powerUp)
+            {
+                case PowerUpID.PogoStick:
+                    hasPogo = true;
+                    break;
+                case PowerUpID.MaruMari:
+                    hasMorphBall = true;
+                    break;
+                case PowerUpID.PurpleLazer:
+                    hasPurple = true;
+                    _projectileStats = Constants.PurpleBolts;
+                    break;
+                case PowerUpID.RedLazer:
+                    if (!hasPurple)
+                    {
+                        _projectileStats = Constants.PurpleBolts;
+                    }
+                    break;
+            }
+        }
     }
 }

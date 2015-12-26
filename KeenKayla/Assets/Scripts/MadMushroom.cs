@@ -11,7 +11,14 @@ public class MadMushroom : Enemy
 
     public override bool Hurt(float damage, GameObject source = null)
     {
-        return false;
+        if (damage < 2)
+        {
+            return false;
+        }
+        else
+        {
+            return base.Hurt(damage, source);
+        }
     }
 
     public IEnumerator Bounce()

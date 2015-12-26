@@ -10,15 +10,12 @@ public enum ItemType
     Artifacts = 4,
 }
 
-public enum PowerUpType
+public enum PowerUpID
 {
-    PogoStick = 0,
-    MaruMari = 1,
-}
-
-public enum LazeMods
-{
-    RedLazer = 0,
+    PogoStick,
+    MaruMari,
+    RedLazer,
+    PurpleLazer,
 }
 
 public enum Team

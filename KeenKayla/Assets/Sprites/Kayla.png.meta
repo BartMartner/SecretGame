@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: df237488adc3ff04292f072dc9f15212
-timeCreated: 1450230587
+timeCreated: 1451190668
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,6 +64,10 @@ TextureImporter:
     21300114: Kayla_57
     21300116: Kayla_58
     21300118: Kayla_59
+    21300120: KaylaMorphBall1
+    21300122: KaylaMorphBall2
+    21300124: KaylaMorphBall3
+    21300126: KaylaMorphBall4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -766,6 +770,50 @@ TextureImporter:
         y: 9
         width: 19
         height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall4
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 103
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

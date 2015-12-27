@@ -9,6 +9,11 @@ public class Enemy : Damagable
     {
         base.Awake();
         _animator = GetComponentInChildren<Animator>();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         EnemyManager.instance.enemies.Add(this);
     }
 

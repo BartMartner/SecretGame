@@ -130,6 +130,12 @@ public class PlayerController : MonoBehaviour
         _xAxis = Input.GetAxis("Horizontal");
         _yAxis = Input.GetAxis("Vertical");
 
+
+        if(hasMorphBall && Input.GetButtonDown("MorphBall"))
+        {
+            Debug.Log("MorphBall");
+        }
+
         #region Looking
         if (!pogo && Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
         {
@@ -359,7 +365,7 @@ public class PlayerController : MonoBehaviour
                 case PowerUpID.RedLazer:
                     if (!hasPurple)
                     {
-                        _projectileStats = Constants.PurpleBolts;
+                        _projectileStats = Constants.RedBolts;
                     }
                     break;
             }

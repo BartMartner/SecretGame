@@ -6,6 +6,15 @@ public class LockPlayerOnCollide : MonoBehaviour
     private Vector3 _lastPosition;
     private bool _playerPresent;
 
+    public void Awake()
+    {
+        var effector = GetComponent<PlatformEffector2D>();
+        if(effector && effector.useColliderMask)
+        {
+            Debug.LogWarning(gameObject.name + " has an effector using a collider mask which may break the LockPlayerOnCollide script attached to it");
+        }
+    }
+
     public void LateUpdate()
     {
         if (_playerPresent)
@@ -20,6 +29,7 @@ public class LockPlayerOnCollide : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Debug.Log("Player Present");
             _playerPresent = true;
         }
     }
@@ -28,9 +38,8 @@ public class LockPlayerOnCollide : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Debug.Log("Player Exit");
             _playerPresent = false;
         }
     }
-
-    
 }

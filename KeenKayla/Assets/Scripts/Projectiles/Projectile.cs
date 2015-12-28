@@ -58,7 +58,7 @@ public class Projectile : MonoBehaviour
         {
             if(_stats.homing > 0)
             {
-                Vector3 newDirection;
+                Vector3 newDirection = _direction;
                 if(_stats.team == Team.Enemy)
                 {
                     newDirection = (Player.instance.transform.position - transform.position).normalized;
@@ -75,7 +75,10 @@ public class Projectile : MonoBehaviour
                         }
                     }
 
-                    newDirection = (closest.transform.position - transform.position).normalized;
+                    if (closest)
+                    {
+                        newDirection = (closest.transform.position - transform.position).normalized;
+                    }
                 }
 
                 _direction = Vector3.Lerp(_direction, newDirection, _stats.homing);

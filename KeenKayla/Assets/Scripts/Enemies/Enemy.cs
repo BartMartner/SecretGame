@@ -19,6 +19,9 @@ public class Enemy : Damagable
 
     public virtual void OnDestroy()
     {
-        EnemyManager.instance.enemies.Remove(this);
+        if(EnemyManager.instance)
+        { 
+            EnemyManager.instance.enemies.Remove(this);
+        }
     }
 }

@@ -43,8 +43,6 @@ public class PlayerController : MonoBehaviour
     private float _maxVelocityY = 12.25f;
 
     public float jumpPower = 1.4f;
-    private float _jumpCeiling = 3f;
-    private float? _jumpCap;
     private bool _canJump = true;
     private bool _jumping;
     private bool _jumpHeld;
@@ -64,9 +62,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
 
     public LayerMask groundLayer;    
-    public LayerMask enemyLayer;
 
-    private bool _canAct = true;
     private bool _isHit;
 
     private Footsteps _footsteps;
@@ -74,10 +70,16 @@ public class PlayerController : MonoBehaviour
     private float _xAxis;
     private float _yAxis;
 
+    [Header("Pogo")]
     public bool hasPogo;
-    public bool hasMorphBall;
-
     public bool pogo;
+
+    [Header ("MorphBall")]
+    public bool hasMorphBall;
+    public bool morphBall;
+    public PhysicsMaterial2D bounceBall;
+    private Vector2 _originalSize;
+    private Vector2 _ballBoundsSize;
 
     private void Awake()
     {
@@ -90,7 +92,10 @@ public class PlayerController : MonoBehaviour
         _halfWidth = collider2D.bounds.size.x;
         //_leftOffset = Vector3.left * _halfWidth * 0.5f;
         //_rightOffset = Vector3.right * _halfWidth * 0.5f;
-        
+
+        _originalSize = collider2D.size;
+        _ballBoundsSize = new Vector2(0.5f, 0.5f);
+
         _animator = playerRenderer.GetComponentInChildren<Animator>();
         _defaultAcceleration = acceleration;
         _defaultMaxVelocity = maxVelocity;
@@ -129,12 +134,6 @@ public class PlayerController : MonoBehaviour
         var velocity = rigidbody2D.velocity;
         _xAxis = Input.GetAxis("Horizontal");
         _yAxis = Input.GetAxis("Vertical");
-
-
-        if(hasMorphBall && Input.GetButtonDown("MorphBall"))
-        {
-            Debug.Log("MorphBall");
-        }
 
         #region Looking
         if (!pogo && Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
@@ -250,7 +249,7 @@ public class PlayerController : MonoBehaviour
                 _canJump = groundedCheck.nearGround && !_jumpHeld;
             }
 
-            if (groundedCheck.onGround && _jumpHeld && _canJump && !attacking)
+            if (groundedCheck.onGround && _jumpHeld && _canJump && !attacking && ToggleMorphball(false))
             {
                 if (jumpSounds.Length > 0)
                 {
@@ -282,24 +281,63 @@ public class PlayerController : MonoBehaviour
         if (!attacking && hasPogo && Input.GetButtonDown("Pogo"))
         {
             pogo = !pogo;
+            ToggleMorphball(false);
         }
 
-        if (Input.GetButtonDown("Attack"))
+        if (!attacking && !morphBall && Input.GetButtonDown("Attack"))
         {
-            if (_canAct && !attacking)
+            if (ToggleMorphball(false))
             {
                 StartCoroutine(Attack());
             }
         }
+
+        if (!attacking && hasMorphBall && Input.GetButtonDown("MorphBall"))
+        {
+            ToggleMorphball(!morphBall);
+        }
+    }
+
+    public bool ToggleMorphball(bool value)
+    {
+        if (morphBall != value)
+        {
+            if(value == false)
+            {
+                var hit = Physics2D.Raycast(transform.position, Vector3.up, 0.75f, groundLayer);
+                if(hit.collider)
+                {
+                    return false;
+                }
+            }
+
+            morphBall = value;
+
+            if(morphBall)
+            {
+                collider2D.sharedMaterial = bounceBall;
+                collider2D.size = _ballBoundsSize;
+                transform.position += Vector3.down * (_originalSize.y - _ballBoundsSize.y) * 0.5f;
+            }
+            else
+            {
+                collider2D.sharedMaterial = null;
+                collider2D.size = _originalSize;
+                transform.position += Vector3.up * (_originalSize.y - _ballBoundsSize.y) * 0.5f;
+            }
+        }
+
+        return true;
     }
 
     public void UpdateAnimator()
-    {
+    {        
         _animator.SetBool("Moving", _xAxis != 0);
         _animator.SetBool("Grounded", groundedCheck.onGround);
         _animator.SetBool("Shooting", attacking);
         _animator.SetFloat("VelocityY", rigidbody2D.velocity.y);
         _animator.SetBool("Pogo", pogo);
+        _animator.SetBool("MorphBall", morphBall);
     }
 
     private IEnumerator Attack()

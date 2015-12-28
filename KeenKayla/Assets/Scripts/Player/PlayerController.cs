@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
@@ -81,6 +82,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 _originalSize;
     private Vector2 _ballBoundsSize;
 
+    [Header("Suits")]
+    public bool hasPowerSuit;
+    public bool hasColdSuit;
+    private Dictionary<string,Sprite> coldSuitSprites;
+    private Dictionary<string, Sprite> powerSuitSprites;
+
     private void Awake()
     {
         instance = this;
@@ -108,6 +115,21 @@ public class PlayerController : MonoBehaviour
         }
 
         RefreshPowerUps();
+
+        var coldSuit = Resources.LoadAll<Sprite>("ColdSuit");
+        coldSuitSprites = new Dictionary<string, Sprite>();
+        foreach (var sprite in coldSuit)
+        {
+            coldSuitSprites.Add(sprite.name, sprite);
+        }
+
+
+        var powerSuit = Resources.LoadAll<Sprite>("PowerSuit");
+        powerSuitSprites = new Dictionary<string, Sprite>();
+        foreach (var sprite in powerSuit)
+        {
+            powerSuitSprites.Add(sprite.name, sprite);
+        }
     }
 
     private void Start()
@@ -298,6 +320,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void LateUpdate()
+    {
+        if (hasPowerSuit)
+        {
+            playerRenderer.sprite = powerSuitSprites[playerRenderer.sprite.name];
+        }
+        else if (hasColdSuit)
+        {
+            playerRenderer.sprite = coldSuitSprites[playerRenderer.sprite.name];
+        }
+    }
+
     public bool ToggleMorphball(bool value)
     {
         if (morphBall != value)
@@ -315,6 +349,7 @@ public class PlayerController : MonoBehaviour
 
             if(morphBall)
             {
+                pogo = false;
                 collider2D.sharedMaterial = bounceBall;
                 collider2D.size = _ballBoundsSize;
                 transform.position += Vector3.down * (_originalSize.y - _ballBoundsSize.y) * 0.5f;

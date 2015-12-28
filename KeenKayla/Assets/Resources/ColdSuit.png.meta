@@ -1,0 +1,825 @@
+fileFormatVersion: 2
+guid: e87d75a9ee7802e4893a50593c2148dc
+timeCreated: 1451190668
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Kayla_0
+    21300002: Kayla_1
+    21300004: Kayla_2
+    21300006: Kayla_3
+    21300008: Kayla_4
+    21300010: Kayla_5
+    21300012: Kayla_6
+    21300014: Kayla_7
+    21300016: Kayla_8
+    21300018: Kayla_9
+    21300020: Kayla_10
+    21300022: Kayla_11
+    21300024: Kayla_12
+    21300026: Kayla_13
+    21300028: Kayla_14
+    21300030: Kayla_15
+    21300032: Kayla_16
+    21300034: Kayla_17
+    21300036: Kayla_18
+    21300038: Kayla_19
+    21300040: Kayla_20
+    21300042: Kayla_21
+    21300044: Kayla_22
+    21300046: Kayla_23
+    21300048: Kayla_24
+    21300050: Kayla_25
+    21300052: Kayla_26
+    21300054: Kayla_27
+    21300056: Kayla_28
+    21300058: Kayla_29
+    21300060: Kayla_30
+    21300062: Kayla_31
+    21300064: Kayla_32
+    21300066: Kayla_33
+    21300068: Kayla_34
+    21300070: Kayla_35
+    21300072: Kayla_36
+    21300074: Kayla_37
+    21300076: Kayla_38
+    21300078: Kayla_39
+    21300080: Kayla_40
+    21300082: Kayla_41
+    21300084: Kayla_42
+    21300086: Kayla_43
+    21300088: Kayla_44
+    21300090: Kayla_45
+    21300092: Kayla_46
+    21300094: Kayla_47
+    21300096: Kayla_48
+    21300098: Kayla_49
+    21300100: Kayla_50
+    21300102: Kayla_51
+    21300104: Kayla_52
+    21300106: Kayla_53
+    21300108: Kayla_54
+    21300110: Kayla_55
+    21300112: Kayla_56
+    21300114: Kayla_57
+    21300116: Kayla_58
+    21300118: Kayla_59
+    21300120: KaylaMorphBall1
+    21300122: KaylaMorphBall2
+    21300124: KaylaMorphBall3
+    21300126: KaylaMorphBall4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Kayla_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 132
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 132
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 132
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 132
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 132
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 132
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 132
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_7
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 132
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 136
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 135
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_10
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 135
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_11
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 135
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 135
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_13
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 135
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 135
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 89
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 89
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 89
+        width: 32
+        height: 30
+      alignment: 9
+      pivot: {x: 0.32374334, y: 0.5072309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_18
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 89
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.304762, y: 0.5139955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 89
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 89
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 89
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_22
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 89
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_23
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 89
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 89
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_25
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 89
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_26
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 89
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_27
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 47
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_28
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 51
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 47
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_30
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 51
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 52
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_32
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 47
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 50
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_34
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 50
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_35
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 42
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_36
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 62
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_37
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 64
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_38
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 59
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_39
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 53
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 9
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_41
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 9
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_42
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 9
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_43
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 9
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_44
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_45
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 9
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_46
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 9
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_47
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 9
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_48
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 9
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_49
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 9
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_50
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 9
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_51
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 9
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_52
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 9
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_53
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 9
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_54
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 9
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_55
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 9
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_56
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 9
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_57
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 9
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_58
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 9
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kayla_59
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 9
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: KaylaMorphBall4
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

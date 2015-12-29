@@ -4,7 +4,7 @@ using System.Collections;
 public class LockPlayerOnCollide : MonoBehaviour
 {
     private Vector3 _lastPosition;
-    private bool _playerPresent;
+    public bool playerPresent;
 
     public void Awake()
     {
@@ -17,7 +17,7 @@ public class LockPlayerOnCollide : MonoBehaviour
 
     public void LateUpdate()
     {
-        if (_playerPresent)
+        if (playerPresent)
         {
             PlayerController.instance.transform.position += transform.position - _lastPosition;
         }
@@ -30,7 +30,7 @@ public class LockPlayerOnCollide : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("Player Present");
-            _playerPresent = true;
+            playerPresent = true;
         }
     }
 
@@ -39,7 +39,7 @@ public class LockPlayerOnCollide : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("Player Exit");
-            _playerPresent = false;
+            playerPresent = false;
         }
     }
 }

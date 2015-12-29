@@ -11,10 +11,12 @@ public class Bounder : Enemy
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
     private float _timer;
     private float _time = 1.25f;
+    private LockPlayerOnCollide _lockPlayer;
 
     protected override void Awake()
     {
         base.Awake();
+        _lockPlayer = GetComponentInChildren<LockPlayerOnCollide>();
         _rigidbody2D = GetComponentInChildren<Rigidbody2D>();
     }
 
@@ -50,7 +52,14 @@ public class Bounder : Enemy
     {
         _rigidbody2D.isKinematic = true;
         _timer = 0;
-        _directionX = Random.Range((int)-1, (int)2);
+        if (_lockPlayer.playerPresent)
+        {
+            _directionX = Mathf.Sign(Player.instance.transform.position.x - transform.position.x);
+        }
+        else
+        {
+            _directionX = Random.Range((int)-1, (int)2);
+        }
 
         if (_directionX == 0)
         {

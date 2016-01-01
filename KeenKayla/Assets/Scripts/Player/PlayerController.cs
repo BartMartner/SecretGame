@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private float _defaultMaxVelocity;
     private ProjectileStats _projectileStats;
     public SpriteRenderer playerRenderer;
-    public GameObject shootPoint;
 
     private Animator _animator;
     new public Rigidbody2D rigidbody2D;
@@ -58,8 +57,6 @@ public class PlayerController : MonoBehaviour
 
     private bool _looking;
 
-    public bool attacking;
-
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
 
     public LayerMask groundLayer;    
@@ -70,6 +67,13 @@ public class PlayerController : MonoBehaviour
 
     private float _xAxis;
     private float _yAxis;
+
+    [Header("Shooting")]
+    public float aiming;
+    public GameObject shootPoint;
+    public GameObject shootPointUp;
+    public GameObject shootPointDown;
+    public bool attacking;
 
     [Header("Pogo")]
     public bool hasPogo;
@@ -154,34 +158,6 @@ public class PlayerController : MonoBehaviour
         }
 
         var velocity = rigidbody2D.velocity;
-        _xAxis = Input.GetAxis("Horizontal");
-        _yAxis = Input.GetAxis("Vertical");
-
-        #region Looking
-        if (!pogo && Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f && groundedCheck.onGround)
-        {
-            _looking = true;
-            var camPos = cameraFocus.transform.localPosition;
-            camPos.y = Mathf.Clamp(camPos.y + Time.deltaTime * Mathf.Sign(_yAxis), -1, 1);
-            cameraFocus.transform.localPosition = camPos;
-            if (_yAxis > 0)
-            {
-                _animator.SetBool("LookingUp", true);
-                _animator.SetBool("LookingDown", false);
-            }
-            else
-            {
-                _animator.SetBool("LookingDown", true);
-                _animator.SetBool("LookingUp", false);
-            }
-        }
-        else
-        {
-            _looking = false;
-            _animator.SetBool("LookingDown", false);
-            _animator.SetBool("LookingUp", false);
-        }
-        #endregion
 
         #region Movement
         if (!groundedCheck.onGround)
@@ -294,12 +270,33 @@ public class PlayerController : MonoBehaviour
         }
 
         rigidbody2D.velocity = velocity;
-
-        UpdateAnimator();
     }
 
     public void Update()
     {
+        _xAxis = Input.GetAxis("Horizontal");
+        _yAxis = Input.GetAxis("Vertical");
+
+        #region Looking
+        if (Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f)
+        {
+            aiming = _yAxis;
+            _looking = groundedCheck.onGround && !pogo && !morphBall && !attacking;
+
+            if (_looking)
+            {
+                var camPos = cameraFocus.transform.localPosition;
+                camPos.y = Mathf.Clamp(camPos.y + Time.deltaTime * Mathf.Sign(_yAxis), -1, 1);
+                cameraFocus.transform.localPosition = camPos;
+            }
+        }
+        else
+        {
+            aiming = 0;
+            _looking = false;
+        }
+        #endregion
+
         if (!attacking && hasPogo && Input.GetButtonDown("Pogo"))
         {
             pogo = !pogo;
@@ -318,6 +315,8 @@ public class PlayerController : MonoBehaviour
         {
             ToggleMorphball(!morphBall);
         }
+
+        UpdateAnimator();
     }
 
     public void LateUpdate()
@@ -373,13 +372,27 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("VelocityY", rigidbody2D.velocity.y);
         _animator.SetBool("Pogo", pogo);
         _animator.SetBool("MorphBall", morphBall);
+        _animator.SetFloat("Aiming", aiming);
+        _animator.SetBool("LookingUp", _looking && aiming > 0);
+        _animator.SetBool("LookingDown", _looking && aiming < 0);
     }
 
     private IEnumerator Attack()
     {
         pogo = false;
         attacking = true;
-        ProjectileManager.instance.Shoot(_projectileStats, shootPoint.transform.position, transform.right);
+        if (aiming == 0)
+        {
+            ProjectileManager.instance.Shoot(_projectileStats, shootPoint.transform.position, transform.right);
+        }
+        else if(aiming > 0)
+        {
+            ProjectileManager.instance.Shoot(_projectileStats, shootPointUp.transform.position, transform.up);
+        }
+        else if (!groundedCheck.onGround)
+        {
+            ProjectileManager.instance.Shoot(_projectileStats, shootPointDown.transform.position, -transform.up);
+        }
         yield return new WaitForSeconds(0.25f);
         attacking = false;
     }

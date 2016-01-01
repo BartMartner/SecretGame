@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: df237488adc3ff04292f072dc9f15212
-timeCreated: 1451190668
+timeCreated: 1451677597
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -131,7 +131,7 @@ TextureImporter:
         x: 17
         y: 132
         width: 17
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,7 +142,7 @@ TextureImporter:
         x: 35
         y: 132
         width: 19
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
         x: 72
         y: 132
         width: 20
-        height: 29
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
         x: 93
         y: 132
         width: 23
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,7 +186,7 @@ TextureImporter:
         x: 117
         y: 132
         width: 22
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,7 +197,7 @@ TextureImporter:
         x: 140
         y: 132
         width: 24
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,7 +219,7 @@ TextureImporter:
         x: 211
         y: 135
         width: 14
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,7 +230,7 @@ TextureImporter:
         x: 226
         y: 135
         width: 22
-        height: 27
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,7 +285,7 @@ TextureImporter:
         x: 3
         y: 89
         width: 16
-        height: 29
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
     - name: Kayla_16
       rect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 89
-        width: 17
-        height: 27
+        width: 18
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,18 +307,25 @@ TextureImporter:
         x: 41
         y: 89
         width: 32
-        height: 30
+        height: 32
       alignment: 9
       pivot: {x: 0.32374334, y: 0.5072309}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -2.359787, y: 15.768616}
+        - {x: -10.359787, y: 3.7686157}
+        - {x: -10.359787, y: -16.231384}
+        - {x: 11.640213, y: -16.231384}
+        - {x: 21.640213, y: -7.2313843}
+        - {x: 21.640213, y: 6.7686157}
+        - {x: 13.640213, y: 15.768616}
     - name: Kayla_18
       rect:
         serializedVersion: 2
         x: 74
         y: 89
         width: 30
-        height: 31
+        height: 32
       alignment: 9
       pivot: {x: 0.304762, y: 0.5139955}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,7 +336,7 @@ TextureImporter:
         x: 105
         y: 89
         width: 22
-        height: 29
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,8 +359,8 @@ TextureImporter:
         y: 89
         width: 17
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Kayla_22

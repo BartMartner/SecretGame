@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 52e17356a277c1c40a11904e5ff2a3eb
-timeCreated: 1451769144
+timeCreated: 1451776862
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,10 @@ TextureImporter:
     21300052: BreakRockLeft
     21300054: BreakRockRight
     21300056: RockBottom1x2A
+    21300058: GrassCenterShadowLeft
+    21300060: GrassCenterShadow
+    21300062: GrassCenterShadowRight
+    21300064: GrassCenterShadowLeftB
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -4965,8 +4969,8 @@ TextureImporter:
         y: 608
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 8, y: 0}
@@ -12624,6 +12628,151 @@ TextureImporter:
         - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+      - - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+        - {x: 8, y: 0}
+        - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
       - - {x: 8, y: 0}
         - {x: 0, y: -16}
         - {x: 0, y: -32}
@@ -14511,6 +14660,66 @@ TextureImporter:
         - {x: 32, y: 0}
       - - {x: 8, y: 0}
         - {x: 0, y: -16}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: GrassCenterShadowLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: GrassCenterShadow
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: GrassCenterShadowRight
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: GrassCenterShadowLeftB
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
         - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}

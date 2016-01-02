@@ -90,7 +90,6 @@ public class MainCamera : MonoBehaviour
         windowRect = new Rect(windowAnchorX, windowAnchorY, movementWindowSize.x, movementWindowSize.y);
     }
 
-
     private void LateUpdate()
     {
         playerPosition = player.transform.position;
@@ -134,9 +133,6 @@ public class MainCamera : MonoBehaviour
             }
         }
 
-        cameraPosition.x = Mathf.Round(32 * cameraPosition.x) / 32f;
-        cameraPosition.y = Mathf.Round(32 * cameraPosition.y) / 32f;
-
         if (tweening || playerPosition != previousPlayerPosition)
         {
             // Here we clamp the desired position into the area declared in the limit variables.
@@ -155,8 +151,8 @@ public class MainCamera : MonoBehaviour
         transform.position = cameraPosition + _shakeOffset;
 
         var snap = transform.position;
-        snap.x = Mathf.Round(32 * snap.x)/32;
-        snap.y = Mathf.Round(32 * snap.y)/32;
+        snap.x = Mathf.Round(32f * snap.x)/ 32f;
+        snap.y = Mathf.Round(32f * snap.y)/ 32f;
         transform.position = snap;
 
         previousPlayerPosition = playerPosition;           

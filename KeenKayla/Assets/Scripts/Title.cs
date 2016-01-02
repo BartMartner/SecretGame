@@ -9,7 +9,10 @@ public class Title : MonoBehaviour
 		
     private void Start()
     {
-        Hud.gameObject.SetActive(false);
+        if (Hud)
+        {
+            Hud.gameObject.SetActive(false);
+        }
         StartCoroutine(FadeOut());
     }
 

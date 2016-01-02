@@ -138,12 +138,13 @@ public class MainCamera : MonoBehaviour
             // Here we clamp the desired position into the area declared in the limit variables.
             if (limitCameraMovementY)
             {
-                cameraPosition.y = Mathf.Clamp(cameraPosition.y, limitBottom, limitTop);
+                cameraPosition.y = Mathf.Clamp(cameraPosition.y, limitBottom + camera.orthographicSize, limitTop - -camera.orthographicSize);
             }
 
             if (limitCameraMovementX)
             {
-                cameraPosition.x = Mathf.Clamp(cameraPosition.x, limitLeft, limitRight);
+                float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
+                cameraPosition.x = Mathf.Clamp(cameraPosition.x, limitLeft + halfWidth, limitRight - halfWidth);
             }
         }
 
@@ -242,7 +243,7 @@ public class MainCamera : MonoBehaviour
 
         // And now we display the camera limits. If the camera is inactive, they will show in red.
         // There is an x in the middle of the screen to show what hits against the limit.
-        if (limitCameraMovementY)
+        if (limitCameraMovementY || limitCameraMovementX)
         {
             Color limitColor;
 
@@ -272,6 +273,7 @@ public class MainCamera : MonoBehaviour
             Debug.DrawLine(centerMarkCorner3, centerMarkCorner4, Color.cyan);
         }
     }
+
 
     public void StartTweenLimitsX(float leftLimit, float rightLimit)
     {
@@ -529,5 +531,10 @@ public class MainCamera : MonoBehaviour
     private void OnDestroy()
     {
         instance = null;
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        if (showDebugBoxes) DrawDebugBox();
     }
 }

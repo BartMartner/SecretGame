@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
     }
     private float _halfWidth;
     private float _jumpTimer;
-    private float _jumpTimeLimit = 0.375f;
-    private float _maxVelocityY = 12.25f;
+    private float _jumpTimeLimit = 0.45f;
+    private float _maxVelocityY = 12.5f;
 
-    public float jumpPower = 1.4f;
+    public float jumpPower = 1.5f;
     private bool _canJump = true;
     private bool _jumping;
     private bool _jumpHeld;

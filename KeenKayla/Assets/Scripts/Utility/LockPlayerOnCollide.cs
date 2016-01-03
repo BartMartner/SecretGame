@@ -19,7 +19,7 @@ public class LockPlayerOnCollide : MonoBehaviour
     {
         if (playerPresent)
         {
-            PlayerController.instance.transform.position += transform.position - _lastPosition;
+            Player.instance.transform.position += transform.position - _lastPosition;
         }
 
         _lastPosition = transform.position;

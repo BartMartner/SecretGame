@@ -6,7 +6,9 @@ using System;
 public class ProjectileManager : MonoBehaviour
 {
     public static ProjectileManager instance;
-    
+
+    public GameObject explosionPrefab;
+    public Bomb bombPrefab;
     public Projectile blasterBoltPrefab;
     public Projectile redBlasterBoltPrefab;
     public Projectile purpleBlasterBoltPrefab;
@@ -121,5 +123,15 @@ public class ProjectileManager : MonoBehaviour
 
             yield return new WaitForSeconds(burstTime/burstCount);
         }
+    }
+
+    public void SpawnBomb(Vector3 position)
+    {
+        Instantiate(bombPrefab, position, Quaternion.identity);
+    }
+
+    public void SpawnExplosion(Vector3 position)
+    {
+        Instantiate(explosionPrefab, position, Quaternion.identity);
     }
 }

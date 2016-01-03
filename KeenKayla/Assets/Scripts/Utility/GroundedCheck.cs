@@ -21,7 +21,7 @@ public class GroundedCheck : MonoBehaviour
     private AudioSource _audioSource;
 
     private bool _player;
-    private PlayerController _playerController;
+    private Player _playerController;
     private AudioClip[] _landingSounds;
 
     private void Start()
@@ -34,7 +34,7 @@ public class GroundedCheck : MonoBehaviour
 
         _audioSource = GetComponentInChildren<AudioSource>();
 
-        _playerController = GetComponentInChildren<PlayerController>();
+        _playerController = GetComponentInChildren<Player>();
         if(_playerController != null)
         {
             _player = true;

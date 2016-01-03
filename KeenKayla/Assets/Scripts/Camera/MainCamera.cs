@@ -106,7 +106,7 @@ public class MainCamera : MonoBehaviour
             multipliedDifference.y *= scrollMultiplierY;
 
             cameraPosition.x += multipliedDifference.x;
-            if (PlayerController.instance.groundedCheck.onGround)
+            if (Player.instance.groundedCheck.onGround)
             {
                 cameraPosition.y += multipliedDifference.y;
             }

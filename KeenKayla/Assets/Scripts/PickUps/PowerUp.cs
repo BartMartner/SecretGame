@@ -9,7 +9,7 @@ public class PowerUp : Pickup
     {
         SaveGameManager.instance.saveGameData.powerUpsCollected.Add(powerUpType);
         SaveGameManager.instance.SaveGame();
-        PlayerController.instance.RefreshPowerUps();
+        Player.instance.RefreshPowerUps();
         base.OnPickup();
     }
 }

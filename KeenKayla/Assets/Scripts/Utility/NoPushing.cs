@@ -18,7 +18,7 @@ public class NoPushing : MonoBehaviour
     {
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
-        _playerCollider = PlayerController.instance.collider2D;
+        _playerCollider = Player.instance.collider2D;
         _defaultConstraints = _rigidBody2D.constraints;
         _noPushConstraints = _defaultConstraints | RigidbodyConstraints2D.FreezePositionX;
     }

@@ -42,7 +42,6 @@ public class Damagable : MonoBehaviour
 
     [HideInInspector]
     public GroundedCheck groundedCheck;
-    public bool isKnockedUp;
 
     protected virtual void Awake()
     {

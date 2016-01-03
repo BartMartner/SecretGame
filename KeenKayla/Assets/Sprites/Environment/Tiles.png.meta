@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 52e17356a277c1c40a11904e5ff2a3eb
-timeCreated: 1451776862
+timeCreated: 1451777892
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -37,6 +37,7 @@ TextureImporter:
     21300060: GrassCenterShadow
     21300062: GrassCenterShadowRight
     21300064: GrassCenterShadowLeftB
+    21300066: BreakRock
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -14723,6 +14724,21 @@ TextureImporter:
         - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
+    - name: BreakRock
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 430
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 16}
+        - {x: -32, y: -16}
+        - {x: 32, y: -16}
+        - {x: 32, y: 16}
     outline: []
   spritePackingTag: 
   userData: 

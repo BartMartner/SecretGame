@@ -12,7 +12,7 @@ public class Door : Damagable
         boxCollider2D = GetComponentInChildren<BoxCollider2D>();
     }
 
-    public override bool Hurt(float damage, GameObject source = null)
+    public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {        
         boxCollider2D.enabled = false;
         shield.gameObject.SetActive(false);

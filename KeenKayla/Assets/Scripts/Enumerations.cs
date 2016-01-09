@@ -40,12 +40,10 @@ public enum ProjectileType
     PurpleBlasterBolt = 3,
 }
 
-public enum EnvironmentType
+public enum GibType
 {
     None = 0,
-    Beach = 1,
-    Temple = 2,
-    DeathArena = 3,
+    BrownRock = 1,
 }
 
 public enum Possibility
@@ -70,6 +68,6 @@ public enum SurfaceType
 public enum DamageType
 {
     Generic,
-    Fire,
+    Bomb,
 }
 

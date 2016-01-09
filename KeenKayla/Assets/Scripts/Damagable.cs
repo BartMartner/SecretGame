@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Damagable : MonoBehaviour
 {
+    [Header("Health and Damage")]
     public DamagableState state;
 
     public float health = 1;
@@ -12,25 +14,32 @@ public class Damagable : MonoBehaviour
         get { return health / maxHealth; }
     }
 
-    public float defaultAegisTime = 0.25f;
-    public float deathTime = 1f;
-
-    public Animator animator;
-
-    public AudioSource audioSource;
-    public AudioClip[] hurtSounds;
-    public AudioClip[] deathSounds;
-
-    public Color defaultColor;
-    public bool flashOnHurt = true;
-    protected Renderer[] _renderers;
-    protected float _deathCounter;
-
     protected bool _aegisActive;
     public bool aegisActive
     {
         get { return _aegisActive; }
     }
+
+    public float defaultAegisTime = 0.25f;
+    public float deathTime = 1f;
+    protected float _deathCounter;
+    
+    public List<DamageType> immunities;
+    public GibType gibs;
+    public int gibAmount = 6;
+    public bool destroyOnDeath;
+
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip[] hurtSounds;
+    public AudioClip[] deathSounds;
+
+    [Header("Visuals")]
+    public Animator animator;
+
+    public Color defaultColor;
+    public bool flashOnHurt = true;
+    protected Renderer[] _renderers;
 
     protected bool _flashing;
     public bool flashing
@@ -135,9 +144,9 @@ public class Damagable : MonoBehaviour
         _flashing = false;
     }
 
-    public virtual bool Hurt(float damage, GameObject source = null)
+    public virtual bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
-        if (_aegisActive || state != DamagableState.Alive)
+        if (_aegisActive || state != DamagableState.Alive || (immunities != null && immunities.Contains(damageType)))
         {
             return false;
         }
@@ -209,6 +218,16 @@ public class Damagable : MonoBehaviour
 
     public virtual void OnDeath()
     {
+        if (gibs != GibType.None)
+        {
+            GibManager.instance.SpawnGibs(gibs, transform.position, gibAmount);
+        }
+
+        if (destroyOnDeath)
+        {
+            Destroy(gameObject);
+        }
+
         //StartCoroutine(FadeOut(1, true));
     }
 

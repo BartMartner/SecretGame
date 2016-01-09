@@ -19,4 +19,5 @@ public static class LayerConstants
     public const int PlayerWeapon = 16;
     public const int EnemyWeapon = 17;
     public const int GenericDamagable = 18;
+    public const int EnvironmentOnly = 20;
 }

@@ -5,8 +5,8 @@ public class ChildDamagable : Damagable
 {
     public Damagable parent;
 
-    public override bool Hurt(float damage, GameObject source = null)
+    public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
-        return parent.Hurt(damage, source);
+        return parent.Hurt(damage, source, damageType);
     }
 }

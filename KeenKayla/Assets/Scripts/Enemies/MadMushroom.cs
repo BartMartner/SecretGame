@@ -9,7 +9,7 @@ public class MadMushroom : Enemy
         StartCoroutine(Bounce());
     }
 
-    public override bool Hurt(float damage, GameObject source = null)
+    public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
         if (damage < 2)
         {
@@ -17,7 +17,7 @@ public class MadMushroom : Enemy
         }
         else
         {
-            return base.Hurt(damage, source);
+            return base.Hurt(damage, source, damageType);
         }
     }
 

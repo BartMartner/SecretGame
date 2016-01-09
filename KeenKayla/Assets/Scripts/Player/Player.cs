@@ -6,6 +6,9 @@ public class Player : Damagable
 {
     public static Player instance;
 
+    [Header ("Player")]
+    public LayerMask playerLayerMask;
+
     public GameObject cameraFocus;
     public float acceleration;
     public float maxVelocity = 10;
@@ -17,8 +20,6 @@ public class Player : Damagable
     private Animator _animator;
     new public Rigidbody2D rigidbody2D;
     new public BoxCollider2D collider2D;
-
-    public AudioClip[] landingSounds;
 
     private bool _disableMovement;
 
@@ -46,10 +47,8 @@ public class Player : Damagable
     private float _xAxis;
     private float _yAxis;
 
-    public LayerMask groundLayer;
-    public LayerMask playerLayerMask;
-
     [Header("Jumping")]
+    public LayerMask groundLayer;
     public AudioClip[] jumpSounds;
     public float jumpPower = 1.5f;
     private bool _canJump = true;
@@ -92,6 +91,9 @@ public class Player : Damagable
     public bool hasColdSuit;
     private Dictionary<string,Sprite> coldSuitSprites;
     private Dictionary<string, Sprite> powerSuitSprites;
+
+    [Header("Player Sounds")]
+    public AudioClip[] landingSounds;
 
     protected override void Awake()
     {
@@ -437,14 +439,14 @@ public class Player : Damagable
         instance = null;
     }
 
-    public override bool Hurt(float damage, GameObject source = null)
+    public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
         if (_aegisActive || state != DamagableState.Alive)
         {
             return false;
         }
 
-        var result = base.Hurt(damage, source);
+        var result = base.Hurt(damage, source, damageType);
 
         if (result && health > 0)
         {

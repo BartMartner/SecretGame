@@ -78,6 +78,8 @@
     <Compile Include="Assets\Scripts\Enumerations.cs" />
     <Compile Include="Assets\Scripts\Extensions.cs" />
     <Compile Include="Assets\Scripts\FireZone.cs" />
+    <Compile Include="Assets\Scripts\Gib.cs" />
+    <Compile Include="Assets\Scripts\GibManager.cs" />
     <Compile Include="Assets\Scripts\InputExtension.cs" />
     <Compile Include="Assets\Scripts\LayerConstants.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\MovingPlatform.cs" />

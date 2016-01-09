@@ -11,7 +11,7 @@ public class DamageCreatureTrigger : MonoBehaviour
         var damagable = other.GetComponentInChildren<Damagable>();
         if(damagable)
         {
-            damagable.Hurt(damage, gameObject);
+            damagable.Hurt(damage, gameObject, damageType);
         }
     }
 }

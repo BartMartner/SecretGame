@@ -56,12 +56,21 @@ public class GibManager : MonoBehaviour
             _gibs[gType].Add(newGib);
         }
 
-        _gibPrefabIndex[gType] = (_gibPrefabIndex[gType] + 1) % _gibs[gType].Count;
+        int gibCount = 0;
+
+        switch (gType)
+        {
+            case GibType.BrownRock:
+                gibCount = BrownRockGibs.Count;
+                break;
+        }
+
+        _gibPrefabIndex[gType] = (_gibPrefabIndex[gType] + 1) % gibCount;
 
         return newGib;
     }
 
-    public void SpawnGibs(GibType gType, Vector3 origin, int amount, float force  = 10, float lifeSpan = 5)
+    public void SpawnGibs(GibType gType, Rect area, int amount, float force  = 10, float lifeSpan = 5)
     {
         List<Gib> eList;
 
@@ -85,7 +94,9 @@ public class GibManager : MonoBehaviour
                     g = NewGib(gType);
                 }
 
-                g.Spawn(gType, origin, force, lifeSpan);
+                var position = new Vector2(Random.Range(area.xMin, area.xMax), Random.Range(area.yMin, area.yMax));
+
+                g.Spawn(gType, position, force, lifeSpan);
             }
         }
     }

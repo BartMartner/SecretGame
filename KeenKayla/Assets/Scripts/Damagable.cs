@@ -52,8 +52,12 @@ public class Damagable : MonoBehaviour
     [HideInInspector]
     public GroundedCheck groundedCheck;
 
+    private Collider2D _collider2D;
+
     protected virtual void Awake()
     {
+        _collider2D = GetComponent<Collider2D>();
+
         if (!audioSource)
         {
             audioSource = GetComponentInChildren<AudioSource>();
@@ -220,7 +224,10 @@ public class Damagable : MonoBehaviour
     {
         if (gibs != GibType.None)
         {
-            GibManager.instance.SpawnGibs(gibs, transform.position, gibAmount);
+            Rect area;
+            area = _collider2D ? new Rect(0, 0, _collider2D.bounds.extents.x * 2, _collider2D.bounds.extents.y * 2) : new Rect(0, 0, 1, 1);
+            area.center = transform.position;
+            GibManager.instance.SpawnGibs(gibs, area, gibAmount);
         }
 
         if (destroyOnDeath)

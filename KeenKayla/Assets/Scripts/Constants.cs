@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Constants : MonoBehaviour
+public class Constants
 {
     public const int bombsPerUpgrade = 2;
     public const float startingHealth = 3;
+
+    public static LayerMask terrain = LayerMask.GetMask("Default", "OneWayPlatform", "DamagableTerrain");
 
     public static ProjectileStats GreenBolts = new ProjectileStats
     {

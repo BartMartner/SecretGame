@@ -12,12 +12,14 @@ public class Bounder : Enemy
     private float _timer;
     private float _time = 1.25f;
     private LockPlayerOnCollide _lockPlayer;
+    private Collider2D _collider2D;
 
     protected override void Awake()
     {
         base.Awake();
         _lockPlayer = GetComponentInChildren<LockPlayerOnCollide>();
         _rigidbody2D = GetComponentInChildren<Rigidbody2D>();
+        _collider2D = GetComponent<Collider2D>();
     }
 
     protected override void Update()
@@ -31,7 +33,17 @@ public class Bounder : Enemy
             if (_timer < _time)
             {
                 _timer += Time.deltaTime;
-                transform.position += _directionX * Vector3.right * speedX * Time.deltaTime;
+                var hit = Physics2D.Raycast(transform.position, _directionX * Vector3.right, _collider2D.bounds.extents.x, LayerMask.GetMask("Default", "DamagableTerrain"));
+
+                if (!hit.collider)
+                {
+                    transform.position += _directionX * Vector3.right * speedX * Time.deltaTime;
+                }
+                else
+                {
+                    Debug.Log(hit.collider.gameObject.name);
+                }
+
                 if (_timer < _time * 0.5f)
                 {
                     transform.position += Vector3.up * speedY * (_time * 0.5f - _timer) / (_time * 0.5f) * Time.deltaTime;

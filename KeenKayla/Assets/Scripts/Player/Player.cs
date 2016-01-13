@@ -410,6 +410,8 @@ public class Player : Damagable
         else if (!groundedCheck.onGround)
         {
             ProjectileManager.instance.Shoot(_projectileStats, shootPointDown.transform.position, -transform.up);
+            yield return new WaitForFixedUpdate();
+            rigidbody2D.AddForce(Vector3.up * 2, ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(0.25f);
         attacking = false;

@@ -12,7 +12,6 @@ public class Bounder : Enemy
     private float _timer;
     private float _time = 1.25f;
     private LockPlayerOnCollide _lockPlayer;
-    private Collider2D _collider2D;
 
     protected override void Awake()
     {

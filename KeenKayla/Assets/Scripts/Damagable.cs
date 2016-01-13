@@ -52,7 +52,7 @@ public class Damagable : MonoBehaviour
     [HideInInspector]
     public GroundedCheck groundedCheck;
 
-    private Collider2D _collider2D;
+    protected Collider2D _collider2D;
 
     protected virtual void Awake()
     {

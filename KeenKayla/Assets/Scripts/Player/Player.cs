@@ -268,7 +268,7 @@ public class Player : Damagable
 
         if(pogo && groundedCheck.onGround)
         {
-            velocity.y += 3;
+            velocity.y += 5;
         }
 
         rigidbody2D.velocity = velocity;

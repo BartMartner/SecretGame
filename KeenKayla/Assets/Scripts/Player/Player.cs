@@ -86,6 +86,14 @@ public class Player : Damagable
     private Vector2 _originalSize;
     private Vector2 _ballBoundsSize;
 
+    [Header("HoverBoots")]
+    public bool hasHoverBoots;
+    public ParticleSystem hoverParticles;
+    public bool hoverJumping;
+    public float hoverPower;
+    //How long the player can hold jump and still get the hover effect
+    private float _hoverTime = 3;
+
     [Header("Suits")]
     public bool hasPowerSuit;
     public bool hasColdSuit;
@@ -266,7 +274,54 @@ public class Player : Damagable
         }
         #endregion
 
-        if(pogo && groundedCheck.onGround)
+        #region Hover Jumping
+        if (hasHoverBoots)
+        {
+            if (groundedCheck.nearGround)
+            {
+                hoverPower = _hoverTime;
+
+                if(hoverJumping)
+                {
+                    hoverJumping = false;
+                    hoverParticles.Stop();
+                }
+            }
+            else if (hoverPower > 0 && !morphBall)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    hoverParticles.Play();
+                    hoverJumping = true;
+                    pogo = false;
+                }
+
+                if (hoverJumping && Input.GetButton("Jump"))
+                {
+                    hoverPower -= Time.deltaTime;
+
+                    velocity.y += -Physics2D.gravity.y * 3 * Time.deltaTime;
+                    if (velocity.y > 3f)
+                    {
+                        velocity.y = 3;
+                    }
+                }
+                else if (hoverJumping)
+                {
+                    hoverParticles.Stop();
+                    hoverJumping = false;
+                }
+            }
+            else if (hoverJumping)
+            {
+                hoverParticles.Stop();
+                hoverJumping = false;
+            }
+        }
+
+        #endregion
+
+        if (pogo && groundedCheck.onGround)
         {
             velocity.y += 5;
         }
@@ -317,7 +372,7 @@ public class Player : Damagable
             }
         }
 
-        if (!attacking && hasPogo && Input.GetButtonDown("Pogo"))
+        if (!attacking && !hoverJumping && hasPogo && Input.GetButtonDown("Pogo"))
         {
             pogo = !pogo;
             ToggleMorphball(false);
@@ -448,6 +503,11 @@ public class Player : Damagable
             return false;
         }
 
+        if(hasPowerSuit || hasColdSuit)
+        {
+            damage = damage * 0.5f;
+        }
+
         var result = base.Hurt(damage, source, damageType);
 
         if (result && health > 0)
@@ -492,6 +552,15 @@ public class Player : Damagable
                     {
                         _projectileStats = Constants.RedBolts;
                     }
+                    break;
+                case PowerUpID.ColdSuit:
+                    hasColdSuit = true;
+                    break;
+                case PowerUpID.PowerSuit:
+                    hasPowerSuit = true;
+                    break;
+                case PowerUpID.HoverBoots:
+                    hasHoverBoots = true;
                     break;
             }
         }

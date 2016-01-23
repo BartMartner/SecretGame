@@ -16,6 +16,9 @@ public enum PowerUpID
     MaruMari,
     RedLazer,
     PurpleLazer,
+    HoverBoots,
+    ColdSuit,
+    PowerSuit,
 }
 
 public enum Team

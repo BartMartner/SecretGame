@@ -269,39 +269,21 @@ public class MainCamera : MonoBehaviour
         }
     }
 
-
-    public void StartTweenLimitsX(float leftLimit, float rightLimit)
+    public void SetLimits(Bounds newBounds, bool transition)
     {
-        if (!limitCameraMovementX)
+        if (transition)
         {
-            ActivateLimitsX(leftLimit, rightLimit);
-            return;
+            StartTweenLimits(newBounds.min.x, newBounds.max.x, newBounds.min.y, newBounds.max.y);
         }
-
-        if (_limitTween != null)
+        else
         {
-            StopCoroutine(_limitTween);
+            limitCameraMovementX = true;
+            limitCameraMovementY = true;
+            limitLeft = newBounds.min.x;
+            limitBottom = newBounds.min.y;
+            limitRight = newBounds.max.x;
+            limitTop = newBounds.max.y;
         }
-
-        _limitTween = TweenLimitsX(leftLimit, rightLimit);
-        StartCoroutine(_limitTween);
-    }
-
-    public void StartTweenLimitsY(float bottomLimit, float topLimit)
-    {
-        if(!limitCameraMovementY)
-        {
-            ActivateLimitsY(bottomLimit, topLimit);
-            return;
-        }
-
-        if (_limitTween != null)
-        {
-            StopCoroutine(_limitTween);
-        }
-
-        _limitTween = TweenLimitsY(bottomLimit, topLimit);
-        StartCoroutine(_limitTween);
     }
 
     public void StartTweenLimits(float leftLimit, float rightLimit, float bottomLimit, float topLimit)
@@ -315,79 +297,24 @@ public class MainCamera : MonoBehaviour
         StartCoroutine(_limitTween);
     }
 
-    private IEnumerator TweenLimitsX(float leftLimit, float rightLimit)
-    {
-        tweening = true;
-        limitCameraMovementX = true;
-
-        bool done = false;
-        while (!done)
-        {
-            done = true;
-            var speed = 5 * Time.deltaTime;
-
-            if (leftLimit != limitLeft)
-            {
-                done = false;
-                limitLeft = Mathf.MoveTowards(limitLeft, leftLimit, speed);
-            }
-
-            if (rightLimit != limitRight)
-            {
-                done = false;
-                limitRight = Mathf.MoveTowards(limitRight, rightLimit, speed);
-            }
-
-            yield return null;
-        }
-
-        tweening = false;
-
-        ValidateLeftAndRightLimits();
-    }
-
-    private IEnumerator TweenLimitsY(float bottomLimit, float topLimit)
-    {
-        tweening = true;
-        limitCameraMovementY = true;
-
-        bool done = false;
-
-        while (!done)
-        {
-            done = true;
-            var speed = 5 * Time.deltaTime;
-
-            if (topLimit != limitTop)
-            {
-                done = false;
-                limitTop = Mathf.MoveTowards(limitTop, topLimit, speed);
-            }
-
-            if (bottomLimit != limitBottom)
-            {
-                done = false;
-                limitBottom = Mathf.MoveTowards(limitBottom, bottomLimit, speed);
-            }
-
-            yield return null;
-        }
-
-        tweening = false;
-        ValidateTopAndBottomLimits();
-    }
-
     private IEnumerator TweenLimits(float leftLimit, float rightLimit, float bottomLimit, float topLimit)
     {
         tweening = true;
         limitCameraMovementX = true;
         limitCameraMovementY = true;
 
+        // Clamp the current limits to the current window (TODO: or new limits)
+        limitTop = cameraPosition.y + camera.orthographicSize;
+        limitBottom = cameraPosition.y - camera.orthographicSize;
+        float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
+        limitRight = cameraPosition.x + halfWidth;
+        limitLeft = cameraPosition.x - halfWidth;
+
         bool done = false;
         while(!done)
         {
             done = true;
-            var speed = 5 * Time.deltaTime;
+            var speed = 8 * Time.deltaTime;
 
             if (leftLimit != limitLeft)
             {

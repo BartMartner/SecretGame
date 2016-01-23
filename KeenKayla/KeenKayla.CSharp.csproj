@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BombCount.cs" />
+    <Compile Include="Assets\CameraBoundsTrigger.cs" />
     <Compile Include="Assets\HealthUpgrade.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />

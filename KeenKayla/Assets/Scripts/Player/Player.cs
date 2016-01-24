@@ -197,11 +197,6 @@ public class Player : Damagable
         else
         {
             _airControlMod = 1f;
-
-            if (_xAxis == 0)
-            {
-                velocity.x = 0;
-            }
         }
 
         if (!_looking && !_isHit && (!attacking || !groundedCheck.onGround))
@@ -223,12 +218,20 @@ public class Player : Damagable
             }
             else if (velocity.x != 0)
             {
-                velocity.x = Mathf.Lerp(velocity.x, 0, 0.5f);
+                var dampen = (hasColdSuit || !inColdZone) ? 0.5f : 0.01f;
+                velocity.x = Mathf.Lerp(velocity.x, 0, dampen);
             }
         }
-        else
+        else 
         {
-            velocity.x = 0;
+            if (hasColdSuit || !inColdZone)
+            {
+                velocity.x = 0;
+            }
+            else
+            {
+                velocity.x = Mathf.Lerp(velocity.x, 0, 0.05f);
+            }
         }
         #endregion
 

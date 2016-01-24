@@ -60,12 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BombCount.cs" />
-    <Compile Include="Assets\CameraBoundsTrigger.cs" />
-    <Compile Include="Assets\HealthUpgrade.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraBoundsTrigger.cs" />
     <Compile Include="Assets\Scripts\Camera\MainCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\PixelPerfect.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
@@ -83,10 +80,12 @@
     <Compile Include="Assets\Scripts\GibManager.cs" />
     <Compile Include="Assets\Scripts\InputExtension.cs" />
     <Compile Include="Assets\Scripts\LayerConstants.cs" />
+    <Compile Include="Assets\Scripts\LevelObjects\ColdZone.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\PitTrigger.cs" />
     <Compile Include="Assets\Scripts\LightManager.cs" />
     <Compile Include="Assets\Scripts\PickUps\BombUpgrade.cs" />
+    <Compile Include="Assets\Scripts\PickUps\HealthUpgrade.cs" />
     <Compile Include="Assets\Scripts\PickUps\Pickup.cs" />
     <Compile Include="Assets\Scripts\PickUps\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
@@ -98,6 +97,7 @@
     <Compile Include="Assets\Scripts\Projectiles\Shooter.cs" />
     <Compile Include="Assets\Scripts\Saving\SaveGameManager.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
+    <Compile Include="Assets\Scripts\UI\BombCount.cs" />
     <Compile Include="Assets\Scripts\UI\BossBar.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\TitleScreen.cs" />
@@ -110,6 +110,9 @@
     <Compile Include="Assets\Scripts\Utility\LookAt.cs" />
     <Compile Include="Assets\Scripts\Utility\NoPushing.cs" />
     <Compile Include="Assets\Scripts\Utility\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\SpriteDefaultFlash.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

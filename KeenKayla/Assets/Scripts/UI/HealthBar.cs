@@ -10,10 +10,19 @@ public class HealthBar : MonoBehaviour
     private Image[] hearts;
     private float _lastValue;
     private float _lastMaxValue;
+    private bool _lastCold;
 
     private void Awake()
     {
         hearts = GetComponentsInChildren<Image>();
+        int i = 0;
+        foreach (var heart in hearts)
+        {
+            Material mat = new Material(Shader.Find("Sprites/DefaultFlash"));
+            mat.name = "heart" + i;
+            heart.material = mat;
+            i++;
+        }
     }
 
     private void Start()
@@ -30,13 +39,29 @@ public class HealthBar : MonoBehaviour
             _lastMaxValue = Player.instance.maxHealth;
             SetHearts();
         }
-	}
+
+        if (Player.instance.inColdZone && !Player.instance.hasColdSuit && Player.instance.state == DamagableState.Alive)
+        {
+            int lastHeartIndex = (int)Mathf.Clamp(Mathf.Ceil(Player.instance.health - 1), 0, hearts.Length-1);
+            var lastHeart = hearts[lastHeartIndex];
+            lastHeart.material.SetColor("_FlashColor", Color.cyan);
+            lastHeart.material.SetFloat("_FlashAmount", Player.instance.coldRatio * 0.5f);
+        }
+
+        if(_lastCold && !Player.instance.inColdZone)
+        {
+            SetHearts();
+        }
+
+        _lastCold = Player.instance.inColdZone;
+    }
 
     private void SetHearts()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i > Player.instance.maxHealth - 1)
+            hearts[i].material.SetFloat("_FlashAmount", 0);
+            if (i > Player.instance.maxHealth - 1)
             {
                 hearts[i].gameObject.SetActive(false);
             }

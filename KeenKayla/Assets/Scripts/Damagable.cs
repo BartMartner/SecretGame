@@ -39,7 +39,7 @@ public class Damagable : MonoBehaviour
 
     public Color defaultColor;
     public bool flashOnHurt = true;
-    protected Renderer[] _renderers;
+    protected SpriteRenderer[] _renderers;
 
     protected bool _flashing;
     public bool flashing
@@ -69,27 +69,13 @@ public class Damagable : MonoBehaviour
         }
 
         maxHealth = health;
-        _damageColor = new Color(0.333f, 0.01f, 0.01f);
+        _damageColor = Color.red;
         groundedCheck = GetComponentInChildren<GroundedCheck>();
     }
 
     protected virtual void Start()
     {
-        _renderers = GetComponentsInChildren<Renderer>();
-        if (_renderers != null && _renderers.Length > 0)
-        {
-            bool defaultColorSet = false;
-            foreach (var renderer in _renderers)
-            {
-                renderer.material.EnableKeyword("_EMISSION");
-
-                if (!defaultColorSet && renderer.material.HasProperty("_EmissionColor"))
-                {
-                    defaultColorSet = true;
-                    defaultColor = renderer.material.GetColor("_EmissionColor");
-                }
-            }
-        }
+        _renderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -128,7 +114,7 @@ public class Damagable : MonoBehaviour
         _aegisActive = false;
     }
 
-    public virtual IEnumerator Flash(int flashes, float time, Color color)
+    public virtual IEnumerator Flash(int flashes, float time, Color color, float amount)
     {
         _flashing = true;
         var flashCounter = 0;
@@ -137,14 +123,34 @@ public class Damagable : MonoBehaviour
         {
             flashCounter++;
 
-            SetColors(color, "_EmissionColor");
+            foreach (var renderer in _renderers)
+            {
+                if (renderer != null)
+                {
+                    renderer.material.SetFloat("_FlashAmount", 0);
+                }
+            }
             yield return new WaitForSeconds(time);
 
-            SetColors(defaultColor, "_EmissionColor");
+            foreach (var renderer in _renderers)
+            {
+                if (renderer != null)
+                {
+                    renderer.material.SetColor("_FlashColor", color);
+                    renderer.material.SetFloat("_FlashAmount", amount);
+                }
+            }
             yield return new WaitForSeconds(time);
         }
 
-        SetColors(defaultColor, "_EmissionColor");
+        foreach (var renderer in _renderers)
+        {
+            if (renderer != null)
+            {
+                renderer.material.SetColor("_FlashColor", color);
+                renderer.material.SetFloat("_FlashAmount", 0);
+            }
+        }
         _flashing = false;
     }
 
@@ -164,7 +170,7 @@ public class Damagable : MonoBehaviour
 
         if (flashOnHurt)
         {
-            StartCoroutine(Flash(1, 0.1f, _damageColor));
+            StartCoroutine(Flash(1, 0.1f, _damageColor, 0.25f));
         }
 
         if (audioSource && hurtSounds.Length > 0 && health > 0)
@@ -210,7 +216,13 @@ public class Damagable : MonoBehaviour
         while (timer < time)
         {
             timer += Time.deltaTime;
-            SetColors(Color.Lerp(Color.white, Color.clear, timer / time), "_Color");
+            foreach (var renderer in _renderers)
+            {
+                if (renderer != null)
+                {
+                    renderer.color = Color.Lerp(Color.white, Color.clear, timer / time);
+                }
+            }
             yield return null;
         }
 
@@ -236,35 +248,6 @@ public class Damagable : MonoBehaviour
         }
 
         //StartCoroutine(FadeOut(1, true));
-    }
-
-    //TODO: string for property
-    protected virtual void SetColors(Color color, string property)
-    {
-        foreach (var renderer in _renderers)
-        {
-            if (renderer != null)
-            {
-                if (string.IsNullOrEmpty(property))
-                {
-                    renderer.material.SetColor("_Color", color);
-                }
-                else
-                {
-                    renderer.material.SetColor(property, color);
-                }
-            }
-        }
-    }
-
-    public virtual void OnKnockUpStart()
-    {
-
-    }
-
-    public virtual void OnKnockUpEnd()
-    {
-
     }
 
     public void Knockback(float direction, float time, float distance)

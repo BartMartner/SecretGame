@@ -94,9 +94,26 @@ public class Player : Damagable
     //How long the player can hold jump and still get the hover effect
     private float _hoverTime = 3;
 
-    [Header("Suits")]
-    public bool hasPowerSuit;
+    [Header("Cold Suit")]
     public bool hasColdSuit;
+    public int coldZoneID;
+    public bool inColdZone
+    {
+        get { return coldZoneID != 0; }
+    }
+    private float _coldTime = 3;
+    private float _coldTimer;
+    public float coldRatio
+    {
+        get
+        {
+            return _coldTimer / _coldTime;
+        }
+    }
+
+    [Header("Power Suit")]
+    public bool hasPowerSuit;
+
     private Dictionary<string,Sprite> coldSuitSprites;
     private Dictionary<string, Sprite> powerSuitSprites;
 
@@ -362,6 +379,22 @@ public class Player : Damagable
         }
         #endregion
 
+        #region ColdSuit
+        if(inColdZone && !hasColdSuit)
+        {
+            _coldTimer += Time.deltaTime;
+            if(_coldTimer > _coldTime)
+            {
+                _coldTimer = 0;
+                Hurt(0.5f);
+            }
+        }
+        else
+        {
+            _coldTimer = 0;
+        }
+        #endregion
+
         if (!attacking && Input.GetButtonDown("Bomb"))
         {
             Debug.Log("Bomb Pressed");
@@ -510,7 +543,7 @@ public class Player : Damagable
 
         var result = base.Hurt(damage, source, damageType);
 
-        if (result && health > 0)
+        if (result && health > 0 && source)
         {
             var direction = transform.position.x > source.transform.position.x ? 1 : -1;
             Knockback(direction, 0.25f, 0.75f);

@@ -38,10 +38,6 @@ public class Bounder : Enemy
                 {
                     transform.position += _directionX * Vector3.right * speedX * Time.deltaTime;
                 }
-                else
-                {
-                    Debug.Log(hit.collider.gameObject.name);
-                }
 
                 if (_timer < _time * 0.5f)
                 {

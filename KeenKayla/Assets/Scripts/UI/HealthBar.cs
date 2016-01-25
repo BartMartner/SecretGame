@@ -97,7 +97,7 @@ public class HealthBar : MonoBehaviour
     {
         for (int i = 0; i < shields.Length; i++)
         {
-            if (i > Player.instance.maxHealth - 1)
+            if (i > Player.instance.maxHealth - 1 || Player.instance.shield == 0)
             {
                 shields[i].gameObject.SetActive(false);
             }

@@ -19,9 +19,13 @@ public class ColdZone : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if(Player.instance.coldZoneID == gameObject.GetInstanceID())
+        if (Player.instance.coldZoneID == gameObject.GetInstanceID())
         {
             Player.instance.coldZoneID = 0;
         }
+    }
+
+    public void OnDrawGizmos()
+    {
     }
 }

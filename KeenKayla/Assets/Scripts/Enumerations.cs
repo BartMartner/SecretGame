@@ -72,5 +72,6 @@ public enum DamageType
 {
     Generic,
     Bomb,
+    PowerSuit,
 }
 

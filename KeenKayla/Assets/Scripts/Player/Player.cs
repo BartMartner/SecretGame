@@ -39,6 +39,7 @@ public class Player : Damagable
     private bool _looking;
 
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
+    public Direction facing = Direction.Right;
 
     private bool _isHit;
 
@@ -243,10 +244,12 @@ public class Player : Damagable
             if (_xAxis < 0 && transform.rotation != _flippedFacing)
             {
                 transform.rotation = _flippedFacing;
+                facing = Direction.Left;
             }
             else if (_xAxis > 0 && transform.rotation != Quaternion.identity)
             {
                 transform.rotation = Quaternion.identity;
+                facing = Direction.Right;
             }
         }
         #endregion
@@ -409,18 +412,18 @@ public class Player : Damagable
 
         if (!attacking && Input.GetButtonDown("Bomb"))
         {
-            Debug.Log("Bomb Pressed");
             if (currentBombs > 0)
             {
                 currentBombs--;
-                if (transform.rotation == _flippedFacing)
-                {
-                    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.left);
-                }
-                else
-                {
-                    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.right);
-                }
+                ProjectileManager.instance.SpawnBomb(transform.position + transform.right * collider2D.bounds.extents.x);
+                //if (facing == Direction.Left)
+                //{
+                    
+                //}
+                //else
+                //{
+                //    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.right * collider2D.bounds.extents.x);
+                //}
             }
         }
 

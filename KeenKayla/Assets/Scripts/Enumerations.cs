@@ -75,3 +75,11 @@ public enum DamageType
     PowerSuit,
 }
 
+public enum Direction
+{
+    Up,
+    Down,
+    Left,
+    Right,
+}
+

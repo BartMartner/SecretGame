@@ -113,6 +113,8 @@ public class Player : Damagable
 
     [Header("Power Suit")]
     public bool hasPowerSuit;
+    public float shield;
+    public bool shieldHit;
 
     private Dictionary<string,Sprite> coldSuitSprites;
     private Dictionary<string, Sprite> powerSuitSprites;
@@ -398,6 +400,13 @@ public class Player : Damagable
         }
         #endregion
 
+        #region PowerSuit
+        if(hasPowerSuit && !shieldHit && !_aegisActive && shield < maxHealth)
+        {
+            shield = Mathf.MoveTowards(shield, maxHealth, Time.deltaTime * 0.5f);
+        }
+        #endregion
+
         if (!attacking && Input.GetButtonDown("Bomb"))
         {
             Debug.Log("Bomb Pressed");
@@ -425,6 +434,11 @@ public class Player : Damagable
         if (!attacking && hasMorphBall && Input.GetButtonDown("MorphBall"))
         {
             ToggleMorphball(!morphBall);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Hurt(1);
         }
     }
 
@@ -534,12 +548,21 @@ public class Player : Damagable
 
     public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
-        if (_aegisActive || state != DamagableState.Alive)
+        if (_aegisActive || state != DamagableState.Alive || (immunities != null && immunities.Contains(damageType)))
         {
             return false;
         }
 
-        if(hasPowerSuit || hasColdSuit)
+        if (hasPowerSuit && shield >= health)
+        {
+            Debug.Log("damage absorbed by shield");
+            shield -= damage;
+            StartCoroutine(Aegis(defaultAegisTime));
+            StartCoroutine(Flash(1, 0.1f, Color.cyan, 0.25f));
+            return true;            
+        }
+
+        if (hasPowerSuit || hasColdSuit)
         {
             damage = damage * 0.5f;
         }
@@ -556,6 +579,13 @@ public class Player : Damagable
         return result;
     }
 
+    private IEnumerator ShieldHit()
+    {
+        shieldHit = true;
+        yield return new WaitForSeconds(2);
+        shieldHit = false;
+    }
+
     public override void Die()
     {
         base.Die();
@@ -567,6 +597,7 @@ public class Player : Damagable
 
     public void RefreshPowerUps()
     {
+        shield = 0;
         _projectileStats = Constants.GreenBolts;
         bool hasPurple = false;
         foreach (var powerUp in SaveGameManager.instance.saveGameData.powerUpsCollected)
@@ -594,6 +625,7 @@ public class Player : Damagable
                     break;
                 case PowerUpID.PowerSuit:
                     hasPowerSuit = true;
+                    shield = maxHealth;
                     break;
                 case PowerUpID.HoverBoots:
                     hasHoverBoots = true;

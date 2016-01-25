@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DamagedByPowerSuit.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraBoundsTrigger.cs" />
@@ -68,24 +67,27 @@
     <Compile Include="Assets\Scripts\Camera\PixelPerfect.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\Damagable.cs" />
+    <Compile Include="Assets\Scripts\DamagedByPowerSuit.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bounder.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\MadMushroom.cs" />
     <Compile Include="Assets\Scripts\Enemies\PoisonSlug.cs" />
-    <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Enumerations.cs" />
     <Compile Include="Assets\Scripts\Extensions.cs" />
     <Compile Include="Assets\Scripts\FireZone.cs" />
     <Compile Include="Assets\Scripts\Gib.cs" />
-    <Compile Include="Assets\Scripts\GibManager.cs" />
     <Compile Include="Assets\Scripts\InputExtension.cs" />
     <Compile Include="Assets\Scripts\LayerConstants.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\ColdZone.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\LevelObjects\PitTrigger.cs" />
-    <Compile Include="Assets\Scripts\LightManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\DropManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GibManager.cs" />
+    <Compile Include="Assets\Scripts\PickUps\BombDrop.cs" />
     <Compile Include="Assets\Scripts\PickUps\BombUpgrade.cs" />
+    <Compile Include="Assets\Scripts\PickUps\HealthDrop.cs" />
     <Compile Include="Assets\Scripts\PickUps\HealthUpgrade.cs" />
     <Compile Include="Assets\Scripts\PickUps\Pickup.cs" />
     <Compile Include="Assets\Scripts\PickUps\PowerUp.cs" />

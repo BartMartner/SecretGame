@@ -413,7 +413,14 @@ public class Player : Damagable
             if (currentBombs > 0)
             {
                 currentBombs--;
-                ProjectileManager.instance.SpawnBomb(transform.position);
+                if (transform.rotation == _flippedFacing)
+                {
+                    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.left);
+                }
+                else
+                {
+                    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.right);
+                }
             }
         }
 

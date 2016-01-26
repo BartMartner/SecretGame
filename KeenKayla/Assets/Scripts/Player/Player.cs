@@ -6,7 +6,8 @@ public class Player : Damagable
 {
     public static Player instance;
 
-    [Header ("Player")]
+    [Header("Player")]
+    public bool ignoreSavePosition;
     public LayerMask playerLayerMask;
 
     public GameObject cameraFocus;
@@ -101,7 +102,7 @@ public class Player : Damagable
     {
         get { return coldZoneID != 0; }
     }
-    private float _coldTime = 3;
+    private float _coldTime = 1.75f;
     private float _coldTimer;
     public float coldRatio
     {
@@ -173,9 +174,9 @@ public class Player : Damagable
         base.Start();
 
         var savedPosition = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
-        if (savedPosition != Vector3.zero)
+        if (savedPosition != Vector3.zero && !ignoreSavePosition)
         {
-            //transform.position = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
+            transform.position = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
         }
 
         currentBombs = maxBombs = SaveGameManager.instance.saveGameData.bombUpgradesCollected.Count * Constants.bombsPerUpgrade;

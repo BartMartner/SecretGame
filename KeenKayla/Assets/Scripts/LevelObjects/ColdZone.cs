@@ -25,8 +25,4 @@ public class ColdZone : MonoBehaviour
             Player.instance.coldZoneID = 0;
         }
     }
-
-    public void OnDrawGizmos()
-    {
-    }
 }

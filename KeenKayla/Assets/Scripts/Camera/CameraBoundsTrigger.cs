@@ -12,11 +12,23 @@ public class CameraBoundsTrigger : MonoBehaviour
         gameObject.layer = LayerConstants.PlayerTrigger;
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _boxCollider2D.isTrigger = true;
+        Player.instance.onSpawn += OnPlayerSpawn;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        MainCamera.instance.SetLimits(_boxCollider2D.bounds, transition);
+        var reallyTrasition = transition && Vector3.Distance(Player.instance.transform.position, MainCamera.instance.transform.position) < 20;
+        MainCamera.instance.SetLimits(_boxCollider2D.bounds, reallyTrasition);        
+    }
+
+    public void OnPlayerSpawn()
+    {
+        if (_boxCollider2D.bounds.Contains(Player.instance.transform.position))
+        {
+            MainCamera.instance.SetLimits(_boxCollider2D.bounds, false);
+            MainCamera.instance.requireUpdate = true;
+        }
+        Player.instance.onSpawn -= OnPlayerSpawn;
     }
 
     public void OnDrawGizmos()

@@ -71,6 +71,7 @@ public class Player : Damagable
     public GameObject shootPointUp;
     public GameObject shootPointDown;
     public bool attacking;
+    public bool preventAttack;
 
     [Header("Bombs")]
     public int currentBombs;
@@ -123,6 +124,9 @@ public class Player : Damagable
     [Header("Player Sounds")]
     public AudioClip[] landingSounds;
 
+    public delegate void OnSpawn();
+    public OnSpawn onSpawn;
+
     protected override void Awake()
     {
         instance = this;
@@ -154,8 +158,6 @@ public class Player : Damagable
             groundedCheck = GetComponent<GroundedCheck>();
         }
 
-        RefreshPowerUps();
-
         var coldSuit = Resources.LoadAll<Sprite>("ColdSuit");
         coldSuitSprites = new Dictionary<string, Sprite>();
         foreach (var sprite in coldSuit)
@@ -163,13 +165,29 @@ public class Player : Damagable
             coldSuitSprites.Add(sprite.name, sprite);
         }
 
-
         var powerSuit = Resources.LoadAll<Sprite>("PowerSuit");
         powerSuitSprites = new Dictionary<string, Sprite>();
         foreach (var sprite in powerSuit)
         {
             powerSuitSprites.Add(sprite.name, sprite);
         }
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        var savedPosition = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
+        if (savedPosition != Vector3.zero)
+        {
+            transform.position = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
+        }
+
+        currentBombs = maxBombs = SaveGameManager.instance.saveGameData.bombUpgradesCollected.Count * Constants.bombsPerUpgrade;
+        health = maxHealth = Constants.startingHealth + SaveGameManager.instance.saveGameData.healthUpgradesCollected.Count;
+
+        RefreshPowerUps();
+        onSpawn();
     }
 
     private void FixedUpdate()
@@ -433,7 +451,7 @@ public class Player : Damagable
             ToggleMorphball(false);
         }
 
-        if (!attacking && !morphBall && Input.GetButtonDown("Attack"))
+        if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack"))
         {
             if (ToggleMorphball(false))
             {
@@ -444,11 +462,6 @@ public class Player : Damagable
         if (!attacking && hasMorphBall && Input.GetButtonDown("MorphBall"))
         {
             ToggleMorphball(!morphBall);
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Hurt(1);
         }
     }
 
@@ -561,6 +574,11 @@ public class Player : Damagable
         if (_aegisActive || state != DamagableState.Alive || (immunities != null && immunities.Contains(damageType)))
         {
             return false;
+        }
+
+        if(damageType == DamageType.Bomb)
+        {
+            damage = 1;
         }
 
         if (hasPowerSuit && shield >= health)

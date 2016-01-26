@@ -60,6 +60,8 @@ public class MainCamera : MonoBehaviour
     private IEnumerator _limitTween;
     private bool tweening;
 
+    public bool requireUpdate;
+
     private void Awake()
     {
         instance = this;
@@ -95,7 +97,7 @@ public class MainCamera : MonoBehaviour
         playerPosition = player.transform.position;
         cameraPosition = transform.position - _lastShakeOffset;
 
-        if (activeTracking && playerPosition != previousPlayerPosition)
+        if (activeTracking && (playerPosition != previousPlayerPosition || !requireUpdate))
         {
             //Get the distance of the player from the camera.
             Vector3 playerPositionDifference = playerPosition - previousPlayerPosition;
@@ -126,28 +128,22 @@ public class MainCamera : MonoBehaviour
 
                 //I made a function to figure out how much to move in order to snap the boundary to the player.
                 cameraPosition.x += DifferenceOutOfBounds(positionDifference.x, movementWindowSize.x);
-
-
                 cameraPosition.y += DifferenceOutOfBounds(positionDifference.y, movementWindowSize.y);
-
             }
         }
 
-        if (tweening || playerPosition != previousPlayerPosition)
+        // Here we clamp the desired position into the area declared in the limit variables.
+        if (limitCameraMovementY)
         {
-            // Here we clamp the desired position into the area declared in the limit variables.
-            if (limitCameraMovementY)
-            {
-                cameraPosition.y = Mathf.Clamp(cameraPosition.y, limitBottom + camera.orthographicSize, limitTop - -camera.orthographicSize);
-            }
-
-            if (limitCameraMovementX)
-            {
-                float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
-                cameraPosition.x = Mathf.Clamp(cameraPosition.x, limitLeft + halfWidth, limitRight - halfWidth);
-            }
+            cameraPosition.y = Mathf.Clamp(cameraPosition.y, limitBottom + camera.orthographicSize, limitTop - camera.orthographicSize);
         }
 
+        if (limitCameraMovementX)
+        {
+            float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
+            cameraPosition.x = Mathf.Clamp(cameraPosition.x, limitLeft + halfWidth, limitRight - halfWidth);
+        }
+        
         // and now we're updating the camera position using what came of all the calculations above.
         transform.position = cameraPosition + _shakeOffset;
 
@@ -155,6 +151,8 @@ public class MainCamera : MonoBehaviour
 
         // This draws the camera boundary rectangle
         if (showDebugBoxes) DrawDebugBox();
+
+        requireUpdate = false;
     }
 
     private static float DifferenceOutOfBounds(float differenceAxis, float windowAxis)

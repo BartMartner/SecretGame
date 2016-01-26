@@ -8,12 +8,27 @@ using System.IO;
 [Serializable]
 public class SaveGameData
 {
+    public Vector3Data savePosition;
     public DateTime lastSaved;
-    public int currentBombs;
-    public float currentHealth;
     public List<int> bombUpgradesCollected = new List<int>();
     public List<int> healthUpgradesCollected = new List<int>();
     public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
+}
+
+
+[Serializable]
+public struct Vector3Data
+{
+    public Vector3Data(float x, float y, float z)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public float x;
+    public float y;
+    public float z;
 }
 
 public class SaveGameManager : MonoBehaviour
@@ -45,14 +60,14 @@ public class SaveGameManager : MonoBehaviour
 
     public void LoadGame()
     {
-        //if (File.Exists(_saveGameFilePath))
-        //{
-        //    var bf = new BinaryFormatter();
-        //    var file = File.Open(_saveGameFilePath, FileMode.Open);
-        //    saveGameData = (SaveGameData)bf.Deserialize(file);
-        //    file.Close();
-        //}
-        //else
+        if (File.Exists(_saveGameFilePath))
+        {
+            var bf = new BinaryFormatter();
+            var file = File.Open(_saveGameFilePath, FileMode.Open);
+            saveGameData = (SaveGameData)bf.Deserialize(file);
+            file.Close();
+        }
+        else
         {
             NewGame();
         }
@@ -71,10 +86,5 @@ public class SaveGameManager : MonoBehaviour
         saveGameData.lastSaved = DateTime.Now;
         bf.Serialize(file, saveGameData);
         file.Close();
-    }
-
-    public void OnApplicationQuit()
-    {
-        SaveGame();
     }
 }

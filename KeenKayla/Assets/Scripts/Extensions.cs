@@ -5,6 +5,17 @@ using System;
 
 public static class Extensions
 {
+
+    public static Vector3Data ToVector3Data(this Vector3 vector)
+    {
+        return new Vector3Data(vector.x, vector.y, vector.z);
+    }
+
+    public static Vector3 ToVector3(this Vector3Data vector)
+    {
+        return new Vector3(vector.x, vector.y, vector.z);
+    }
+
     public static TEnum[] GetEnumValues<TEnum>()
     {
         return (TEnum[])Enum.GetValues(typeof(TEnum));

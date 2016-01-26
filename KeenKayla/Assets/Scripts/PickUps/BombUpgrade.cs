@@ -5,12 +5,20 @@ public class BombUpgrade : Pickup
 {
     public int id;
 
+    public void Awake()
+    {
+        if(SaveGameManager.instance.saveGameData.bombUpgradesCollected.Contains(id))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public override void OnPickup()
     {
         SaveGameManager.instance.saveGameData.bombUpgradesCollected.Add(id);
-        Player.instance.currentBombs += 3;
-        Player.instance.maxBombs += 3;
-        SaveGameManager.instance.SaveGame();
+        Player.instance.currentBombs += Constants.bombsPerUpgrade;
+        Player.instance.maxBombs += Constants.bombsPerUpgrade;
+        //SaveGameManager.instance.SaveGame();
         base.OnPickup();
     }
 

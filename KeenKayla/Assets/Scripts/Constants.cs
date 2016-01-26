@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Constants
+public static class Constants
 {
     public const int bombsPerUpgrade = 2;
     public const float startingHealth = 3;

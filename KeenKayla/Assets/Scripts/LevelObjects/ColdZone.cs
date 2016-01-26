@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class ColdZone : MonoBehaviour
 {
     private BoxCollider2D _boxCollider2D;

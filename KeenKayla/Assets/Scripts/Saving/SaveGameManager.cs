@@ -51,10 +51,7 @@ public class SaveGameManager : MonoBehaviour
         }
 
         _saveGameFilePath = Application.persistentDataPath + "/SaveGame.dat";
-    }
 
-    private void Start()
-    {
         LoadGame();
     }
 

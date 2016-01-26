@@ -9,12 +9,14 @@ public class SaveTrigger : MonoBehaviour
     {
         playerPresent = true;
         Player.instance.preventAttack = true;
+        UIMain.instance.ShowTextBar("Press X To Save", 0);
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
         playerPresent = false;
         Player.instance.preventAttack = false;
+        UIMain.instance.HideTextBar();
     }
 
     public void Update()
@@ -28,7 +30,9 @@ public class SaveTrigger : MonoBehaviour
     public IEnumerator Save()
     {
         playerPresent = false;
-        
+
+        UIMain.instance.ShowTextBar("Save Successful");
+
         //TODO: Play Some Animation For the Save Station
         //TODO: Play Some Animation For the Player
         var newPosition = Player.instance.transform.position;

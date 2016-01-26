@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bounder.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\LazerEye.cs" />
     <Compile Include="Assets\Scripts\Enemies\MadMushroom.cs" />
     <Compile Include="Assets\Scripts\Enemies\PoisonSlug.cs" />
     <Compile Include="Assets\Scripts\Enumerations.cs" />

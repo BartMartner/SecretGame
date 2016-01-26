@@ -84,9 +84,7 @@ public class Player : Damagable
     [Header ("MorphBall")]
     public bool hasMorphBall;
     public bool morphBall;
-    public PhysicsMaterial2D bounceBall;
-    private Vector2 _originalSize;
-    private Vector2 _ballBoundsSize;
+    public CircleCollider2D ballCollider;
 
     [Header("HoverBoots")]
     public bool hasHoverBoots;
@@ -144,9 +142,6 @@ public class Player : Damagable
         //_leftOffset = Vector3.left * _halfWidth * 0.5f;
         //_rightOffset = Vector3.right * _halfWidth * 0.5f;
 
-        _originalSize = collider2D.size;
-        _ballBoundsSize = new Vector2(0.5f, 0.5f);
-
         _animator = playerRenderer.GetComponentInChildren<Animator>();
         _defaultAcceleration = acceleration;
         _defaultMaxVelocity = maxVelocity;
@@ -180,7 +175,7 @@ public class Player : Damagable
         var savedPosition = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
         if (savedPosition != Vector3.zero)
         {
-            transform.position = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
+            //transform.position = SaveGameManager.instance.saveGameData.savePosition.ToVector3();
         }
 
         currentBombs = maxBombs = SaveGameManager.instance.saveGameData.bombUpgradesCollected.Count * Constants.bombsPerUpgrade;
@@ -495,15 +490,15 @@ public class Player : Damagable
             if(morphBall)
             {
                 pogo = false;
-                collider2D.sharedMaterial = bounceBall;
-                collider2D.size = _ballBoundsSize;
-                transform.position += Vector3.down * (_originalSize.y - _ballBoundsSize.y) * 0.5f;
+                collider2D.enabled = false;
+                ballCollider.enabled = true;                
+                transform.position += Vector3.down * (collider2D.size.y - ballCollider.radius) * 0.5f;
             }
             else
             {
-                collider2D.sharedMaterial = null;
-                collider2D.size = _originalSize;
-                transform.position += Vector3.up * (_originalSize.y - _ballBoundsSize.y) * 0.5f;
+                collider2D.enabled = true;
+                ballCollider.enabled = false;
+                transform.position += Vector3.up * (collider2D.size.y - ballCollider.radius) * 0.5f;
             }
         }
 

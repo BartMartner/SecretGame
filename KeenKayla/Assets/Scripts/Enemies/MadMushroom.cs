@@ -9,18 +9,6 @@ public class MadMushroom : Enemy
         StartCoroutine(Bounce());
     }
 
-    public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
-    {
-        if (damage < 2)
-        {
-            return false;
-        }
-        else
-        {
-            return base.Hurt(damage, source, damageType);
-        }
-    }
-
     public IEnumerator Bounce()
     {
         while (state == DamagableState.Alive)

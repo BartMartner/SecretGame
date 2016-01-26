@@ -21,7 +21,7 @@ public class Damagable : MonoBehaviour
     }
 
     public float defaultAegisTime = 0.25f;
-    public float deathTime = 1f;
+    public float deathTime = 0f;
     protected float _deathCounter;
     
     public List<DamageType> immunities;

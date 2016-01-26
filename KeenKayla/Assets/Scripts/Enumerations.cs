@@ -72,7 +72,9 @@ public enum DamageType
 {
     Generic,
     Bomb,
+    RedLazer,
     PowerSuit,
+    PurpleLazer,
 }
 
 public enum Direction

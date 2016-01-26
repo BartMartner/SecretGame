@@ -13,6 +13,7 @@ public static class Constants
         type = ProjectileType.BlasterBolt,
         team = Team.Player,
         damage = 1,
+        damageType = DamageType.Generic,
         speed = 8,
         lifeSpan = 10,
     };
@@ -22,6 +23,7 @@ public static class Constants
         type = ProjectileType.RedBlasterBolt,
         team = Team.Player,
         damage = 2,
+        damageType = DamageType.RedLazer,
         speed = 10,
         lifeSpan = 10,
     };
@@ -31,6 +33,7 @@ public static class Constants
         type = ProjectileType.PurpleBlasterBolt,
         team = Team.Player,
         damage = 3,
+        damageType = DamageType.PurpleLazer,
         speed = 10,
         homing = 0.05f,
         lifeSpan = 10,

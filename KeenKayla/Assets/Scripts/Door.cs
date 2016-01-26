@@ -13,9 +13,16 @@ public class Door : Damagable
     }
 
     public override bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
-    {        
-        boxCollider2D.enabled = false;
-        shield.gameObject.SetActive(false);
-        return true;
+    {
+        if (!immunities.Contains(damageType))
+        {
+            boxCollider2D.enabled = false;
+            shield.gameObject.SetActive(false);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

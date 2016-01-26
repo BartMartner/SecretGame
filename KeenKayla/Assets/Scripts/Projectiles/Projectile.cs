@@ -203,7 +203,7 @@ public class Projectile : MonoBehaviour
             {
                 if (damagable.state != DamagableState.Dead && damagable.state != DamagableState.Dying)
                 {
-                    damagable.Hurt(_stats.damage, gameObject);
+                    damagable.Hurt(_stats.damage, gameObject, _stats.damageType);
                     hit = true;
                 }
             }

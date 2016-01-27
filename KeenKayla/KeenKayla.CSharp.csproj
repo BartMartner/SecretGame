@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DoorTransitionTrigger.cs" />
+    <Compile Include="Assets\LazerEyeMiniBoss.cs" />
     <Compile Include="Assets\SaveTrigger.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />

@@ -15,10 +15,10 @@ public class MadMushroom : Enemy
         {
             for (int i = 0; i < 3; i++)
             {
-                var bounceHeight = 1;
+                var bounceHeight = 1f;
                 if (i == 2)
                 {
-                    bounceHeight = 2;
+                    bounceHeight = 2.5f;
                 }
 
                 var startingPosition = transform.position;

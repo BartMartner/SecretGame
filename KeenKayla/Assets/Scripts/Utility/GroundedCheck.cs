@@ -4,7 +4,6 @@ using System.Collections;
 public class GroundedCheck : MonoBehaviour
 {
     public float groundedDistance = 0.1f;
-    //public bool onOneWayPlatform;
     public bool onGround;
     public int groundFrames;
     public int groundTolerance = 12;
@@ -44,9 +43,9 @@ public class GroundedCheck : MonoBehaviour
 
     public void UpdateRaycasts()
     {
-        var offset = _halfHeight * 0.5f;
+        var offset = -_collider2D.offset.y + _halfHeight * 0.5f;
         var deltaToBottom = (_halfHeight - offset);
-        var origin = transform.position + Vector3.down * offset;
+        var origin = transform.position + new Vector3(0, -offset, 0);
         var distance = deltaToBottom + (_halfHeight * 1.5f);
 
         rightRayHit = Physics2D.Raycast(origin + _rightOffset, Vector3.down, distance, groundLayer);
@@ -75,5 +74,26 @@ public class GroundedCheck : MonoBehaviour
         {
             groundFrames--;
         }
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        _collider2D = GetComponent<BoxCollider2D>();
+        _halfHeight = _collider2D.bounds.extents.y;
+        _halfWidth = _collider2D.bounds.size.x;
+        _leftOffset = Vector3.left * _halfWidth * 0.5f;
+        _rightOffset = Vector3.right * _halfWidth * 0.5f;
+
+        var offset = -_collider2D.offset.y + _halfHeight * 0.5f;
+        var deltaToBottom = (_halfHeight - offset);
+        var origin = transform.position + new Vector3(0, -offset, 0);
+        var distance = deltaToBottom + (_halfHeight * 1.5f);
+
+        var right = origin + _rightOffset;
+        var middle = origin;
+        var left = origin + _leftOffset;
+        Debug.DrawLine(right, right + Vector3.down * distance);
+        Debug.DrawLine(middle, middle + Vector3.down * distance);
+        Debug.DrawLine(left, left + Vector3.down * distance);
     }
 }

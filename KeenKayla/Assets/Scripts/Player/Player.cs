@@ -216,7 +216,7 @@ public class Player : Damagable
             _airControlMod = 1f;
         }
 
-        if (!_looking && !_isHit && (!attacking || !groundedCheck.onGround))
+        if (!_disableMovement && !_looking && !_isHit && (!attacking || !groundedCheck.onGround))
         {
             if (_xAxis != 0)
             {
@@ -378,8 +378,11 @@ public class Player : Damagable
     {
         base.UpdateAlive();
 
-        _xAxis = Input.GetAxis("Horizontal");
-        _yAxis = Input.GetAxis("Vertical");
+        if (!_disableMovement)
+        {
+            _xAxis = Input.GetAxis("Horizontal");
+            _yAxis = Input.GetAxis("Vertical");
+        }
 
         #region Looking
         if (Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f)
@@ -430,14 +433,6 @@ public class Player : Damagable
             {
                 currentBombs--;
                 ProjectileManager.instance.SpawnBomb(transform.position + transform.right * collider2D.bounds.extents.x);
-                //if (facing == Direction.Left)
-                //{
-                    
-                //}
-                //else
-                //{
-                //    ProjectileManager.instance.SpawnBomb(transform.position + Vector3.right * collider2D.bounds.extents.x);
-                //}
             }
         }
 

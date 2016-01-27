@@ -90,7 +90,7 @@ GameObject:
   - 61: {fileID: 6166410}
   - 114: {fileID: 11400726}
   m_Layer: 11
-  m_Name: TransitionTriggerLeft
+  m_Name: DoorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ GameObject:
   - 61: {fileID: 6121510}
   - 114: {fileID: 11473230}
   m_Layer: 11
-  m_Name: TransitionTriggerRight
+  m_Name: DoorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

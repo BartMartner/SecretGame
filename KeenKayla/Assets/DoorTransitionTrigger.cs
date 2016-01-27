@@ -6,6 +6,7 @@ public class DoorTransitionTrigger : MonoBehaviour
     public BoxCollider2D trigger;
     public Transform exitPoint;
     public Door door;
+    public GameObject[] destroyOnTransition;
     public DoorTransitionTrigger connectedTrigger;
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +22,16 @@ public class DoorTransitionTrigger : MonoBehaviour
     private IEnumerator Transition()
     {
         connectedTrigger.trigger.enabled = false;
-        connectedTrigger.door.Open();
+
+        if (connectedTrigger.door)
+        {
+            connectedTrigger.door.Open();
+        }
+
+        foreach (var go in connectedTrigger.destroyOnTransition)
+        {
+            Destroy(go);
+        }
 
         Player.instance.rigidbody2D.isKinematic = true;
         Player.instance.DisableMovement();
@@ -36,7 +46,15 @@ public class DoorTransitionTrigger : MonoBehaviour
         Player.instance.EnableMovement();
 
         connectedTrigger.trigger.enabled = true;
-        connectedTrigger.door.Close();
-        door.Close();
+
+        if (connectedTrigger.door)
+        {
+            connectedTrigger.door.Close();
+        }
+
+        if (door)
+        {
+            door.Close();
+        }
     }
 }

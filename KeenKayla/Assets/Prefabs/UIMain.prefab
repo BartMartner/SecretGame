@@ -472,7 +472,6 @@ GameObject:
   - 224: {fileID: 22498502}
   - 222: {fileID: 22274170}
   - 114: {fileID: 11453210}
-  - 114: {fileID: 11440922}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1053,17 +1052,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11440922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f4e5cf71c1c8d4098d03d4ad05ca71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11443018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1196,7 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

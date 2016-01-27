@@ -11,13 +11,24 @@ public class Door : Damagable
     {
         if (!immunities.Contains(damageType))
         {
-            boxCollider2D.enabled = false;
-            shield.gameObject.SetActive(false);
+            Open();
             return true;
         }
         else
         {
             return false;
         }
+    }
+
+    public void Open()
+    {
+        boxCollider2D.enabled = false;
+        shield.gameObject.SetActive(false);
+    }
+
+    public void Close()
+    {
+        boxCollider2D.enabled = true;
+        shield.gameObject.SetActive(true);
     }
 }

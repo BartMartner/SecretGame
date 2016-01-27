@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MadMushroom : Enemy
 {
+    public float offset = 0f;
+
     protected override void Start()
     {
         base.Start();
@@ -11,6 +13,8 @@ public class MadMushroom : Enemy
 
     public IEnumerator Bounce()
     {
+        yield return new WaitForSeconds(offset);
+
         while (state == DamagableState.Alive)
         {
             for (int i = 0; i < 3; i++)

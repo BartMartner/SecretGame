@@ -11,8 +11,8 @@ public class BombCount : MonoBehaviour
 
     private void Start()
     {
-        _bombText = GetComponentInChildren<Text>();
         _bombImage = GetComponentInChildren<Image>();
+        _bombText = GetComponentInChildren<Text>();
         SetBombs();
     }
 

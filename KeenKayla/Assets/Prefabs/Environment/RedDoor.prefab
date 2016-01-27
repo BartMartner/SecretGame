@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 440378}
   - 212: {fileID: 21214706}
-  m_Layer: 19
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,8 +25,25 @@ GameObject:
   m_Component:
   - 4: {fileID: 400100}
   - 212: {fileID: 21258824}
-  m_Layer: 19
+  m_Layer: 8
   m_Name: Interior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &166424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 494654}
+  - 61: {fileID: 6122996}
+  - 251: {fileID: 25122324}
+  m_Layer: 0
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +59,7 @@ GameObject:
   - 4: {fileID: 415956}
   - 114: {fileID: 11409782}
   - 61: {fileID: 6194742}
-  m_Layer: 19
+  m_Layer: 8
   m_Name: RedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 454942}
   - 212: {fileID: 21236190}
-  m_Layer: 19
+  m_Layer: 8
   m_Name: Exterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.469, y: 0.18799996, z: 0}
+  m_LocalPosition: {x: 0.47, y: 1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415956}
@@ -84,12 +101,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454942}
   - {fileID: 400100}
   - {fileID: 440378}
+  - {fileID: 494654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &440378
@@ -99,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.344, y: 0.25, z: 0}
+  m_LocalPosition: {x: -0.66, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415956}
@@ -111,11 +129,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.531, y: 0.21899986, z: 0}
+  m_LocalPosition: {x: -0.47, y: 1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415956}
   m_RootOrder: 0
+--- !u!4 &494654
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.25, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 415956}
+  m_RootOrder: 3
+--- !u!61 &6122996
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6194742
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -124,12 +168,12 @@ BoxCollider2D:
   m_GameObject: {fileID: 185362}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c36aa227cadf9e44b8312d8d0af86965, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1, y: -1}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.375, y: 2}
+  m_Size: {x: 1.5, y: 2}
 --- !u!114 &11409782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +190,7 @@ MonoBehaviour:
   maxHealth: 0
   defaultAegisTime: 0.25
   deathTime: 1
-  immunities: 0000000001000000
+  immunities: 00000000
   gibs: 0
   gibAmount: 6
   destroyOnDeath: 0
@@ -157,7 +201,7 @@ MonoBehaviour:
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
-  boxCollider2D: {fileID: 0}
+  boxCollider2D: {fileID: 6122996}
   shield: {fileID: 121920}
 --- !u!212 &21214706
 SpriteRenderer:
@@ -249,13 +293,39 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!251 &25122324
+PlatformEffector2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166424}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: immunities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300006, guid: 4cc3670ed54ee054dbb0456f504bdbc5,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 185362}

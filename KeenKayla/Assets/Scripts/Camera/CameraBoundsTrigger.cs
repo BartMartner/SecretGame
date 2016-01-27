@@ -18,7 +18,7 @@ public class CameraBoundsTrigger : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         var reallyTrasition = transition && Vector3.Distance(Player.instance.transform.position, MainCamera.instance.transform.position) < 20;
-        MainCamera.instance.SetLimits(_boxCollider2D.bounds, reallyTrasition);        
+        MainCamera.instance.SetLimits(_boxCollider2D.bounds, reallyTrasition);
     }
 
     public void OnPlayerSpawn()
@@ -43,9 +43,29 @@ public class CameraBoundsTrigger : MonoBehaviour
         Vector3 topRight = new Vector3(_boxCollider2D.bounds.max.x, _boxCollider2D.bounds.max.y, 0);
         Vector3 topLeft = new Vector3(_boxCollider2D.bounds.min.x, _boxCollider2D.bounds.max.y, 0);
 
-        Debug.DrawLine(bottomLeft, bottomRight, Color.yellow);
-        Debug.DrawLine(bottomRight, topRight, Color.yellow);
-        Debug.DrawLine(topRight, topLeft, Color.yellow);
-        Debug.DrawLine(topLeft, bottomLeft, Color.yellow);
+        var color = Color.yellow * 0.5f;
+        Debug.DrawLine(bottomLeft, bottomRight, color);
+        Debug.DrawLine(bottomRight, topRight, color);
+        Debug.DrawLine(topRight, topLeft, color);
+        Debug.DrawLine(topLeft, bottomLeft, color);
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        if (!_boxCollider2D)
+        {
+            _boxCollider2D = GetComponent<BoxCollider2D>();
+        }
+
+        Vector3 bottomLeft = new Vector3(_boxCollider2D.bounds.min.x, _boxCollider2D.bounds.min.y, 0);
+        Vector3 bottomRight = new Vector3(_boxCollider2D.bounds.max.x, _boxCollider2D.bounds.min.y, 0);
+        Vector3 topRight = new Vector3(_boxCollider2D.bounds.max.x, _boxCollider2D.bounds.max.y, 0);
+        Vector3 topLeft = new Vector3(_boxCollider2D.bounds.min.x, _boxCollider2D.bounds.max.y, 0);
+
+        var color = Color.yellow;
+        Debug.DrawLine(bottomLeft, bottomRight, color);
+        Debug.DrawLine(bottomRight, topRight, color);
+        Debug.DrawLine(topRight, topLeft, color);
+        Debug.DrawLine(topLeft, bottomLeft, color);
     }
 }

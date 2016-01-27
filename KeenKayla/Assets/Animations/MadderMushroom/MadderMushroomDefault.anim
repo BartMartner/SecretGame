@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MadMushroomDefault
+  m_Name: MadderMushroomDefault
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 27506ca5e82b3cf4cbcb77f46566cc16, type: 3}
     - time: 0.2
-      value: {fileID: 21300002, guid: 6ef4a96e82bce69469ca3ef3637f254e, type: 3}
+      value: {fileID: 21300002, guid: 27506ca5e82b3cf4cbcb77f46566cc16, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,7 +41,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 27506ca5e82b3cf4cbcb77f46566cc16, type: 3}
-    - {fileID: 21300002, guid: 6ef4a96e82bce69469ca3ef3637f254e, type: 3}
+    - {fileID: 21300002, guid: 27506ca5e82b3cf4cbcb77f46566cc16, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

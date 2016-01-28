@@ -16,7 +16,8 @@ public class DoorTransitionTrigger : MonoBehaviour
 
     public void Awake()
     {
-        parentScene = transform.root.name;
+        parentScene = transform.root.name.ToLowerInvariant();
+        targetScene = targetScene.ToLowerInvariant();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -50,12 +51,13 @@ public class DoorTransitionTrigger : MonoBehaviour
             var scene = SceneManager.GetSceneByName(targetScene);
             SceneManager.SetActiveScene(scene);
 
-            var doorTriggers = FindObjectsOfType<DoorTransitionTrigger>().Where(t => Vector3.Distance(t.transform.position, transform.position) < 0.1f && t.parentScene == targetScene);
-            Debug.Log("Found " + doorTriggers.Count() + " door triggers");
-
             yield return null;
 
-            connectedTrigger = doorTriggers.First();
+            var doorTriggers = FindObjectsOfType<DoorTransitionTrigger>();
+            Debug.Log("Found " + doorTriggers.Count() + " door triggers");
+            var validTriggers = doorTriggers.Where(t => Vector3.Distance(t.transform.position, transform.position) < 0.25f && t.parentScene == targetScene);
+            Debug.Log("Found " + validTriggers.Count() + "valid door triggers");
+            connectedTrigger = validTriggers.First();
         }
 
         connectedTrigger.trigger.enabled = false;

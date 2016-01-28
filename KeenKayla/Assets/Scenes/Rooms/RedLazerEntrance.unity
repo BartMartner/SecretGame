@@ -303,6 +303,60 @@ Transform:
   - {fileID: 102869847}
   m_Father: {fileID: 2113165581}
   m_RootOrder: 1
+--- !u!1001 &492132740
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 851303704}
+    m_Modifications:
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 109822, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: m_Name
+      value: DoorLeft (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438198, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+      propertyPath: targetScene
+      value: RedLazerSave
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &492132741 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
+  m_PrefabInternal: {fileID: 492132740}
 --- !u!1 &703118727
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentScene: 
-  targetScene: 
+  targetScene: RedLazerSave
   trigger: {fileID: 703118729}
   exitPoint: {fileID: 1756301218}
   door: {fileID: 0}
@@ -365,8 +419,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1756301218}
-  m_Father: {fileID: 2113165581}
-  m_RootOrder: 3
+  m_Father: {fileID: 851303704}
+  m_RootOrder: 1
 --- !u!1 &762338964
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +476,37 @@ BoxCollider2D:
   m_Offset: {x: 5, y: -4}
   serializedVersion: 2
   m_Size: {x: 10, y: 7.999996}
+--- !u!1 &851303703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 851303704}
+  m_Layer: 0
+  m_Name: Doors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851303704
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 851303703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1066434057}
+  - {fileID: 703118730}
+  - {fileID: 492132741}
+  - {fileID: 1094897195}
+  m_Father: {fileID: 2113165581}
+  m_RootOrder: 3
 --- !u!1 &877803130
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +656,106 @@ SpriteRenderer:
   m_Color: {r: 0.65882355, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1066434056
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 851303704}
+    m_Modifications:
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483532, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+      propertyPath: targetScene
+      value: FirstColdRoom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1066434057 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 439994, guid: fd220a69ef3c03049b71bc54f1f8a016, type: 2}
+  m_PrefabInternal: {fileID: 1066434056}
+--- !u!1001 &1094897194
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 851303704}
+    m_Modifications:
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403520, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+      propertyPath: targetScene
+      value: RedLazerRoom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1094897195 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
+  m_PrefabInternal: {fileID: 1094897194}
 --- !u!1 &1407856218
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1659612018
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,6 +1414,6 @@ Transform:
   - {fileID: 1659612018}
   - {fileID: 159047982}
   - {fileID: 762338965}
-  - {fileID: 703118730}
+  - {fileID: 851303704}
   m_Father: {fileID: 0}
   m_RootOrder: 0

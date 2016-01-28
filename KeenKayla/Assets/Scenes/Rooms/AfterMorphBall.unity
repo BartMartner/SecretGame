@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11403520, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
       propertyPath: targetScene
@@ -226,33 +226,6 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0.0627451, b: 0.32156864, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &210645304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 155806, guid: 648eb6b2b3f1bd64cbc910d10d51033f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 210645305}
-  m_Layer: 8
-  m_Name: Exit
-  m_TagString: Untagged
-  m_Icon: {fileID: -2663371497217273435, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &210645305
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 453566, guid: 648eb6b2b3f1bd64cbc910d10d51033f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 210645304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.125, y: -0.5, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 521243656}
-  m_RootOrder: 0
 --- !u!1 &251457725
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,71 +349,60 @@ SpriteRenderer:
 Transform:
   m_PrefabParentObject: {fileID: 430966, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
   m_PrefabInternal: {fileID: 647276779}
---- !u!1 &521243653
-GameObject:
+--- !u!1001 &507612456
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 102060, guid: 648eb6b2b3f1bd64cbc910d10d51033f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 521243656}
-  - 61: {fileID: 521243655}
-  - 114: {fileID: 521243654}
-  m_Layer: 11
-  m_Name: DoorLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &521243654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11454634, guid: 648eb6b2b3f1bd64cbc910d10d51033f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 521243653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b9b3e311eb78f4a8f10c500d96e3ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentScene: 
-  targetScene: MorphBallRoom
-  trigger: {fileID: 521243655}
-  exitPoint: {fileID: 210645305}
-  door: {fileID: 0}
-  destroyOnTransition:
-  - {fileID: 251457725}
-  connectedTrigger: {fileID: 0}
---- !u!61 &521243655
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6129854, guid: 648eb6b2b3f1bd64cbc910d10d51033f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 521243653}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.25, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 2}
---- !u!4 &521243656
+  m_Modification:
+    m_TransformParent: {fileID: 922594086}
+    m_Modifications:
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486178, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: destroyOnTransition.Array.data[0]
+      value: 
+      objectReference: {fileID: 251457725}
+    - target: {fileID: 11486178, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+      propertyPath: targetScene
+      value: MorphBallRoom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &521243656 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 486964, guid: 648eb6b2b3f1bd64cbc910d10d51033f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 521243653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.01, y: -6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 210645305}
-  m_Father: {fileID: 595386601}
-  m_RootOrder: 5
+  m_PrefabParentObject: {fileID: 467898, guid: 3cd01601a9eaefe4f9965c6bb5a05964, type: 2}
+  m_PrefabInternal: {fileID: 507612456}
 --- !u!1 &595386600
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +433,6 @@ Transform:
   - {fileID: 825487988}
   - {fileID: 251457726}
   - {fileID: 922594086}
-  - {fileID: 521243656}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &647276779
@@ -768,6 +729,7 @@ Transform:
   m_LocalPosition: {x: 30, y: 22.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 521243656}
   - {fileID: 118419474}
   m_Father: {fileID: 595386601}
   m_RootOrder: 4

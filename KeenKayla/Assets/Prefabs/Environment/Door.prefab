@@ -423,7 +423,7 @@ MonoBehaviour:
   maxHealth: 0
   defaultAegisTime: 0.25
   deathTime: 1
-  immunities: 0000000001000000
+  immunities: 
   gibs: 0
   gibAmount: 6
   destroyOnDeath: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   maxHealth: 0
   defaultAegisTime: 0.25
   deathTime: 1
-  immunities: 0000000001000000
+  immunities: 
   gibs: 0
   gibAmount: 6
   destroyOnDeath: 0
@@ -594,7 +594,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: immunities.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder

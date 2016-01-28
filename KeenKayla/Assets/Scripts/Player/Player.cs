@@ -242,7 +242,7 @@ public class Player : Damagable
         }
         else 
         {
-            if (hasColdSuit || !inColdZone)
+            if (hasColdSuit || !inColdZone || _disableMovement)
             {
                 velocity.x = 0;
             }
@@ -379,11 +379,16 @@ public class Player : Damagable
     {
         base.UpdateAlive();
 
-        if (!_disableMovement)
+        if(_disableMovement)
         {
-            _xAxis = Input.GetAxis("Horizontal");
-            _yAxis = Input.GetAxis("Vertical");
+            aiming = 0;
+            _looking = false;
+            _coldTimer = 0;
+            return;
         }
+
+        _xAxis = Input.GetAxis("Horizontal");
+        _yAxis = Input.GetAxis("Vertical");
 
         #region Looking
         if (Mathf.Abs(_yAxis) > 0.25f && Mathf.Abs(_xAxis) < 0.2f)

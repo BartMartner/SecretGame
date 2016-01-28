@@ -62,10 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DoorTransitionTrigger.cs" />
-    <Compile Include="Assets\LazerEyeMiniBoss.cs" />
-    <Compile Include="Assets\MadderMushroom.cs" />
-    <Compile Include="Assets\SaveTrigger.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraBoundsTrigger.cs" />
@@ -75,10 +71,13 @@
     <Compile Include="Assets\Scripts\Damagable.cs" />
     <Compile Include="Assets\Scripts\DamagedByPowerSuit.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\DoorTransitionTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bounder.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\LazerEye.cs" />
+    <Compile Include="Assets\Scripts\Enemies\LazerEyeMiniBoss.cs" />
     <Compile Include="Assets\Scripts\Enemies\MadMushroom.cs" />
+    <Compile Include="Assets\Scripts\Enemies\MadderMushroom.cs" />
     <Compile Include="Assets\Scripts\Enemies\PoisonSlug.cs" />
     <Compile Include="Assets\Scripts\Enumerations.cs" />
     <Compile Include="Assets\Scripts\Extensions.cs" />
@@ -107,6 +106,7 @@
     <Compile Include="Assets\Scripts\Projectiles\ProjectileStats.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Shooter.cs" />
     <Compile Include="Assets\Scripts\Saving\SaveGameManager.cs" />
+    <Compile Include="Assets\Scripts\Saving\SaveTrigger.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\UI\BombCount.cs" />
     <Compile Include="Assets\Scripts\UI\BossBar.cs" />

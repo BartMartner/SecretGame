@@ -184,9 +184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b9b3e311eb78f4a8f10c500d96e3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentScene: 
+  targetScene: 
   trigger: {fileID: 6178352}
   exitPoint: {fileID: 498734}
   door: {fileID: 11459612}
+  destroyOnTransition: []
   connectedTrigger: {fileID: 0}
 --- !u!114 &11459612
 MonoBehaviour:

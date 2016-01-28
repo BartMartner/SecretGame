@@ -58,7 +58,14 @@ public class MainCamera : MonoBehaviour
     private Vector3 _lastShakeOffset;
 
     private IEnumerator _limitTween;
-    private bool tweening;
+    private bool _tweening;
+    public bool tweening
+    {
+        get
+        {
+            return _tweening;
+        }
+    }
 
     public bool requireUpdate;
 
@@ -297,7 +304,7 @@ public class MainCamera : MonoBehaviour
 
     private IEnumerator TweenLimits(float leftLimit, float rightLimit, float bottomLimit, float topLimit)
     {
-        tweening = true;
+        _tweening = true;
         limitCameraMovementX = true;
         limitCameraMovementY = true;
 
@@ -318,30 +325,50 @@ public class MainCamera : MonoBehaviour
             {
                 done = false;
                 limitLeft = Mathf.MoveTowards(limitLeft, leftLimit, speed);
+
+                if (cameraPosition.x - halfWidth - 1 > limitLeft && limitRight > limitLeft)
+                {
+                    limitLeft = leftLimit;
+                }
             }
 
             if (rightLimit != limitRight)
             {
                 done = false;
                 limitRight = Mathf.MoveTowards(limitRight, rightLimit, speed);
+
+                if(cameraPosition.x + halfWidth + 1 < limitRight && limitRight > limitLeft)
+                {
+                    limitRight = rightLimit;
+                }
             }
 
             if (bottomLimit != limitBottom)
             {
                 done = false;
                 limitBottom = Mathf.MoveTowards(limitBottom, bottomLimit, speed);
+
+                if (cameraPosition.y - camera.orthographicSize -1 > limitBottom)
+                {
+                    limitBottom = bottomLimit;
+                }
             }
 
             if (topLimit != limitTop)
             {
                 done = false;
                 limitTop = Mathf.MoveTowards(limitTop, topLimit, speed);
+
+                if (cameraPosition.y + camera.orthographicSize + 1 < limitTop)
+                {
+                    limitTop = topLimit;
+                }
             }
 
             yield return null;
         }
 
-        tweening = false;
+        _tweening = false;
         ValidateLeftAndRightLimits();
         ValidateTopAndBottomLimits();
     }

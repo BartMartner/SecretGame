@@ -613,13 +613,17 @@ public class Player : Damagable
         cameraFocus.transform.parent = null;
         collider2D.enabled = false;
         rigidbody2D.velocity = Vector3.up * 5 + Vector3.right * 1.3f;
+    }
 
-
+    public override void OnDeath()
+    {
+        base.OnDeath();
+        StartCoroutine(RestartAfterDeath());
     }
 
     public IEnumerator RestartAfterDeath()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

@@ -212,10 +212,10 @@ MonoBehaviour:
   maxHealth: 0
   defaultAegisTime: 0.25
   deathTime: 0
-  immunities: 
+  immunities: 00000000
   gibs: 0
   gibAmount: 6
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
   deathSounds: []
@@ -294,6 +294,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: immunities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
@@ -314,6 +318,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7e6fed29891afab46935fb2ec9b82c8c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: destroyOnDeath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159802}

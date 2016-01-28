@@ -5,7 +5,6 @@ public class DamagedByPowerSuit : MonoBehaviour
 {
     public float amount = 1;
     public Damagable damagable;
-    public Collider2D collider;
     public bool fromTop = true;
     public bool fromLeft = true;
     public bool fromBottom = true;
@@ -17,16 +16,11 @@ public class DamagedByPowerSuit : MonoBehaviour
         {
             damagable = GetComponent<Damagable>();
         }
-
-        if(!collider)
-        {
-            collider = GetComponent<Collider2D>();
-        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == Player.instance.gameObject)
+        if (collision.gameObject == Player.instance.gameObject && Player.instance.hasPowerSuit)
         {
             Damage();
         }
@@ -34,7 +28,7 @@ public class DamagedByPowerSuit : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == Player.instance.gameObject)
+        if (collision.gameObject == Player.instance.gameObject && Player.instance.hasPowerSuit)
         {
             Damage();
         }

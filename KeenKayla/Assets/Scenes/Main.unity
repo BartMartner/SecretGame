@@ -37305,7 +37305,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11461916, guid: e21047e372fa1bc4b9aa1b6bc93fce89, type: 2}
       propertyPath: ignoreSavePosition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11461916, guid: e21047e372fa1bc4b9aa1b6bc93fce89, type: 2}
       propertyPath: hasColdSuit
@@ -44396,6 +44396,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 830614504}
     m_Modifications:
+    - target: {fileID: 11414596, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
+      propertyPath: immunities.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 402018, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11.57
@@ -44439,6 +44443,10 @@ Prefab:
     - target: {fileID: 159802, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
       propertyPath: m_Name
       value: MadderMushroom (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414596, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
+      propertyPath: destroyOnDeath
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -52484,7 +52492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 1
   damagable: {fileID: 2033012395}
-  collider: {fileID: 2033012397}
   fromTop: 0
   fromLeft: 0
   fromBottom: 1

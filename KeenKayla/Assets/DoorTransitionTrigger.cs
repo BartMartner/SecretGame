@@ -36,7 +36,7 @@ public class DoorTransitionTrigger : MonoBehaviour
         Player.instance.rigidbody2D.isKinematic = true;
         Player.instance.DisableMovement();
 
-        while (Player.instance.transform.position != connectedTrigger.exitPoint.position)
+        while (Vector3.Distance(Player.instance.transform.position, connectedTrigger.exitPoint.position) > 0.25)
         {
             Player.instance.transform.position = Vector3.MoveTowards(Player.instance.transform.position, connectedTrigger.exitPoint.position, Time.deltaTime * 3);
             yield return false;

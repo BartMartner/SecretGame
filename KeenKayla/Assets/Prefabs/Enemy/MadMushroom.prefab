@@ -121,11 +121,11 @@ MonoBehaviour:
   health: 1
   maxHealth: 0
   defaultAegisTime: 0.25
-  deathTime: 1
+  deathTime: 0
   immunities: 00000000
   gibs: 0
   gibAmount: 6
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
   deathSounds: []
@@ -134,6 +134,7 @@ MonoBehaviour:
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
   dropChance: 0.75
+  offset: 0
 --- !u!114 &11491742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +192,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7929a9a4c676c0148a6d093229f9522e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: destroyOnDeath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: deathTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138906}

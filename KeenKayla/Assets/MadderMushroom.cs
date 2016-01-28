@@ -13,10 +13,6 @@ public class MadderMushroom : Enemy
         StartCoroutine(JumpCheck());
     }
 
-    protected override void UpdateAlive()
-    {
-    }
-
     private IEnumerator JumpCheck()
     {
         yield return new WaitForSeconds(Random.Range(0, 2f));

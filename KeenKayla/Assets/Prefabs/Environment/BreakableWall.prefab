@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6156710}
   - 251: {fileID: 25126722}
   - 114: {fileID: 11407246}
+  - 114: {fileID: 11477966}
   m_Layer: 0
   m_Name: BreakableWall
   m_TagString: Untagged
@@ -72,6 +73,24 @@ MonoBehaviour:
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
+--- !u!114 &11477966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b990299cba5acda4b91b47404062c7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  damagable: {fileID: 11407246}
+  collider: {fileID: 6156710}
+  fromTop: 0
+  fromLeft: 0
+  fromBottom: 1
+  fromRight: 0
 --- !u!212 &21277256
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +144,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: damagable
+      value: 
+      objectReference: {fileID: 11407246}
+    - target: {fileID: 0}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 6156710}
+    - target: {fileID: 0}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186818}

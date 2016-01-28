@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DamagedByPowerSuit : MonoBehaviour
 {
-    public float amount;
+    public float amount = 1;
     public Damagable damagable;
     public Collider2D collider;
     public bool fromTop = true;

@@ -12,7 +12,7 @@ GameObject:
   - 58: {fileID: 5851140}
   - 114: {fileID: 11465068}
   m_Layer: 0
-  m_Name: HealthUpgrade 1
+  m_Name: HealthUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

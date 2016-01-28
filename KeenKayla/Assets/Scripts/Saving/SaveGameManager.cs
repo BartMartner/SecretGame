@@ -4,11 +4,13 @@ using System.Collections;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class SaveGameData
 {
     public Vector3Data savePosition;
+    public string lastRoom;
     public DateTime lastSaved;
     public List<int> bombUpgradesCollected = new List<int>();
     public List<int> healthUpgradesCollected = new List<int>();
@@ -68,11 +70,18 @@ public class SaveGameManager : MonoBehaviour
         {
             NewGame();
         }
+
+        if (!Player.instance.ignoreSavePosition)
+        {
+            SceneManager.LoadScene(saveGameData.lastRoom, LoadSceneMode.Additive);
+        }
     }
 
     public void NewGame()
     {
         saveGameData = new SaveGameData();
+        saveGameData.savePosition = new Vector3Data(0, 3, 0);
+        saveGameData.lastRoom = "Entryway";
         SaveGame();
     }
 

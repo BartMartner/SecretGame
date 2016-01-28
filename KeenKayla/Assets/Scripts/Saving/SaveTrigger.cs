@@ -41,6 +41,7 @@ public class SaveTrigger : MonoBehaviour
         Player.instance.health = Player.instance.maxHealth;
         Player.instance.currentBombs = Player.instance.maxBombs;
         SaveGameManager.instance.saveGameData.savePosition = Player.instance.transform.position.ToVector3Data();
+        SaveGameManager.instance.saveGameData.lastRoom = transform.root.name;
         SaveGameManager.instance.SaveGame();
 
         yield return null;

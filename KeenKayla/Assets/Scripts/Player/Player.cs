@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Player : Damagable
 {
@@ -612,6 +613,14 @@ public class Player : Damagable
         cameraFocus.transform.parent = null;
         collider2D.enabled = false;
         rigidbody2D.velocity = Vector3.up * 5 + Vector3.right * 1.3f;
+
+
+    }
+
+    public IEnumerator RestartAfterDeath()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void RefreshPowerUps()

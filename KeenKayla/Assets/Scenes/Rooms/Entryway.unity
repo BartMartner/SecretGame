@@ -5689,6 +5689,10 @@ Prefab:
       propertyPath: connectedTrigger
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11482774, guid: a6710e4aa598ece47b80141515f40344, type: 2}
+      propertyPath: targetScene
+      value: MorphballRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6710e4aa598ece47b80141515f40344, type: 2}
   m_IsPrefabParent: 0

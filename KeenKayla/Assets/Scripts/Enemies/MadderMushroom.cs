@@ -21,7 +21,10 @@ public class MadderMushroom : Enemy
         while (state == DamagableState.Alive)
         {           
             var v = rigidbody2D.velocity;
-            v.x = 5 * Mathf.Sign(Player.instance.transform.position.x - transform.position.x);
+            if (Vector3.Distance(Player.instance.transform.position, transform.position) < 6)
+            {
+                v.x = 5 * Mathf.Sign(Player.instance.transform.position.x - transform.position.x);
+            }
 
             if (shouldJump)
             {

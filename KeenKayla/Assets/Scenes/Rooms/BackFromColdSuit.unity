@@ -438,7 +438,7 @@ Transform:
   - {fileID: 609354389}
   - {fileID: 1029591892}
   m_Father: {fileID: 768756726}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1001 &609354388
 Prefab:
   m_ObjectHideFlags: 0
@@ -609,9 +609,9 @@ Transform:
   - {fileID: 108795514}
   - {fileID: 1191609469}
   - {fileID: 378130073}
-  - {fileID: 923288219}
   - {fileID: 1597053828}
   - {fileID: 443492602}
+  - {fileID: 923288219}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &773900600
@@ -653,7 +653,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 21247728, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7929a9a4c676c0148a6d093229f9522e, type: 2}
@@ -668,6 +668,10 @@ Prefab:
     - target: {fileID: 24944436, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
       propertyPath: m_UseGlobalAngle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 443036, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
@@ -718,6 +722,10 @@ Prefab:
     - target: {fileID: 108082, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
       propertyPath: m_Name
       value: LazerEye (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 443036, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
@@ -821,7 +829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401738, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 401738, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_LocalScale.x
@@ -935,7 +943,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 21247728, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7929a9a4c676c0148a6d093229f9522e, type: 2}
@@ -1394,7 +1402,7 @@ Transform:
   - {fileID: 1709473105}
   - {fileID: 1094623230}
   m_Father: {fileID: 768756726}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1605532534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1676,10 @@ Prefab:
     - target: {fileID: 421786, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 443036, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}

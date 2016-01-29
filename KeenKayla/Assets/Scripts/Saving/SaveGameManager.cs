@@ -57,6 +57,14 @@ public class SaveGameManager : MonoBehaviour
         LoadGame();
     }
 
+    public void Start()
+    {
+        if (!Player.instance.ignoreSavePosition)
+        {
+            SceneManager.LoadScene(saveGameData.lastRoom, LoadSceneMode.Additive);
+        }
+    }
+
     public void LoadGame()
     {
         if (File.Exists(_saveGameFilePath))
@@ -69,11 +77,6 @@ public class SaveGameManager : MonoBehaviour
         else
         {
             NewGame();
-        }
-
-        if (!Player.instance.ignoreSavePosition)
-        {
-            SceneManager.LoadScene(saveGameData.lastRoom, LoadSceneMode.Additive);
         }
     }
 

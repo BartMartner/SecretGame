@@ -30,7 +30,7 @@ public class Gib : MonoBehaviour
 
     public void Spawn(GibType gType, Vector3 origin, float force, float lifeSpan)
     {
-        transform.parent = null;
+        //transform.parent = null;
         transform.position = origin;
         _lifeSpan = lifeSpan;
         _lifeCounter = 0;

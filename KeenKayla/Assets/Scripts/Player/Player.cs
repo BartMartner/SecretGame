@@ -184,7 +184,11 @@ public class Player : Damagable
         health = maxHealth = Constants.startingHealth + SaveGameManager.instance.saveGameData.healthUpgradesCollected.Count;
 
         RefreshPowerUps();
-        onSpawn();
+
+        if (onSpawn != null)
+        {
+            onSpawn();
+        }
     }
 
     private void FixedUpdate()

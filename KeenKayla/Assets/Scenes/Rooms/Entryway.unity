@@ -2810,9 +2810,9 @@ Transform:
   - {fileID: 626902500}
   - {fileID: 1729916498}
   - {fileID: 522454955}
+  - {fileID: 1449411395}
   - {fileID: 2003515411}
   - {fileID: 1717658798}
-  - {fileID: 1449411395}
   - {fileID: 187250158}
   - {fileID: 57086347}
   - {fileID: 1529379806}
@@ -7776,11 +7776,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499340000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -7.5, z: 0}
+  m_LocalPosition: {x: 16.5, y: -5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 840320881}
+  m_RootOrder: 56
 --- !u!1 &500537011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9832,7 +9832,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 146204, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
       propertyPath: m_Name
-      value: HealthUpgrade0
+      value: HealthUpgrade1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465068, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
+      propertyPath: id
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
@@ -13969,6 +13973,7 @@ Transform:
   - {fileID: 795931371}
   - {fileID: 648987533}
   - {fileID: 2031367696}
+  - {fileID: 499340002}
   m_Father: {fileID: 1529379806}
   m_RootOrder: 2
 --- !u!1 &847929955
@@ -24061,7 +24066,7 @@ Transform:
   - {fileID: 112612789}
   - {fileID: 1754198258}
   m_Father: {fileID: 162538889}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1 &1455278153
 GameObject:
   m_ObjectHideFlags: 0

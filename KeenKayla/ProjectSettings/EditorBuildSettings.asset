@@ -6,9 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Rooms/AfterMorphBall.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/AltPurpleLazerPath.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/BackFromColdSuit.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/BackToPogo.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/ColdSuitHoverFork.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/ColdSuitRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/ColdSuitSaveRoomFork.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/EarlyHealthUpgrade.unity
   - enabled: 1
@@ -16,8 +26,64 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/FirstBombRoom.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/FirstColdRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/FungusAreaSaveRoom.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/HallIntoPowerArmorArea.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HallToHoverBoots.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootDrop.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootFall.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootGate.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootHealthUpgrade.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootRoom.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/MorphballRoom.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/PostMorphballCold.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerArmorFork.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerArmorHoverBootClimb.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerArmorSave.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuit.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuitChallengeHall.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuitHeartTank.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuitLock.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuitRestock.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PreviewOfFinalLair.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PurpleChallengeHall.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PurpleLazerRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PurpleRestock.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PurpleSave.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/RedLazerBombUpgrade.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/RedLazerClimb.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/RedLazerEntrance.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/RedLazerRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/RedLazerSave.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/SaveNearSecondBombs.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/SecondBombs.unity

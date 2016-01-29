@@ -1411,6 +1411,10 @@ Prefab:
       propertyPath: m_Name
       value: HealthUpgrade 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11465068, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
+      propertyPath: id
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
   m_IsPrefabParent: 0

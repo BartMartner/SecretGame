@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 420168}
   - 212: {fileID: 21291850}
   m_Layer: 8
-  m_Name: New Sprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   m_Layer: 8
   m_Name: LazerEyeMiniBoss
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   immunities: 
   gibs: 0
   gibAmount: 6
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
   deathSounds: []

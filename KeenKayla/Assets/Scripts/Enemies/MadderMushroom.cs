@@ -64,4 +64,10 @@ public class MadderMushroom : Enemy
             yield return null;
         }
     }
+
+    public override void OnImmune(DamageType damageType)
+    {
+        Flash(1, 0.25f, Color.green, 0.5f);
+        base.OnImmune(damageType);
+    }
 }

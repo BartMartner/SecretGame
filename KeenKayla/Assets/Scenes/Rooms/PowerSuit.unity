@@ -356,13 +356,13 @@ Transform:
   m_Children:
   - {fileID: 1981785226}
   - {fileID: 1540190226}
+  - {fileID: 790792480}
   - {fileID: 107667565}
   - {fileID: 1521877376}
-  - {fileID: 790792480}
   - {fileID: 1950255336}
+  - {fileID: 1565614648}
   - {fileID: 1669527622}
   - {fileID: 2123652786}
-  - {fileID: 1565614648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &498649805
@@ -441,7 +441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 391678908}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &886338663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ Transform:
   - {fileID: 1865878009}
   - {fileID: 498649806}
   m_Father: {fileID: 391678908}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1001 &1669527621
 Prefab:
   m_ObjectHideFlags: 0
@@ -1205,7 +1205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401738, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_Color.r

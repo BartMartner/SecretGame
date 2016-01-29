@@ -345,8 +345,8 @@ Transform:
   - {fileID: 1643933501}
   - {fileID: 1570201993}
   - {fileID: 1368732192}
-  - {fileID: 943569573}
   - {fileID: 1462578796}
+  - {fileID: 943569573}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1146734851
@@ -536,7 +536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473922, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11438198, guid: db99751ad71a8044c9432d22f78db98d, type: 2}
       propertyPath: targetScene

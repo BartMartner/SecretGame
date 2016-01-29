@@ -714,7 +714,7 @@ Transform:
   - {fileID: 712531958}
   - {fileID: 1280025338}
   m_Father: {fileID: 1827461736}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &780133557
 Prefab:
   m_ObjectHideFlags: 0
@@ -1207,7 +1207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406500, guid: 9059605cab695104f927169c77227fbd, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11489108, guid: 9059605cab695104f927169c77227fbd, type: 2}
       propertyPath: direction.y
@@ -1256,8 +1256,8 @@ Transform:
   - {fileID: 519572532}
   - {fileID: 2039466620}
   - {fileID: 293718781}
-  - {fileID: 1800215881}
   - {fileID: 752936487}
+  - {fileID: 1800215881}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1913053285

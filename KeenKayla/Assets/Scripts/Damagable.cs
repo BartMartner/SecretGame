@@ -156,8 +156,14 @@ public class Damagable : MonoBehaviour
 
     public virtual bool Hurt(float damage, GameObject source = null, DamageType damageType = DamageType.Generic)
     {
-        if (_aegisActive || state != DamagableState.Alive || (immunities != null && immunities.Contains(damageType)))
+        if (_aegisActive || state != DamagableState.Alive)
         {
+            return false;
+        }
+
+        if ((immunities != null && immunities.Contains(damageType)))
+        {
+            OnImmune(damageType);
             return false;
         }
 
@@ -179,6 +185,11 @@ public class Damagable : MonoBehaviour
         }
 
         return true;
+    }
+
+    public virtual void OnImmune(DamageType damageType)
+    {
+
     }
 
     public virtual void Die()

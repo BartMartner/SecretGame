@@ -410,7 +410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445854, guid: af7e111a690fca24d9530f8beef8781a, type: 2}
       propertyPath: targetScene
-      value: ColdSuitSaveRoomFork
+      value: FungusPreColdSuit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7e111a690fca24d9530f8beef8781a, type: 2}

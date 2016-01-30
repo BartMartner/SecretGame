@@ -14,11 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/BackToPogo.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/ColdSuitHoverFork.unity
+    path: Assets/Scenes/Rooms/FungusMushroomJumps.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/ColdSuitRoom.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/ColdSuitSaveRoomFork.unity
+    path: Assets/Scenes/Rooms/FungusPreColdSuit.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/EarlyHealthUpgrade.unity
   - enabled: 1

@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1127180451}
   m_Layer: 0
-  m_Name: ColdSuitSaveRoomFork
+  m_Name: FungusPreColdSuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445854, guid: af7e111a690fca24d9530f8beef8781a, type: 2}
       propertyPath: targetScene
-      value: ColdSuitHoverFork
+      value: FungusMushroomJumps
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7e111a690fca24d9530f8beef8781a, type: 2}

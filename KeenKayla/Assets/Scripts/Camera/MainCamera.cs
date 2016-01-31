@@ -147,7 +147,7 @@ public class MainCamera : MonoBehaviour
 
         if (limitCameraMovementX)
         {
-            float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
+            float halfWidth = (320f / 240f) * camera.orthographicSize;
             cameraPosition.x = Mathf.Clamp(cameraPosition.x, limitLeft + halfWidth, limitRight - halfWidth);
         }
         
@@ -311,7 +311,7 @@ public class MainCamera : MonoBehaviour
         // Clamp the current limits to the current window (TODO: or new limits)
         limitTop = cameraPosition.y + camera.orthographicSize;
         limitBottom = cameraPosition.y - camera.orthographicSize;
-        float halfWidth = ((float)Screen.width / (float)Screen.height) * camera.orthographicSize;
+        float halfWidth = (320f / 240f) * camera.orthographicSize;
         limitRight = cameraPosition.x + halfWidth;
         limitLeft = cameraPosition.x - halfWidth;
 

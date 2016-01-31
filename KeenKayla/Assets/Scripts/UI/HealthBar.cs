@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
         int i = 0;
         foreach (var heart in hearts)
         {
-            Material mat = new Material(Shader.Find("Sprites/DefaultFlash"));
+            Material mat = new Material(Shader.Find("Sprites/DefaultFlashUI"));
             mat.name = "heart" + i;
             heart.material = mat;
             i++;

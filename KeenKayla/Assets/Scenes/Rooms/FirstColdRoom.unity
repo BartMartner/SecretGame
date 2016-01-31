@@ -149,7 +149,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 45247948}
   - 212: {fileID: 45247950}
-  - 68: {fileID: 45247949}
+  - 61: {fileID: 45247951}
+  - 251: {fileID: 45247949}
   m_Layer: 0
   m_Name: Collision (16)
   m_TagString: Untagged
@@ -169,21 +170,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 18
---- !u!68 &45247949
-EdgeCollider2D:
+--- !u!251 &45247949
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45247947}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &45247950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,6 +217,20 @@ SpriteRenderer:
   m_Color: {r: 0.6691177, g: 1, b: 0.98630834, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &45247951
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45247947}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1001 &135326460
 Prefab:
   m_ObjectHideFlags: 0
@@ -559,7 +576,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 441940680}
   - 212: {fileID: 441940682}
-  - 68: {fileID: 441940681}
+  - 61: {fileID: 441940683}
+  - 251: {fileID: 441940681}
   m_Layer: 0
   m_Name: Collision (13)
   m_TagString: Untagged
@@ -579,21 +597,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 15
---- !u!68 &441940681
-EdgeCollider2D:
+--- !u!251 &441940681
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 441940679}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &441940682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -624,6 +644,20 @@ SpriteRenderer:
   m_Color: {r: 0.5921569, g: 0.06666667, b: 0.06666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &441940683
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441940679}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1001 &608372512
 Prefab:
   m_ObjectHideFlags: 0
@@ -749,7 +783,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 802402044}
   - 212: {fileID: 802402046}
-  - 68: {fileID: 802402045}
+  - 61: {fileID: 802402047}
+  - 251: {fileID: 802402045}
   m_Layer: 0
   m_Name: Collision (15)
   m_TagString: Untagged
@@ -769,21 +804,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 17
---- !u!68 &802402045
-EdgeCollider2D:
+--- !u!251 &802402045
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802402043}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &802402046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -814,6 +851,20 @@ SpriteRenderer:
   m_Color: {r: 0.6691177, g: 1, b: 0.98630834, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &802402047
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802402043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &804740700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1111,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1100854608}
   - 212: {fileID: 1100854610}
-  - 68: {fileID: 1100854609}
+  - 61: {fileID: 1100854611}
+  - 251: {fileID: 1100854609}
   m_Layer: 0
   m_Name: Collision (12)
   m_TagString: Untagged
@@ -1080,21 +1132,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 14
---- !u!68 &1100854609
-EdgeCollider2D:
+--- !u!251 &1100854609
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1100854607}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &1100854610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1125,6 +1179,20 @@ SpriteRenderer:
   m_Color: {r: 0.65882355, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1100854611
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1100854607}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1170565506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1202,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1170565507}
   - 212: {fileID: 1170565509}
-  - 68: {fileID: 1170565508}
+  - 61: {fileID: 1170565510}
+  - 251: {fileID: 1170565508}
   m_Layer: 0
   m_Name: Collision (14)
   m_TagString: Untagged
@@ -1154,21 +1223,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 16
---- !u!68 &1170565508
-EdgeCollider2D:
+--- !u!251 &1170565508
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170565506}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &1170565509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1199,6 +1270,20 @@ SpriteRenderer:
   m_Color: {r: 0.6691177, g: 1, b: 0.98630834, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1170565510
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170565506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1254907208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1424,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1362183761}
   - 212: {fileID: 1362183763}
-  - 68: {fileID: 1362183762}
+  - 61: {fileID: 1362183764}
+  - 251: {fileID: 1362183762}
   m_Layer: 0
   m_Name: Collision (8)
   m_TagString: Untagged
@@ -1359,21 +1445,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 10
---- !u!68 &1362183762
-EdgeCollider2D:
+--- !u!251 &1362183762
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362183760}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &1362183763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1404,6 +1492,20 @@ SpriteRenderer:
   m_Color: {r: 0.65882355, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1362183764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362183760}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1578228043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1862,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1922274694}
   - 212: {fileID: 1922274696}
-  - 68: {fileID: 1922274695}
+  - 61: {fileID: 1922274697}
+  - 251: {fileID: 1922274695}
   m_Layer: 0
   m_Name: Collision (11)
   m_TagString: Untagged
@@ -1780,21 +1883,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 13
---- !u!68 &1922274695
-EdgeCollider2D:
+--- !u!251 &1922274695
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1922274693}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &1922274696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1825,6 +1930,20 @@ SpriteRenderer:
   m_Color: {r: 0.65882355, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1922274697
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922274693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &1946681321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +2094,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2114783806}
   - 212: {fileID: 2114783808}
-  - 68: {fileID: 2114783807}
+  - 61: {fileID: 2114783809}
+  - 251: {fileID: 2114783807}
   m_Layer: 0
   m_Name: Collision (7)
   m_TagString: Untagged
@@ -1995,21 +2115,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1278166664}
   m_RootOrder: 9
---- !u!68 &2114783807
-EdgeCollider2D:
+--- !u!251 &2114783807
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2114783805}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &2114783808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2040,6 +2162,20 @@ SpriteRenderer:
   m_Color: {r: 0.65882355, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &2114783809
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114783805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_Offset: {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &2139919601
 GameObject:
   m_ObjectHideFlags: 0

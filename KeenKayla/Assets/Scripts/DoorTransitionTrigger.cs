@@ -48,7 +48,7 @@ public class DoorTransitionTrigger : MonoBehaviour
                 yield return null;
             }
 
-            var scene = SceneManager.GetSceneByName(targetScene);
+            var scene = SceneManager.GetSceneByName("Core");
             SceneManager.SetActiveScene(scene);
 
             yield return null;

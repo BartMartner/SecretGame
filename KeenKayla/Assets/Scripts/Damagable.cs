@@ -27,7 +27,7 @@ public class Damagable : MonoBehaviour
     public List<DamageType> immunities;
     public GibType gibs;
     public int gibAmount = 6;
-    public bool destroyOnDeath;
+    public bool destroyOnDeath = true;
 
     [Header("Sounds")]
     public AudioSource audioSource;

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bearkeloid.cs" />
+    <Compile Include="Assets\Faller.cs" />
     <Compile Include="Assets\PixelPerfectScreen.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />

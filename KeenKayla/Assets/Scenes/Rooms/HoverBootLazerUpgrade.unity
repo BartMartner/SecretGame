@@ -987,11 +987,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179980, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}
       propertyPath: m_Name
-      value: LazerPowerUpgrade3
+      value: LazerPowerUpgrade4
       objectReference: {fileID: 0}
     - target: {fileID: 11450690, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}
       propertyPath: id
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}

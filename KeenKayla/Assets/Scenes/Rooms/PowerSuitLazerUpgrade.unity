@@ -266,7 +266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 418656, guid: b2f9a9b7d02248e4b81112a2b69eba5c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421216, guid: b2f9a9b7d02248e4b81112a2b69eba5c, type: 2}
       propertyPath: targetScene
@@ -320,11 +320,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11450690, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}
       propertyPath: id
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 179980, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}
       propertyPath: m_Name
-      value: LazerPowerUpgrade1
+      value: LazerPowerUpgrade6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14c4b2e879c1b1f439226067e322db1b, type: 2}

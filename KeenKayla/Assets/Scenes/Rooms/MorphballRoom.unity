@@ -203,15 +203,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 629320642}
     m_Modifications:
     - target: {fileID: 499244, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20.5
+      value: 28.5
       objectReference: {fileID: 0}
     - target: {fileID: 499244, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -29
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 499244, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -235,7 +235,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499244, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11458268, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
       propertyPath: wanderRange
@@ -244,6 +244,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &138830046 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 499244, guid: 20f507c642b2fed498792d1097066ee8, type: 2}
+  m_PrefabInternal: {fileID: 138830045}
 --- !u!1001 &141176676
 Prefab:
   m_ObjectHideFlags: 0
@@ -573,6 +577,7 @@ Transform:
   m_Children:
   - {fileID: 425620334}
   - {fileID: 77987676}
+  - {fileID: 138830046}
   m_Father: {fileID: 1860433757}
   m_RootOrder: 5
 --- !u!1 &823500656
@@ -908,7 +913,7 @@ GameObject:
   - 4: {fileID: 1010941456}
   - 61: {fileID: 1010941458}
   - 114: {fileID: 1010941457}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraBoundsTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 2270504221434485236, guid: 0000000000000000d000000000000000, type: 0}
@@ -948,7 +953,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 19, y: -5.25}
   serializedVersion: 2

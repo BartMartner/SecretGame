@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\DamagedByPowerSuit.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\DoorTransitionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Bearkeloid.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bounder.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Faller.cs" />
@@ -126,7 +127,6 @@
     <Compile Include="Assets\Scripts\Utility\LookAt.cs" />
     <Compile Include="Assets\Scripts\Utility\NoPushing.cs" />
     <Compile Include="Assets\Scripts\Utility\Utilities.cs" />
-    <Compile Include="Assets\Sprites\Enemies\Bearkeloid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\SpriteDefaultFlash.shader" />

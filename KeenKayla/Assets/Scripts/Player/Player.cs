@@ -460,11 +460,11 @@ public class Player : Damagable
 
         if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack") && lazerPower >= 1)
         {
-            lazerPower -= 1;
             if (ToggleMorphball(false))
             {
                 StartCoroutine(Attack());
             }
+            lazerPower -= 1;
         }
 
         if(!attacking && lazerPower < maxLazerPower)
@@ -542,15 +542,36 @@ public class Player : Damagable
         attacking = true;
         if (aiming == 0)
         {
-            ProjectileManager.instance.Shoot(_projectileStats, shootPoint.transform.position, transform.right);
+            if (lazerPower >= 4)
+            {
+                ProjectileManager.instance.ArcShoot(_projectileStats, shootPoint.transform.position, transform.right, 3, 15);
+            }
+            else
+            {
+                ProjectileManager.instance.Shoot(_projectileStats, shootPoint.transform.position, transform.right);
+            }
         }
         else if(aiming > 0)
         {
-            ProjectileManager.instance.Shoot(_projectileStats, shootPointUp.transform.position, transform.up);
+            if (lazerPower >= 4)
+            {
+                ProjectileManager.instance.ArcShoot(_projectileStats, shootPoint.transform.position, transform.up, 3, 15);
+            }
+            else
+            {
+                ProjectileManager.instance.Shoot(_projectileStats, shootPointUp.transform.position, transform.up);
+            }
         }
         else if (!groundedCheck.onGround)
         {
-            ProjectileManager.instance.Shoot(_projectileStats, shootPointDown.transform.position, -transform.up);
+            if (lazerPower >= 4)
+            {
+                ProjectileManager.instance.ArcShoot(_projectileStats, shootPoint.transform.position, -transform.up, 3, 15);
+            }
+            else
+            {
+                ProjectileManager.instance.Shoot(_projectileStats, shootPointDown.transform.position, -transform.up);
+            }
             yield return new WaitForFixedUpdate();
             rigidbody2D.AddForce(Vector3.up * 2, ForceMode2D.Impulse);
         }

@@ -6800,10 +6800,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 899956385}
     m_Modifications:
-    - target: {fileID: 11414596, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
-      propertyPath: immunities.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 402018, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11.57
@@ -6836,24 +6832,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11426182, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426182, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
-      propertyPath: onGround
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 159802, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
       propertyPath: m_Name
       value: MadderMushroom (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 11414596, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
-      propertyPath: destroyOnDeath
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 701c946b18cda7443aad924f64a5a959, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1754371184 stripped

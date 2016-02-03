@@ -14,7 +14,7 @@ public class LazerPowerBar : MonoBehaviour
     public Color purpleColor;
 
     private float _lastMax;
-
+    private bool _flashing;
 
     public void Start()
     {
@@ -33,6 +33,33 @@ public class LazerPowerBar : MonoBehaviour
         }
 
         _lastMax = Player.instance.maxLazerPower;
+
+        if(Player.instance.lazerPower >= 4 && !_flashing)
+        {
+            _flashing = true;
+            StartCoroutine(Flash());
+        }
+    }
+
+    public IEnumerator Flash()
+    {
+        var originalColor = fill.color;
+        var flashColor = originalColor;
+        flashColor.g += 0.5f;
+        flashColor.r += 0.5f;
+        flashColor.b += 0.25f;
+
+        while (Player.instance.lazerPower >= 4)
+        {
+            fill.color = flashColor;
+            yield return new WaitForSeconds(0.1f);
+
+            fill.color = originalColor;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        OnRefreshPowerUp();
+        _flashing = false;
     }
 
     public void OnRefreshPowerUp()

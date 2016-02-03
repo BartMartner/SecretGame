@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Faller : Enemy
 {
+    [Header ("Faller")]
+    public Sprite aboutToFallSprite;
     public LayerMask explosionLayerMask;
-    private Collider2D _collider2D;
     private Rigidbody2D _rigidbody2D;
     private bool _falling;
     private float _halfHeight;
@@ -13,7 +14,6 @@ public class Faller : Enemy
     {
         base.Awake();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _collider2D = GetComponent<Collider2D>();
         _halfHeight = _collider2D.bounds.extents.y + 0.125f;
     }
 
@@ -63,7 +63,11 @@ public class Faller : Enemy
 
     private IEnumerator WaitThenFall()
     {
-        yield return new WaitForSeconds(0.25f);
+        animator.enabled = false;
+        _renderers[0].sprite = aboutToFallSprite;
+        yield return new WaitForSeconds(0.4f);
+        animator.enabled = true;
         _rigidbody2D.isKinematic = false;
+        animator.SetTrigger("Fall");
     }
 }

@@ -391,9 +391,35 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11478744, guid: 24c1a72c22cf07642bb936beeab5844e, type: 2}
+      propertyPath: aboutToFallSprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 0512fe5a986c1c34f84282738c519da3,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24c1a72c22cf07642bb936beeab5844e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &425620332 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 166586, guid: 24c1a72c22cf07642bb936beeab5844e, type: 2}
+  m_PrefabInternal: {fileID: 425620331}
+--- !u!95 &425620333
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 425620332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ce1a2ebbf7062745b25a21ff9a88324, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &823500656
 GameObject:
   m_ObjectHideFlags: 0

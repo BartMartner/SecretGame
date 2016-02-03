@@ -5,6 +5,7 @@ public static class Constants
 {
     public const int bombsPerUpgrade = 5;
     public const float startingHealth = 3;
+    public const float startingLazerPower = 3;
 
     public static LayerMask terrain = LayerMask.GetMask("Default", "OneWayPlatform", "DamagableTerrain");
 

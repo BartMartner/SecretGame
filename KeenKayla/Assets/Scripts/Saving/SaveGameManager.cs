@@ -14,6 +14,7 @@ public class SaveGameData
     public DateTime lastSaved;
     public List<int> bombUpgradesCollected = new List<int>();
     public List<int> healthUpgradesCollected = new List<int>();
+    public List<int> lazerPowerUpgradesCollected = new List<int>();
     public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
 }
 
@@ -73,6 +74,11 @@ public class SaveGameManager : MonoBehaviour
             var file = File.Open(_saveGameFilePath, FileMode.Open);
             saveGameData = (SaveGameData)bf.Deserialize(file);
             file.Close();
+
+            if(saveGameData.lazerPowerUpgradesCollected == null)
+            {
+                saveGameData.lazerPowerUpgradesCollected = new List<int>();
+            }
         }
         else
         {

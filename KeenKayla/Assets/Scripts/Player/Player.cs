@@ -74,6 +74,9 @@ public class Player : Damagable
     public GameObject shootPointDown;
     public bool attacking;
     public bool preventAttack;
+    public float lazerPower;
+    public float maxLazerPower;
+
 
     [Header("Bombs")]
     public int currentBombs;
@@ -126,6 +129,9 @@ public class Player : Damagable
 
     public delegate void OnSpawn();
     public OnSpawn onSpawn;
+
+    public delegate void OnRefreshPowerUps();
+    public OnRefreshPowerUps onRefreshPowerUps;
 
     protected override void Awake()
     {
@@ -181,8 +187,8 @@ public class Player : Damagable
         }
 
         currentBombs = maxBombs = SaveGameManager.instance.saveGameData.bombUpgradesCollected.Count * Constants.bombsPerUpgrade;
-        health = maxHealth = Constants.startingHealth + SaveGameManager.instance.saveGameData.healthUpgradesCollected.Count;
-
+        health = maxHealth = Constants.startingLazerPower + SaveGameManager.instance.saveGameData.healthUpgradesCollected.Count;
+        lazerPower = maxLazerPower = Constants.startingLazerPower + SaveGameManager.instance.saveGameData.lazerPowerUpgradesCollected.Count;
         RefreshPowerUps();
 
         if (onSpawn != null)
@@ -452,12 +458,18 @@ public class Player : Damagable
             ToggleMorphball(false);
         }
 
-        if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack"))
+        if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack") && lazerPower >= 1)
         {
+            lazerPower -= 1;
             if (ToggleMorphball(false))
             {
                 StartCoroutine(Attack());
             }
+        }
+
+        if(!attacking && lazerPower < maxLazerPower)
+        {
+            lazerPower += Mathf.Min(maxLazerPower-lazerPower, Time.deltaTime);
         }
 
         if (!attacking && hasMorphBall && Input.GetButtonDown("MorphBall"))
@@ -673,5 +685,11 @@ public class Player : Damagable
                     break;
             }
         }
+
+        if (onRefreshPowerUps != null)
+        {
+            onRefreshPowerUps();
+        }
     }
+
 }

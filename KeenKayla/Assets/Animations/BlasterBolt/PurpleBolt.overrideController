@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PurpleBolt
+  m_Controller: {fileID: 9100000, guid: 54c49ff5d8068cb47a1061001bf22293, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 77b3f21035ba1e44094999be4a81731c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 21a8c29a84dbe9642be5e3ad84300ce5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 07c93806296900b4a8964b8b26c05af9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0d7faace86f605b4895744239a19c749, type: 2}

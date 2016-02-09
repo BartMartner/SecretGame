@@ -156,7 +156,7 @@ MonoBehaviour:
   deathTime: 1
   immunities: 
   gibs: 0
-  gibAmount: 6
+  gibAmount: 10
   destroyOnDeath: 0
   audioSource: {fileID: 0}
   hurtSounds: []
@@ -249,6 +249,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7929a9a4c676c0148a6d093229f9522e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: gibs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gibAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 185482}

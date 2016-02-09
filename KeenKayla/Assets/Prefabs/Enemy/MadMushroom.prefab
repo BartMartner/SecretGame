@@ -123,8 +123,8 @@ MonoBehaviour:
   defaultAegisTime: 0.25
   deathTime: 0
   immunities: 00000000
-  gibs: 0
-  gibAmount: 6
+  gibs: 2
+  gibAmount: 12
   destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
@@ -199,6 +199,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: deathTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gibs
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gibAmount
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

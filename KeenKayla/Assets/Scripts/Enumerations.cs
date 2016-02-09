@@ -47,6 +47,7 @@ public enum GibType
 {
     None = 0,
     BrownRock = 1,
+    Meat = 2,
 }
 
 public enum Possibility

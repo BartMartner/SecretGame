@@ -865,8 +865,8 @@ MonoBehaviour:
   defaultAegisTime: 0.1
   deathTime: 0
   immunities: 
-  gibs: 0
-  gibAmount: 6
+  gibs: 2
+  gibAmount: 4
   destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
@@ -1406,6 +1406,14 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 9529694}
+    - target: {fileID: 0}
+      propertyPath: gibs
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gibAmount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108082}

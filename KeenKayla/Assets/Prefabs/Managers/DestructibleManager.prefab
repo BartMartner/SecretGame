@@ -47,6 +47,17 @@ MonoBehaviour:
   - {fileID: 11422632, guid: 959d9974d0c91aa4d90a1def4221b585, type: 2}
   - {fileID: 11437236, guid: 19e8f44980647f44caacb27f12ec3761, type: 2}
   - {fileID: 11404108, guid: 640aba897bdb4ec44ad5d44e0f0fbff7, type: 2}
+  MeatGibs:
+  - {fileID: 11453254, guid: 6baa2cc838cb05a4eb7d2ffedc17c867, type: 2}
+  - {fileID: 11402082, guid: db6e99043b48b284c9ed90ff7b58c2e4, type: 2}
+  - {fileID: 11455412, guid: 0e9ebdea178f5d242881c37653f59585, type: 2}
+  - {fileID: 11424224, guid: 5c517d4517801194eba4be0f6d94fc6a, type: 2}
+  - {fileID: 11410984, guid: e6631c779fcb5f34fa3b397c88027f88, type: 2}
+  - {fileID: 11497350, guid: af2834f35eac47245a2507dc9d3f12b8, type: 2}
+  - {fileID: 11408318, guid: faf0f2dd939ad354c9c76f87a04135eb, type: 2}
+  - {fileID: 11490002, guid: 58e5f583c7406864bb0a567a94c07629, type: 2}
+  - {fileID: 11482686, guid: 4f3ecf5018711044fb653938866e7384, type: 2}
+  - {fileID: 11496056, guid: 4a89cd8a5df0aaa4a9038e6b071a8f65, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ public class PowerUp : Pickup
 {
     public PowerUpID powerUpType;
 
-    public void Awake()
+    public void Start()
     {
         if (SaveGameManager.instance.saveGameData.powerUpsCollected.Contains(powerUpType))
         {

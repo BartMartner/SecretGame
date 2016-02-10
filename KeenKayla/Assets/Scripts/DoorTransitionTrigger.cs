@@ -34,6 +34,7 @@ public class DoorTransitionTrigger : MonoBehaviour
     {
         Player.instance.rigidbody2D.isKinematic = true;
         Player.instance.DisableMovement();
+        Player.instance.lockAnimator = true;
         trigger.enabled = false;
 
         var loadNewScene = false;
@@ -60,6 +61,7 @@ public class DoorTransitionTrigger : MonoBehaviour
             connectedTrigger = validTriggers.First();
         }
 
+        connectedTrigger.StopAllCoroutines();
         connectedTrigger.trigger.enabled = false;
 
         if (connectedTrigger.door)
@@ -74,24 +76,28 @@ public class DoorTransitionTrigger : MonoBehaviour
 
         while (Vector3.Distance(Player.instance.transform.position, connectedTrigger.exitPoint.position) > 0.25)
         {
-            Player.instance.transform.position = Vector3.MoveTowards(Player.instance.transform.position, connectedTrigger.exitPoint.position, Time.unscaledDeltaTime * 3);
+            Player.instance.transform.position = Vector3.MoveTowards(Player.instance.transform.position, connectedTrigger.exitPoint.position, Time.unscaledDeltaTime * 2.5f);
             yield return false;
         }
-
-        while(MainCamera.instance.tweening)
-        {
-            yield return false;
-        }
-
-        Player.instance.rigidbody2D.isKinematic = false;
-        Player.instance.EnableMovement();
-
-        connectedTrigger.trigger.enabled = true;
 
         if (connectedTrigger.door)
         {
             connectedTrigger.door.Close();
         }
+
+        connectedTrigger.door.locked = true;
+
+        Player.instance.rigidbody2D.isKinematic = false;
+        Player.instance.EnableMovement();
+        Player.instance.lockAnimator = false;
+
+        while (MainCamera.instance.tweening)
+        {
+            yield return false;
+        }
+
+        connectedTrigger.door.locked = false;
+        connectedTrigger.trigger.enabled = true; 
 
         if(loadNewScene)
         {

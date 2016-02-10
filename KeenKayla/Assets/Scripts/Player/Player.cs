@@ -133,6 +133,8 @@ public class Player : Damagable
     public delegate void OnRefreshPowerUps();
     public OnRefreshPowerUps onRefreshPowerUps;
 
+    public bool lockAnimator;
+
     protected override void Awake()
     {
         instance = this;
@@ -524,16 +526,19 @@ public class Player : Damagable
     }
 
     public void UpdateAnimator()
-    {        
-        _animator.SetBool("Moving", _xAxis != 0);
-        _animator.SetBool("Grounded", groundedCheck.onGround);
-        _animator.SetBool("Shooting", attacking);
-        _animator.SetFloat("VelocityY", rigidbody2D.velocity.y);
-        _animator.SetBool("Pogo", pogo);
-        _animator.SetBool("MorphBall", morphBall);
-        _animator.SetFloat("Aiming", aiming);
-        _animator.SetBool("LookingUp", _looking && aiming > 0);
-        _animator.SetBool("LookingDown", _looking && aiming < 0);
+    {
+        if (!lockAnimator)
+        {
+            _animator.SetBool("Moving", _xAxis != 0);
+            _animator.SetBool("Grounded", groundedCheck.onGround);
+            _animator.SetBool("Shooting", attacking);
+            _animator.SetFloat("VelocityY", rigidbody2D.velocity.y);
+            _animator.SetBool("Pogo", pogo);
+            _animator.SetBool("MorphBall", morphBall);
+            _animator.SetFloat("Aiming", aiming);
+            _animator.SetBool("LookingUp", _looking && aiming > 0);
+            _animator.SetBool("LookingDown", _looking && aiming < 0);
+        }
     }
 
     private IEnumerator Attack()

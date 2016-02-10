@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485918}
@@ -368,7 +368,7 @@ MonoBehaviour:
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
-  ignoreSavePosition: 0
+  ignoreSavePosition: 1
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -391,6 +391,8 @@ MonoBehaviour:
   shootPointDown: {fileID: 166748}
   attacking: 0
   preventAttack: 0
+  lazerPower: 0
+  maxLazerPower: 0
   currentBombs: 0
   maxBombs: 0
   hasPogo: 0
@@ -408,6 +410,7 @@ MonoBehaviour:
   shield: 0
   shieldHit: 0
   landingSounds: []
+  lockAnimator: 0
 --- !u!114 &11474128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1983,7 +1986,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300038, guid: df237488adc3ff04292f072dc9f15212, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df237488adc3ff04292f072dc9f15212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

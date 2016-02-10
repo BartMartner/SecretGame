@@ -5,7 +5,7 @@ public class LazerPowerUpgrade : Pickup
 {
     public int id;
 
-    public void Awake()
+    public void Start()
     {
         if (SaveGameManager.instance.saveGameData.lazerPowerUpgradesCollected.Contains(id))
         {

@@ -610,6 +610,52 @@ Transform:
   - {fileID: 475972251}
   m_Father: {fileID: 1944462799}
   m_RootOrder: 0
+--- !u!1001 &1504951892
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1944462799}
+    m_Modifications:
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1504951893 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 431200, guid: 6af678cdbf67a9241ba19d2959e58398, type: 2}
+  m_PrefabInternal: {fileID: 1504951892}
 --- !u!1001 &1919610822
 Prefab:
   m_ObjectHideFlags: 0
@@ -684,6 +730,7 @@ Transform:
   - {fileID: 1465799739}
   - {fileID: 1919610823}
   - {fileID: 170292497}
+  - {fileID: 1504951893}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &2124907978

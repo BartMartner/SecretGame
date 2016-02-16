@@ -83,9 +83,8 @@ public class DoorTransitionTrigger : MonoBehaviour
         if (connectedTrigger.door)
         {
             connectedTrigger.door.Close();
+            connectedTrigger.door.locked = true;
         }
-
-        connectedTrigger.door.locked = true;
 
         Player.instance.rigidbody2D.isKinematic = false;
         Player.instance.EnableMovement();
@@ -96,7 +95,11 @@ public class DoorTransitionTrigger : MonoBehaviour
             yield return false;
         }
 
-        connectedTrigger.door.locked = false;
+        if (connectedTrigger.door)
+        {
+            connectedTrigger.door.locked = false;
+        }
+
         connectedTrigger.trigger.enabled = true; 
 
         if(loadNewScene)

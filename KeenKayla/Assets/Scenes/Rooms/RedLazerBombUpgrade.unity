@@ -454,8 +454,8 @@ Transform:
   m_Children:
   - {fileID: 43593662}
   - {fileID: 827794667}
-  - {fileID: 1680747237}
   - {fileID: 2078864864}
+  - {fileID: 1680747237}
   - {fileID: 1299928941}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2698,7 +2698,7 @@ Transform:
   - {fileID: 1545998762}
   - {fileID: 1101819889}
   m_Father: {fileID: 217327351}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &2123579385
 GameObject:
   m_ObjectHideFlags: 0

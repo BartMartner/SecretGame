@@ -52,7 +52,7 @@ public class Player : Damagable
 
     [Header("Jumping")]
     public LayerMask groundLayer;
-    public AudioClip[] jumpSounds;
+    public AudioClip jumpSound;
     public float jumpPower = 1.5f;
     private bool _canJump = true;
     private bool _jumping;
@@ -67,7 +67,7 @@ public class Player : Damagable
     }
 
     [Header("Shooting")]
-    public AudioClip[] attackSounds;
+    public AudioClip attackSound;
     public float aiming;
     public GameObject shootPoint;
     public GameObject shootPointUp;
@@ -83,6 +83,7 @@ public class Player : Damagable
     public int maxBombs;
 
     [Header("Pogo")]
+    public AudioClip pogoSound;
     public bool hasPogo;
     public bool pogo;
 
@@ -311,16 +312,15 @@ public class Player : Damagable
 
             if (groundedCheck.onGround && _jumpHeld && _canJump && !attacking && ToggleMorphball(false))
             {
-                if (jumpSounds.Length > 0)
+                if (jumpSound)
                 {
-                    audioSource.PlayOneShot(jumpSounds[Random.Range(0, jumpSounds.Length)]);
+                    audioSource.PlayOneShot(jumpSound);
                 }
                 
                 rigidbody2D.gravityScale = 0;
                 _canJump = false;
                 _jumping = true;
                 _jumpTimer = 0;
-                groundedCheck.groundFrames = 0;
                 velocity.y = 0;
             }
         }
@@ -376,6 +376,10 @@ public class Player : Damagable
         if (pogo && groundedCheck.onGround)
         {
             velocity.y += 5;
+            if (groundedCheck.justLanded)
+            {
+                audioSource.PlayOneShot(pogoSound);
+            }
         }
 
         rigidbody2D.velocity = velocity;
@@ -545,6 +549,9 @@ public class Player : Damagable
     {
         pogo = false;
         attacking = true;
+
+        audioSource.PlayOneShot(attackSound);
+
         if (aiming == 0)
         {
             if (lazerPower >= 4)

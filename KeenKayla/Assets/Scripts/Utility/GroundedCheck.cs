@@ -5,8 +5,6 @@ public class GroundedCheck : MonoBehaviour
 {
     public float groundedDistance = 0.1f;
     public bool onGround;
-    public int groundFrames;
-    public int groundTolerance = 12;
     public bool nearGround;
     public LayerMask groundLayer;
 
@@ -14,14 +12,21 @@ public class GroundedCheck : MonoBehaviour
     public RaycastHit2D leftRayHit;
     public RaycastHit2D middleRayHit;
 
+    public AudioClip landingSound;
+    public bool justLanded
+    {
+        get
+        {
+            return !_lastOnGround && onGround;
+        }
+    }
+
+    private bool _lastOnGround;
     private float _halfHeight, _halfWidth;
     private Vector3 _leftOffset, _rightOffset;
     private BoxCollider2D _collider2D;
     private AudioSource _audioSource;
-
-    private bool _player;
-    private Player _playerController;
-    private AudioClip[] _landingSounds;
+    
 
     private void Start()
     {
@@ -32,17 +37,12 @@ public class GroundedCheck : MonoBehaviour
         _rightOffset = Vector3.right * _halfWidth * 0.5f;
 
         _audioSource = GetComponentInChildren<AudioSource>();
-
-        _playerController = GetComponentInChildren<Player>();
-        if(_playerController != null)
-        {
-            _player = true;
-            _landingSounds = _playerController.landingSounds;
-        }
     }
 
     public void UpdateRaycasts()
     {
+        _lastOnGround = onGround;
+
         var offset = -_collider2D.offset.y + _halfHeight * 0.5f;
         var deltaToBottom = (_halfHeight - offset);
         var origin = transform.position + new Vector3(0, -offset, 0);
@@ -57,22 +57,9 @@ public class GroundedCheck : MonoBehaviour
             (middleRayHit.collider != null && middleRayHit.distance < groundedDistance + deltaToBottom) ||
             (rightRayHit.collider != null && rightRayHit.distance < groundedDistance + deltaToBottom));
 
-        if (onGround && groundFrames < groundTolerance)
+        if (justLanded & _audioSource != null && landingSound)
         {
-            if(_player && !_playerController.jumping || !_player)
-            {
-                if (groundFrames <= 0 && _audioSource != null && _landingSounds != null && _landingSounds.Length > 0)
-                {
-                    _audioSource.PlayOneShot(_landingSounds[Random.Range(0, _landingSounds.Length)]);
-                }
-
-                groundFrames = groundTolerance;
-            }
-        }
-
-        if (!onGround && groundTolerance > 0)
-        {
-            groundFrames--;
+            _audioSource.PlayOneShot(landingSound);
         }
     }
 

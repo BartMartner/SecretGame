@@ -218,7 +218,7 @@ MonoBehaviour:
   destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSounds: []
-  deathSounds: []
+  deathSound: {fileID: 8300000, guid: ad960ffa470af69468e72a40ddeae987, type: 3}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
@@ -238,12 +238,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundedDistance: 0.1
   onGround: 1
-  groundFrames: 0
-  groundTolerance: 12
   nearGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 528385
+  landingSound: {fileID: 0}
 --- !u!114 &11456116
 MonoBehaviour:
   m_ObjectHideFlags: 1

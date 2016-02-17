@@ -32,7 +32,7 @@ public class Damagable : MonoBehaviour
     [Header("Sounds")]
     public AudioSource audioSource;
     public AudioClip[] hurtSounds;
-    public AudioClip[] deathSounds;
+    public AudioClip deathSound;
 
     [Header("Visuals")]
     public Animator animator;
@@ -202,9 +202,9 @@ public class Damagable : MonoBehaviour
         state = DamagableState.Dying;
         _deathCounter = 0;
 
-        if (audioSource && deathSounds.Length > 0)
+        if (deathSound)
         {
-            audioSource.PlayOneShot(deathSounds[Random.Range(0, deathSounds.Length)]);
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
         }
     }
 

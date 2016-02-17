@@ -97,6 +97,7 @@ public class Player : Damagable
     public ParticleSystem hoverParticles;
     public bool hoverJumping;
     public float hoverPower;
+    public AudioSource hoverSound;
     //How long the player can hold jump and still get the hover effect
     private float _hoverTime = 3;
 
@@ -337,6 +338,7 @@ public class Player : Damagable
                 {
                     hoverJumping = false;
                     hoverParticles.Stop();
+                    hoverSound.Stop();
                 }
             }
             else if (hoverPower > 0 && !morphBall)
@@ -344,6 +346,7 @@ public class Player : Damagable
                 if (Input.GetButtonDown("Jump"))
                 {
                     hoverParticles.Play();
+                    hoverSound.Play();
                     hoverJumping = true;
                     pogo = false;
                 }
@@ -361,12 +364,14 @@ public class Player : Damagable
                 else if (hoverJumping)
                 {
                     hoverParticles.Stop();
+                    hoverSound.Stop();
                     hoverJumping = false;
                 }
             }
             else if (hoverJumping)
             {
                 hoverParticles.Stop();
+                hoverSound.Stop();
                 hoverJumping = false;
             }
         }

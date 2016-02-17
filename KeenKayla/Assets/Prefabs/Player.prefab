@@ -473,6 +473,8 @@ MonoBehaviour:
   pogoSound: {fileID: 8300000, guid: 3f934af4e9c282e4da5ddd3e25d4c968, type: 3}
   hasPogo: 0
   pogo: 0
+  morph: {fileID: 8300000, guid: b6d032ea61ccf0343841757d6cf159a1, type: 3}
+  unmorph: {fileID: 8300000, guid: c71a53903652c7f4d9ea08c382ca246d, type: 3}
   hasMorphBall: 0
   morphBall: 0
   ballCollider: {fileID: 5814326}

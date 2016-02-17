@@ -187,6 +187,7 @@ MonoBehaviour:
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 791553
+  fall: {fileID: 8300000, guid: 44fd4ce940275994a959522f0eb665cd, type: 3}
 --- !u!212 &21221862
 SpriteRenderer:
   m_ObjectHideFlags: 1

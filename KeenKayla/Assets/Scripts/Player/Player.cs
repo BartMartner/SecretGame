@@ -87,7 +87,9 @@ public class Player : Damagable
     public bool hasPogo;
     public bool pogo;
 
-    [Header ("MorphBall")]
+    [Header("MorphBall")]
+    public AudioClip morph;
+    public AudioClip unmorph;
     public bool hasMorphBall;
     public bool morphBall;
     public CircleCollider2D ballCollider;
@@ -518,6 +520,7 @@ public class Player : Damagable
 
             if(morphBall)
             {
+                audioSource.PlayOneShot(morph);
                 pogo = false;
                 collider2D.enabled = false;
                 ballCollider.enabled = true;                
@@ -525,6 +528,7 @@ public class Player : Damagable
             }
             else
             {
+                audioSource.PlayOneShot(unmorph);
                 collider2D.enabled = true;
                 ballCollider.enabled = false;
                 transform.position += Vector3.up * (collider2D.size.y - ballCollider.radius) * 0.5f;

@@ -6,6 +6,7 @@ public class Faller : Enemy
     [Header ("Faller")]
     public Sprite aboutToFallSprite;
     public LayerMask explosionLayerMask;
+    public AudioClip fall;
     private Rigidbody2D _rigidbody2D;
     private bool _falling;
     private float _halfHeight;
@@ -67,6 +68,7 @@ public class Faller : Enemy
         _renderers[0].sprite = aboutToFallSprite;
         yield return new WaitForSeconds(0.4f);
         animator.enabled = true;
+        audioSource.PlayOneShot(fall);
         _rigidbody2D.isKinematic = false;
         animator.SetTrigger("Fall");
     }

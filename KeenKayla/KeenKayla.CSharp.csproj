@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Arachnut.cs" />
     <Compile Include="Assets\MushroomBoss.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
@@ -134,8 +135,9 @@
     <Compile Include="Assets\Waver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Shaders\SpriteDefaultFlash.shader" />
-    <None Include="Assets\Shaders\SpriteDefaultFlashUI.shader" />
+    <None Include="Assets\Shaders\SpritesDefaultFlash.shader" />
+    <None Include="Assets\Shaders\SpritesDefaultFlashUI.shader" />
+    <None Include="Assets\Shaders\SpritesTile.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

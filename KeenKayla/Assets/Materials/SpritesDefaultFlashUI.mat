@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SpriteDefaultFlash
-  m_Shader: {fileID: 4800000, guid: 03009a44de4a53c45a8532a1d7b829ca, type: 3}
+  m_Name: SpritesDefaultFlashUI
+  m_Shader: {fileID: 4800000, guid: 3d4af509d9598094cab3d89c454f2641, type: 3}
   m_ShaderKeywords: PIXELSNAP_ON
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 4000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -147,4 +147,4 @@ Material:
       data:
         first:
           name: _FlashColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

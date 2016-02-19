@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 95069f0f7cfaf8644991765147a60b31
-timeCreated: 1455578001
+timeCreated: 1455841393
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,7 @@ TextureImporter:
     21300052: 2x1TopSingle
     21300054: TopLeftSingle
     21300056: TopLeftSingleEdge
+    21300058: 1x1TopSingle
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -459,6 +460,17 @@ TextureImporter:
         serializedVersion: 2
         x: 320
         y: 48
+        width: 16
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: 1x1TopSingle
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
         width: 16
         height: 48
       alignment: 1

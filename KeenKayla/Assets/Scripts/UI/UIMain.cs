@@ -54,8 +54,10 @@ public class UIMain : MonoBehaviour
         switch(type)
         {
             case PowerUpID.ColdSuit:
+                StartCoroutine(ItemCollect(coldSuit));
                 break;
             case PowerUpID.HoverBoots:
+                StartCoroutine(ItemCollect(hoverBoots));
                 break;
             case PowerUpID.MaruMari:
                 StartCoroutine(ItemCollect(maruMari));
@@ -64,10 +66,13 @@ public class UIMain : MonoBehaviour
                 StartCoroutine(ItemCollect(pogo));
                 break;
             case PowerUpID.PowerSuit:
+                StartCoroutine(ItemCollect(powerSuit));
                 break;
             case PowerUpID.PurpleLazer:
+                StartCoroutine(ItemCollect(purpleLazer));
                 break;
             case PowerUpID.RedLazer:
+                StartCoroutine(ItemCollect(redLazer));
                 break;
         }
     }

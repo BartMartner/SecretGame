@@ -56234,6 +56234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 1
+  music: {fileID: 8300000, guid: 420819d7940f2e541babc652b92324b0, type: 3}
 --- !u!4 &1033980239
 Transform:
   m_ObjectHideFlags: 0

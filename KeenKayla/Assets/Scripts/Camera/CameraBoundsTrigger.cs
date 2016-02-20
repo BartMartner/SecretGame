@@ -6,6 +6,7 @@ public class CameraBoundsTrigger : MonoBehaviour
 {
     private BoxCollider2D _boxCollider2D;
     public bool transition = true;
+    public AudioClip music;
 
     private void Awake()
     {
@@ -19,6 +20,10 @@ public class CameraBoundsTrigger : MonoBehaviour
     {
         var reallyTrasition = transition && Vector3.Distance(Player.instance.transform.position, MainCamera.instance.transform.position) < 20;
         MainCamera.instance.SetLimits(_boxCollider2D.bounds, reallyTrasition);
+        if (music)
+        {
+            MusicManager.instance.SetSong(music);
+        }
     }
 
     public void OnPlayerSpawn()
@@ -28,7 +33,13 @@ public class CameraBoundsTrigger : MonoBehaviour
             MainCamera.instance.SetLimits(_boxCollider2D.bounds, false);
             MainCamera.instance.requireUpdate = true;
         }
+
         Player.instance.onSpawn -= OnPlayerSpawn;
+
+        if (music)
+        {
+            MusicManager.instance.SetSong(music);
+        }
     }
 
     public void OnDrawGizmos()

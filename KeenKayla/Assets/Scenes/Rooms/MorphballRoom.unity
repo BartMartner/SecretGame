@@ -9248,6 +9248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 1
+  music: {fileID: 8300000, guid: 95b1d20319ab2d148aacc908a429e367, type: 3}
 --- !u!61 &1010941458
 BoxCollider2D:
   m_ObjectHideFlags: 0

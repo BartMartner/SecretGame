@@ -15,6 +15,9 @@ public class UIMain : MonoBehaviour
     public GameObject hoverBoots;
     public GameObject powerSuit;
     public GameObject purpleLazer;
+    public GameObject heartPopUp;
+    public GameObject bombPopUp;
+    public GameObject lazerPopUp;
     public AudioClip itemCollectJingle;
 
     public void Awake()
@@ -75,6 +78,21 @@ public class UIMain : MonoBehaviour
                 StartCoroutine(ItemCollect(redLazer));
                 break;
         }
+    }
+
+    public void ShowHeartPopup()
+    {
+        StartCoroutine(ItemCollect(heartPopUp));
+    }
+
+    public void ShowBombPopup()
+    {
+        StartCoroutine(ItemCollect(bombPopUp));
+    }
+
+    public void ShowLazerPopup()
+    {
+        StartCoroutine(ItemCollect(lazerPopUp));
     }
 
     private IEnumerator ItemCollect(GameObject popUp)

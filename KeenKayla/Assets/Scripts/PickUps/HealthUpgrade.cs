@@ -19,6 +19,7 @@ public class HealthUpgrade : Pickup
         Player.instance.maxHealth += 1;
         Player.instance.health = Player.instance.maxHealth;
         //SaveGameManager.instance.SaveGame();
+        UIMain.instance.ShowHeartPopup();
         base.OnPickup();
     }
 

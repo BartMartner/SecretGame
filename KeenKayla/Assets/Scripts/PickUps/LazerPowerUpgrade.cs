@@ -18,6 +18,7 @@ public class LazerPowerUpgrade : Pickup
         SaveGameManager.instance.saveGameData.lazerPowerUpgradesCollected.Add(id);
         Player.instance.maxLazerPower += 1;
         Player.instance.lazerPower = Player.instance.maxHealth;
+        UIMain.instance.ShowLazerPopup();
         base.OnPickup();
     }
 

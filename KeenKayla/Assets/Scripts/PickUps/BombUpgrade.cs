@@ -19,6 +19,7 @@ public class BombUpgrade : Pickup
         Player.instance.currentBombs += Constants.bombsPerUpgrade;
         Player.instance.maxBombs += Constants.bombsPerUpgrade;
         //SaveGameManager.instance.SaveGame();
+        UIMain.instance.ShowBombPopup();
         base.OnPickup();
     }
 

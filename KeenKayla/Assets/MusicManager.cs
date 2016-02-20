@@ -20,40 +20,40 @@ public class MusicManager : MonoBehaviour
         {
             StartCoroutine(ChangeSongs(clip));
         }
-    }    
+    }
 
-    private IEnumerator ChangeSongs(AudioClip clip)
+    public IEnumerator ChangeSongs(AudioClip clip)
     {
         if (_audioSource.isPlaying)
         {
-            yield return StartCoroutine(FadeOut(1));
+            yield return StartCoroutine(FadeOut(5));
         }
 
         _audioSource.clip = clip;
         _audioSource.Play();
-        yield return StartCoroutine(FadeIn(1));
+        yield return StartCoroutine(FadeIn(3));
     }
 
-    private IEnumerator FadeOut(float time)
+    public IEnumerator FadeOut(float time)
     {
         var timer = 0f;
         var _origVolume = _audioSource.volume;
         while (timer < time)
         {
             timer += Time.unscaledDeltaTime;
-            _audioSource.volume = Mathf.Lerp(_origVolume, 0, timer / timer);
+            _audioSource.volume = Mathf.Lerp(_origVolume, 0, timer / time);
             yield return null;
         }
     }
 
-    private IEnumerator FadeIn(float time)
+    public IEnumerator FadeIn(float time)
     {
         var timer = 0f;
         var _origVolume = _audioSource.volume;
         while (timer < time)
         {
             timer += Time.unscaledDeltaTime;
-            _audioSource.volume = Mathf.Lerp(_origVolume, _maxVolume, timer / timer);
+            _audioSource.volume = Mathf.Lerp(_origVolume, _maxVolume, timer / time);
             yield return null;
         }
     }

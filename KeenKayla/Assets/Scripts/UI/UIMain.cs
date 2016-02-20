@@ -97,6 +97,8 @@ public class UIMain : MonoBehaviour
 
     private IEnumerator ItemCollect(GameObject popUp)
     {
+        StartCoroutine(MusicManager.instance.FadeOut(1));
+
         AudioSource.PlayClipAtPoint(itemCollectJingle, Player.instance.transform.position);
 
         popUp.SetActive(true);
@@ -118,6 +120,8 @@ public class UIMain : MonoBehaviour
         }
 
         Time.timeScale = 1;
+
+        StartCoroutine(MusicManager.instance.FadeIn(3));
         popUp.SetActive(false);
     }
 

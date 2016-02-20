@@ -8,6 +8,8 @@ public class UIMain : MonoBehaviour
     public static UIMain instance;
     public Image textBar;
     private Text _textBarText;
+    public GameObject MaruMari;
+    public GameObject Pogo;
 
     public void Awake()
     {

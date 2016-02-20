@@ -202,7 +202,7 @@ MonoBehaviour:
   gibAmount: 4
   destroyOnDeath: 1
   audioSource: {fileID: 0}
-  hurtSounds: []
+  hurtSound: {fileID: 8300000, guid: 800fba6c0b3bb5b489e144d44cd44102, type: 3}
   deathSound: {fileID: 8300000, guid: ad960ffa470af69468e72a40ddeae987, type: 3}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}

@@ -171,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -76.125, y: 20.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485918}
@@ -437,7 +437,7 @@ MonoBehaviour:
   gibAmount: 6
   destroyOnDeath: 0
   audioSource: {fileID: 0}
-  hurtSounds: []
+  hurtSound: {fileID: 8300000, guid: deb9fdf7149f2584ca4ccd7bb0308abe, type: 3}
   deathSound: {fileID: 0}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
@@ -478,7 +478,7 @@ MonoBehaviour:
   hasMorphBall: 0
   morphBall: 0
   ballCollider: {fileID: 5814326}
-  hasHoverBoots: 1
+  hasHoverBoots: 0
   hoverParticles: {fileID: 19848364}
   hoverJumping: 0
   hoverPower: 0

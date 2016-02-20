@@ -944,7 +944,7 @@ MonoBehaviour:
   gibAmount: 4
   destroyOnDeath: 1
   audioSource: {fileID: 0}
-  hurtSounds: []
+  hurtSound: {fileID: 8300000, guid: 1c77219792b647143a1f2f00cdfad926, type: 3}
   deathSound: {fileID: 8300000, guid: ad960ffa470af69468e72a40ddeae987, type: 3}
   animator: {fileID: 9529694}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}

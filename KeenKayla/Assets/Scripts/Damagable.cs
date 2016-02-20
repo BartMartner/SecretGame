@@ -31,7 +31,7 @@ public class Damagable : MonoBehaviour
 
     [Header("Sounds")]
     public AudioSource audioSource;
-    public AudioClip[] hurtSounds;
+    public AudioClip hurtSound;
     public AudioClip deathSound;
 
     [Header("Visuals")]
@@ -179,9 +179,9 @@ public class Damagable : MonoBehaviour
             StartCoroutine(Flash(1, 0.1f, _damageColor, 0.25f));
         }
 
-        if (audioSource && hurtSounds.Length > 0 && health > 0)
+        if (audioSource && health > 0)
         {
-            audioSource.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length)]);
+            audioSource.PlayOneShot(hurtSound);
         }
 
         return true;

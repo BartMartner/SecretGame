@@ -7548,7 +7548,7 @@ Transform:
   - {fileID: 579628418}
   - {fileID: 1029591892}
   m_Father: {fileID: 2032514627}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1089996499
 GameObject:
   m_ObjectHideFlags: 0
@@ -14919,8 +14919,8 @@ Transform:
   - {fileID: 339296387}
   - {fileID: 2140921760}
   - {fileID: 367236180}
-  - {fileID: 1869753838}
   - {fileID: 1084767408}
+  - {fileID: 1869753838}
   - {fileID: 1183135407}
   m_Father: {fileID: 0}
   m_RootOrder: 0

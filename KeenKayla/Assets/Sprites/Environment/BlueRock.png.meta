@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3bd997b6582d4964d80a94af12abf2e8
-timeCreated: 1455756770
+timeCreated: 1455928411
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,6 +59,7 @@ TextureImporter:
     21300104: Bottom3x1A
     21300106: 3x1A
     21300108: 3x1B
+    21300110: 2x1A
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -14434,6 +14435,17 @@ TextureImporter:
         - {x: 9, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
+    - name: 2x1A
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 32
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

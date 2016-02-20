@@ -957,6 +957,14 @@ Prefab:
       propertyPath: targetScene
       value: PurpleLazerHealthTank
       objectReference: {fileID: 0}
+    - target: {fileID: 21208070, guid: 2ed4e9a88ced52a48ac99c4be7adca0b, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21208070, guid: 2ed4e9a88ced52a48ac99c4be7adca0b, type: 2}
+      propertyPath: m_Color.b
+      value: 0.8920455
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ed4e9a88ced52a48ac99c4be7adca0b, type: 2}
   m_IsPrefabParent: 0

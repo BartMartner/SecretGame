@@ -155,10 +155,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11491332, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
-      propertyPath: targetScene
-      value: PowerSuitLock
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
   m_IsPrefabParent: 0

@@ -100,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492340}
   m_RootOrder: 0
@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalPosition: {x: 40, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 492340}
@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 181032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.75, y: 1, z: 0}
-  m_LocalScale: {x: 0.25, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492340}
   m_RootOrder: 1
@@ -195,7 +195,7 @@ MonoBehaviour:
   destroyOnDeath: 0
   audioSource: {fileID: 0}
   hurtSounds: []
-  deathSounds: []
+  deathSound: {fileID: 0}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentScene: 
-  targetScene: 
+  targetScene: PurpleSave
   trigger: {fileID: 6159020}
   exitPoint: {fileID: 400580}
   door: {fileID: 11453806}
@@ -246,9 +246,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1631701953
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b729405509bde5d429f1e7760416920a, type: 3}
-  m_Color: {r: 0.42647058, g: 0.39197662, b: 0.39197662, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: 26c1f2403d0139547890546144759ec5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
 --- !u!212 &21230982
 SpriteRenderer:
@@ -276,8 +276,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b729405509bde5d429f1e7760416920a, type: 3}
-  m_Color: {r: 0.76470596, g: 0.21960786, b: 0.17254902, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ff19d60b1e210e24aa6976c75c94fab0, type: 3}
+  m_Color: {r: 1, g: 0.26222247, b: 0.19852942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

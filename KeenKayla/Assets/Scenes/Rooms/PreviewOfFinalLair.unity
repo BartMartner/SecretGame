@@ -962,6 +962,31 @@ Prefab:
       propertyPath: targetScene
       value: BackFromColdSuit
       objectReference: {fileID: 0}
+    - target: {fileID: 21271148, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 66fdb78aad8375641bebe3d5103d5463,
+        type: 3}
+    - target: {fileID: 404804, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 404804, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21271148, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21271148, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_Color.g
+      value: 0.18295847
+      objectReference: {fileID: 0}
+    - target: {fileID: 21271148, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36c8e51c826b76f4684c0b13c01e5232, type: 2}
   m_IsPrefabParent: 0

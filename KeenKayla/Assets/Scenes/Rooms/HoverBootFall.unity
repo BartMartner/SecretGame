@@ -206,7 +206,7 @@ Transform:
   - {fileID: 1778711391}
   - {fileID: 143494387}
   m_Father: {fileID: 1769248593}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &134528717
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,33 +352,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 412998, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
   m_PrefabInternal: {fileID: 143494386}
---- !u!1 &211054379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 211054380}
-  m_Layer: 0
-  m_Name: DVDLoadingMenuBoss
-  m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &211054380
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 211054379}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.875, y: -19.375, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1769248593}
-  m_RootOrder: 1
 --- !u!1 &378458952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1748,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1259855760}
-  - {fileID: 211054380}
   - {fileID: 1830112396}
   - {fileID: 111963402}
   m_Father: {fileID: 0}
@@ -1871,7 +1843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441506, guid: 0673dff6e0c712d4ba842b1450c00a47, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6112772, guid: 0673dff6e0c712d4ba842b1450c00a47, type: 2}
       propertyPath: m_Offset.y

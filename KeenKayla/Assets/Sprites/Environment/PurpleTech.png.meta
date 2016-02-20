@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c8825034ecc1974cace6bc4765e072a
-timeCreated: 1454354613
+timeCreated: 1455925870
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,7 @@ TextureImporter:
     21300024: TopRightInnerCorner
     21300026: Right
     21300028: BottomLeft
+    21300030: TopLeftEdge
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2631,6 +2632,17 @@ TextureImporter:
         - {x: 9, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
+    - name: TopLeftEdge
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

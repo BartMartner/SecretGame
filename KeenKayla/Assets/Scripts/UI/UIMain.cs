@@ -8,8 +8,9 @@ public class UIMain : MonoBehaviour
     public static UIMain instance;
     public Image textBar;
     private Text _textBarText;
-    public GameObject MaruMari;
-    public GameObject Pogo;
+    public GameObject maruMari;
+    public GameObject pogo;
+    public AudioClip itemCollectJingle;
 
     public void Awake()
     {
@@ -41,6 +42,55 @@ public class UIMain : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         HideTextBar();
+    }
+
+    public void ShowPopUp(PowerUpID type)
+    {
+        switch(type)
+        {
+            case PowerUpID.ColdSuit:
+                break;
+            case PowerUpID.HoverBoots:
+                break;
+            case PowerUpID.MaruMari:
+                StartCoroutine(ItemCollect(maruMari));
+                break;
+            case PowerUpID.PogoStick:
+                StartCoroutine(ItemCollect(pogo));
+                break;
+            case PowerUpID.PowerSuit:
+                break;
+            case PowerUpID.PurpleLazer:
+                break;
+            case PowerUpID.RedLazer:
+                break;
+        }
+    }
+
+    private IEnumerator ItemCollect(GameObject popUp)
+    {
+        AudioSource.PlayClipAtPoint(itemCollectJingle, Player.instance.transform.position);
+
+        popUp.SetActive(true);
+        Time.timeScale = 0;
+
+        var timer = 0f;
+
+        bool press = false;
+        while (timer < 6)
+        {
+            press = Input.anyKey;
+            timer += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        while(!(press || Input.anyKey))
+        {
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+        popUp.SetActive(false);
     }
 
     public void HideTextBar()

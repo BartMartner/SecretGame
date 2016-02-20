@@ -19,6 +19,7 @@ public class PowerUp : Pickup
         //SaveGameManager.instance.SaveGame();
         Player.instance.health = Player.instance.maxHealth;
         Player.instance.RefreshPowerUps();
+        UIMain.instance.ShowPopUp(powerUpType);
         base.OnPickup();
     }
 }

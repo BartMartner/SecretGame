@@ -10,6 +10,11 @@ public class UIMain : MonoBehaviour
     private Text _textBarText;
     public GameObject maruMari;
     public GameObject pogo;
+    public GameObject coldSuit;
+    public GameObject redLazer;
+    public GameObject hoverBoots;
+    public GameObject powerSuit;
+    public GameObject purpleLazer;
     public AudioClip itemCollectJingle;
 
     public void Awake()

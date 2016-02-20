@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: d9289f8c2eb970640880adae9e1c2bb7
-timeCreated: 1454521591
+timeCreated: 1455981572
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GrassTR
+    21300000: GrassTopLeft
     21300002: BrownRock_1
     21300004: BrownRock_2
     21300006: BrownRock_3
@@ -36,7 +36,7 @@ TextureImporter:
     21300058: BrownRock_29
     21300060: BrownRock_30
     21300062: Grass2x2
-    21300064: GrassTL
+    21300064: GrassTopRight
     21300066: 4x1
     21300068: Bottom4x1
     21300070: LeftEdge
@@ -58,9 +58,9 @@ TextureImporter:
     21300102: Grass1x2B
     21300104: Bottom3x1A
     21300106: 3x1A
-    21300108: TopRight
+    21300108: TopLeft
     21300110: Top
-    21300112: TopLeft
+    21300112: TopRight
     21300114: 2x2A
     21300116: Bottom2x2
     21300118: 2x1B
@@ -78,6 +78,8 @@ TextureImporter:
     21300142: BrownToGray1x2C
     21300144: BrownToGray1x2D
     21300146: Bottom3x1B
+    21300148: TopLeftEdge
+    21300150: TopGrassBomb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -124,7 +126,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: GrassTR
+    - name: GrassTopLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -156,7 +158,7 @@ TextureImporter:
         - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
-    - name: GrassTL
+    - name: GrassTopRight
       rect:
         serializedVersion: 2
         x: 80
@@ -12786,7 +12788,7 @@ TextureImporter:
         - {x: 9, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
-    - name: TopRight
+    - name: TopLeft
       rect:
         serializedVersion: 2
         x: 128
@@ -14764,7 +14766,7 @@ TextureImporter:
         - {x: 9, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
-    - name: TopLeft
+    - name: TopRight
       rect:
         serializedVersion: 2
         x: 176
@@ -60861,6 +60863,32 @@ TextureImporter:
         - {x: 21, y: -1}
         - {x: 9, y: -26}
         - {x: 9, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: TopLeftEdge
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: TopGrassBomb
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
     outline: []

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 95069f0f7cfaf8644991765147a60b31
-timeCreated: 1455841393
+timeCreated: 1455981085
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -34,6 +34,11 @@ TextureImporter:
     21300054: TopLeftSingle
     21300056: TopLeftSingleEdge
     21300058: 1x1TopSingle
+    21300060: BottomRightInnerCornerSingle
+    21300062: TopRightInnerCornerSingle
+    21300064: TopLeftInnerCornerSingle
+    21300066: BottomLeftInnerCornerSingle
+    21300068: TopBreakableSingle
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -477,6 +482,74 @@ TextureImporter:
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: BottomRightInnerCornerSingle
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 48
+        width: 16
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: TopRightInnerCornerSingle
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 48
+        width: 16
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: TopLeftInnerCornerSingle
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 32
+        width: 32
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -64}
+        - {x: 26, y: -64}
+        - {x: 32, y: -51}
+        - {x: 32, y: 0}
+    - name: BottomLeftInnerCornerSingle
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 48
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 24}
+        - {x: -16, y: -24}
+        - {x: 16, y: -24}
+        - {x: 16, y: 24}
+    - name: TopBreakableSingle
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 24}
+        - {x: -16, y: -24}
+        - {x: 16, y: -24}
+        - {x: 16, y: 24}
     outline: []
   spritePackingTag: 
   userData: 

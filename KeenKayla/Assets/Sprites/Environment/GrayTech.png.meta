@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 95069f0f7cfaf8644991765147a60b31
-timeCreated: 1455981085
+timeCreated: 1456010085
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -39,6 +39,7 @@ TextureImporter:
     21300064: TopLeftInnerCornerSingle
     21300066: BottomLeftInnerCornerSingle
     21300068: TopBreakableSingle
+    21300070: TopLeftInnerCorner2x1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -550,6 +551,17 @@ TextureImporter:
         - {x: -16, y: -24}
         - {x: 16, y: -24}
         - {x: 16, y: 24}
+    - name: TopLeftInnerCorner2x1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

@@ -2700,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 1
+  music: {fileID: 0}
 --- !u!61 &454115604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3539,7 +3540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430966, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -14.75
+      value: -14.625
       objectReference: {fileID: 0}
     - target: {fileID: 430966, guid: a8f1fbbffed934547b66ae47db0455a8, type: 2}
       propertyPath: m_LocalPosition.z

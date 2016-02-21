@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 487036}
   - 114: {fileID: 11487090}
   - 61: {fileID: 6172326}
+  - 82: {fileID: 8215722}
   m_Layer: 19
   m_Name: TopDoor
   m_TagString: Untagged
@@ -173,6 +174,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.375}
   serializedVersion: 2
   m_Size: {x: 2, y: 0.75}
+--- !u!82 &8215722
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102902}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11467576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,14 +287,16 @@ MonoBehaviour:
   gibAmount: 6
   destroyOnDeath: 0
   audioSource: {fileID: 0}
-  hurtSounds: []
-  deathSounds: []
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 0}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
   boxCollider2D: {fileID: 6172326}
   shield: {fileID: 117534}
+  open: {fileID: 8300000, guid: 269045536f097354f8862614c156f058, type: 3}
+  close: {fileID: 8300000, guid: a6f7caff1ffeac744a47f3288fea6a6a, type: 3}
 --- !u!212 &21244428
 SpriteRenderer:
   m_ObjectHideFlags: 1

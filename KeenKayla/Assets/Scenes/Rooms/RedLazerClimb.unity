@@ -2932,6 +2932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 1
+  music: {fileID: 0}
 --- !u!61 &519572534
 BoxCollider2D:
   m_ObjectHideFlags: 0

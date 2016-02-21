@@ -9,6 +9,8 @@ public class Door : Damagable
     private bool _locked;
     private SpriteRenderer _shieldRenderer;
     private Color _originalShieldColor;
+    public AudioClip open;
+    public AudioClip close;
 
     public bool locked
     {
@@ -64,11 +66,13 @@ public class Door : Damagable
     {
         boxCollider2D.enabled = false;
         shield.gameObject.SetActive(false);
+        audioSource.PlayOneShot(open);
     }
 
     public void Close()
     {
         boxCollider2D.enabled = true;
         shield.gameObject.SetActive(true);
+        audioSource.PlayOneShot(close);
     }
 }

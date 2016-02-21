@@ -139,6 +139,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
   m_PrefabInternal: {fileID: 15175355}
+--- !u!1001 &82087331
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &82087332 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 82087331}
 --- !u!1001 &107141786
 Prefab:
   m_ObjectHideFlags: 0
@@ -369,6 +427,60 @@ BoxCollider2D:
   m_Offset: {x: 10, y: -4}
   serializedVersion: 2
   m_Size: {x: 20, y: 8}
+--- !u!1001 &502422111
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &502422112 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 502422111}
 --- !u!1 &561970184
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +630,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
   m_PrefabInternal: {fileID: 703977373}
+--- !u!1001 &795712282
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &795712283 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 795712282}
 --- !u!1 &840859227
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +779,122 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0.34117648, b: 0.34117648, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &882730776
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &882730777 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 882730776}
+--- !u!1001 &993194627
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &993194628 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 993194627}
 --- !u!1 &1047278301
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +1136,12 @@ Transform:
   - {fileID: 1083125610}
   - {fileID: 107141787}
   - {fileID: 155459584}
+  - {fileID: 882730777}
+  - {fileID: 993194628}
+  - {fileID: 82087332}
+  - {fileID: 795712283}
+  - {fileID: 502422112}
+  - {fileID: 2102941243}
   m_Father: {fileID: 1127180451}
   m_RootOrder: 3
 --- !u!1 &1237570646
@@ -1309,6 +1601,68 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 405872, guid: af7e111a690fca24d9530f8beef8781a, type: 2}
   m_PrefabInternal: {fileID: 2097994353}
+--- !u!1001 &2102941242
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1223678275}
+    m_Modifications:
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410908, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: onGround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: offset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+      propertyPath: m_Name
+      value: MadMushroom (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2102941243 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
+  m_PrefabInternal: {fileID: 2102941242}
 --- !u!1 &2105360948
 GameObject:
   m_ObjectHideFlags: 0

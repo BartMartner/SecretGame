@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: 3bd997b6582d4964d80a94af12abf2e8
-timeCreated: 1456064688
+timeCreated: 1456097834
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TopRight
+    21300000: TopLeft
     21300002: BrownRock_1
     21300004: BrownRock_2
     21300006: BrownRock_3
@@ -36,7 +36,7 @@ TextureImporter:
     21300058: BrownRock_29
     21300060: BrownRock_30
     21300062: Top2x2
-    21300064: TopLeft
+    21300064: TopRight
     21300066: 4x1
     21300068: Bottom4x1
     21300070: LeftEdge
@@ -61,6 +61,8 @@ TextureImporter:
     21300108: 3x1B
     21300110: 2x1A
     21300112: Bottom2x1A
+    21300114: TopRightSingle
+    21300116: Right2x1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -107,7 +109,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: TopRight
+    - name: TopLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -139,7 +141,7 @@ TextureImporter:
         - {x: 0, y: -32}
         - {x: 32, y: -32}
         - {x: 32, y: 0}
-    - name: TopLeft
+    - name: TopRight
       rect:
         serializedVersion: 2
         x: 80
@@ -14453,6 +14455,34 @@ TextureImporter:
         x: 16
         y: 0
         width: 32
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: TopRightSingle
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 32
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -48}
+        - {x: 15, y: -48}
+        - {x: 24, y: -44}
+        - {x: 27, y: -27}
+        - {x: 27, y: 0}
+    - name: Right2x1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 48
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}

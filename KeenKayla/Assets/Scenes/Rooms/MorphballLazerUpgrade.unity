@@ -781,9 +781,9 @@ Transform:
   m_Children:
   - {fileID: 1036789156}
   - {fileID: 786732059}
+  - {fileID: 1915937924}
   - {fileID: 1918867540}
   - {fileID: 1192086655}
-  - {fileID: 1915937924}
   - {fileID: 178676812}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1740,7 +1740,7 @@ Transform:
   - {fileID: 533888139}
   - {fileID: 297919458}
   m_Father: {fileID: 948352692}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1001 &1918867539
 Prefab:
   m_ObjectHideFlags: 0

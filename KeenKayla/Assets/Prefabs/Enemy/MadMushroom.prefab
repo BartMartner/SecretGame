@@ -30,6 +30,8 @@ GameObject:
   - 61: {fileID: 6121718}
   - 95: {fileID: 9593436}
   - 82: {fileID: 8289670}
+  - 50: {fileID: 5083454}
+  - 114: {fileID: 11410908}
   m_Layer: 8
   m_Name: MadMushroom
   m_TagString: Untagged
@@ -56,12 +58,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: 0, z: 0}
+  m_LocalPosition: {x: 19.5, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5083454
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138906}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0.75
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!61 &6121718
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -181,6 +200,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11410908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a12c204b1b59db428f492f0109888d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundedDistance: 0.075
+  onGround: 0
+  nearGround: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 528385
+  landingSound: {fileID: 0}
 --- !u!114 &11438552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,7 +246,7 @@ MonoBehaviour:
   flashOnHurt: 1
   groundedCheck: {fileID: 0}
   dropChance: 0.75
-  offset: 0
+  offset: 0.33
 --- !u!114 &11491742
 MonoBehaviour:
   m_ObjectHideFlags: 1

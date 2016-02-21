@@ -27,7 +27,6 @@ public class GroundedCheck : MonoBehaviour
     private BoxCollider2D _collider2D;
     private AudioSource _audioSource;
     
-
     private void Start()
     {
         _collider2D = GetComponent<BoxCollider2D>();

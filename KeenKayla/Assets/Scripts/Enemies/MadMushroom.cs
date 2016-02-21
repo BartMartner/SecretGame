@@ -4,11 +4,35 @@ using System.Collections;
 public class MadMushroom : Enemy
 {
     public float offset = 0f;
+    private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
+    private Rigidbody2D _rigidBody2D;
 
     protected override void Start()
     {
         base.Start();
+        _rigidBody2D = GetComponent<Rigidbody2D>();
         StartCoroutine(Bounce());
+    }
+
+    protected override void UpdateAlive()
+    {
+        base.UpdateAlive();
+
+        groundedCheck.UpdateRaycasts();
+
+        var playerDistance = Vector3.Distance(transform.position, Player.instance.transform.position);
+        if (playerDistance > 0.5F)
+        {
+            var direction = Mathf.Sin(Player.instance.transform.position.x - transform.position.x);
+            if (direction < 0 && transform.rotation != _flippedFacing)
+            {
+                transform.rotation = _flippedFacing;
+            }
+            else if (direction > 0 && transform.rotation != Quaternion.identity)
+            {
+                transform.rotation = Quaternion.identity;
+            }
+        }
     }
 
     public IEnumerator Bounce()
@@ -19,36 +43,23 @@ public class MadMushroom : Enemy
         {
             for (int i = 0; i < 3; i++)
             {
-                var bounceHeight = 1f;
+                var bouncePower = 1f;
                 if (i == 2)
                 {
-                    bounceHeight = 2.5f;
+                    bouncePower = 1.75f;
                 }
 
-                var startingPosition = transform.position;
-                var targetPosition = transform.position + Vector3.up * bounceHeight;
+                _rigidBody2D.velocity = Vector3.zero;
+                _rigidBody2D.AddForce(Vector3.up * bouncePower * 4, ForceMode2D.Impulse);
 
-                var speed = 5;
+                yield return new WaitForSeconds(0.25f);
 
-                var delta = targetPosition - startingPosition;
-
-                while (transform.position != targetPosition)
+                while (!groundedCheck.onGround)
                 {
-                    var currentDelta = targetPosition - transform.position;
-                    var speedMod = Mathf.Clamp(currentDelta.y / delta.y, 0.5f, 1);
-                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * speedMod * Time.deltaTime);
                     yield return null;
                 }
 
-                while (transform.position != startingPosition)
-                {
-                    var currentDelta = transform.position - startingPosition;
-                    var speedMod = Mathf.Clamp((delta.y-currentDelta.y) / delta.y, 0.65f, 1f);
-                    transform.position = Vector3.MoveTowards(transform.position, startingPosition, speed * speedMod * Time.deltaTime);
-                    yield return null;
-                }
-
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.25f);
             }
         }
     }

@@ -64,8 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Arachnut.cs" />
+    <Compile Include="Assets\EndingController.cs" />
     <Compile Include="Assets\MushroomBoss.cs" />
     <Compile Include="Assets\MusicManager.cs" />
+    <Compile Include="Assets\PlayTimeText.cs" />
     <Compile Include="Assets\Scripts\Audio\Footsteps.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraBoundsTrigger.cs" />

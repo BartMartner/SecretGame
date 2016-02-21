@@ -11,13 +11,12 @@ public class SaveGameData
 {
     public Vector3Data savePosition;
     public string lastRoom;
-    public DateTime lastSaved;
     public List<int> bombUpgradesCollected = new List<int>();
     public List<int> healthUpgradesCollected = new List<int>();
     public List<int> lazerPowerUpgradesCollected = new List<int>();
     public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
+    public TimeSpan playTime;
 }
-
 
 [Serializable]
 public struct Vector3Data
@@ -38,6 +37,7 @@ public class SaveGameManager : MonoBehaviour
 {
     public static SaveGameManager instance;
     public SaveGameData saveGameData = new SaveGameData();
+    public DateTime sessionStart;
 
     private string _saveGameFilePath;
 
@@ -68,6 +68,7 @@ public class SaveGameManager : MonoBehaviour
 
     public void LoadGame()
     {
+        sessionStart = DateTime.UtcNow;
         if (File.Exists(_saveGameFilePath))
         {
             var bf = new BinaryFormatter();
@@ -96,9 +97,10 @@ public class SaveGameManager : MonoBehaviour
 
     public void SaveGame()
     {
+        saveGameData.playTime += DateTime.UtcNow - sessionStart;
+        sessionStart = DateTime.UtcNow;
         var bf = new BinaryFormatter();
         var file = File.Create(_saveGameFilePath);
-        saveGameData.lastSaved = DateTime.Now;
         bf.Serialize(file, saveGameData);
         file.Close();
     }

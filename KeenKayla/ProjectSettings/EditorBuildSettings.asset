@@ -48,6 +48,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/MorphballRoom.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/MorphballLazerUpgrade.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/PostMorphballCold.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/PowerArmorFork.unity
@@ -86,6 +88,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/RedLazerSave.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/SaveNearSecondBombs.unity
+    path: Assets/Scenes/Rooms/MorphballSave.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/SecondBombs.unity
+    path: Assets/Scenes/Rooms/MorphballBombs.unity
+  - enabled: 1
+    path: Assets/Scenes/TheEnd.unity

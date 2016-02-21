@@ -48,7 +48,12 @@ public class UIMain : MonoBehaviour
 
     public IEnumerator WaitHideTextBar(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        var timer = 0f;
+        while (timer < delay)
+        {
+            timer += Time.unscaledDeltaTime;
+            yield return null;
+        }
         HideTextBar();
     }
 

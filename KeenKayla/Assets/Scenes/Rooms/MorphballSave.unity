@@ -1182,7 +1182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473340, guid: f4d1187bc66c3444b896e2cc63c5c558, type: 2}
       propertyPath: targetScene
-      value: MorphballLazerUpgrade
+      value: MorphballBombs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4d1187bc66c3444b896e2cc63c5c558, type: 2}
@@ -1282,7 +1282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11403520, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
       propertyPath: targetScene
-      value: SecondBombs
+      value: MorphballLazerUpgrade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a39ac93f7bd2cc47b78ca806a460f8d, type: 2}
@@ -1300,7 +1300,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1510650950}
   m_Layer: 0
-  m_Name: SaveNearSecondBombs
+  m_Name: MorphballSave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -16,6 +16,17 @@ public class SaveGameData
     public List<int> lazerPowerUpgradesCollected = new List<int>();
     public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
     public TimeSpan playTime;
+
+    public int CompletionRate()
+    {
+        //7 Power Ups;
+        //9 Heart Tanks;
+        //7 Lazer Upgrades;
+        //4 Bomb Upgrade;
+        var totalItems = 7f + 9f + 7f + 4f;
+        var collected = bombUpgradesCollected.Count + healthUpgradesCollected.Count + lazerPowerUpgradesCollected.Count + powerUpsCollected.Count;
+        return (int)((collected/totalItems) * 100);
+    }
 }
 
 [Serializable]
@@ -60,7 +71,7 @@ public class SaveGameManager : MonoBehaviour
 
     public void Start()
     {
-        if (!Player.instance.ignoreSavePosition)
+        if (Player.instance && !Player.instance.ignoreSavePosition)
         {
             SceneManager.LoadScene(saveGameData.lastRoom, LoadSceneMode.Additive);
         }

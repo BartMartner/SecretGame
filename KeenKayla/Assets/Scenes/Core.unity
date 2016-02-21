@@ -464,6 +464,15 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 193864, guid: d4c7ea8c0f6be3344b86a0a341bc06e3, type: 2}
+      propertyPath: m_Name
+      value: bButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461288, guid: d4c7ea8c0f6be3344b86a0a341bc06e3, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c743569b10eca9141bcd9e709f99a993,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c7ea8c0f6be3344b86a0a341bc06e3, type: 2}
   m_IsPrefabParent: 0

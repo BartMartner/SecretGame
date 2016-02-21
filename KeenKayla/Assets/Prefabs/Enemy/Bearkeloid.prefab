@@ -195,7 +195,7 @@ MonoBehaviour:
   state: 0
   health: 6
   maxHealth: 6
-  defaultAegisTime: 0.25
+  defaultAegisTime: 0
   deathTime: 0
   immunities: 
   gibs: 2

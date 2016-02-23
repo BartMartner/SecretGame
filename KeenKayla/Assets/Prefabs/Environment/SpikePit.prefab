@@ -73,7 +73,7 @@ GameObject:
   - 4: {fileID: 431038}
   - 61: {fileID: 6109876}
   - 114: {fileID: 11425314}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DamageTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

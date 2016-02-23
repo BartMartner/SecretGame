@@ -330,54 +330,14 @@ public class Player : Damagable
         #endregion
 
         #region Hover Jumping
-        if (hasHoverBoots)
+        if (hoverJumping)
         {
-            if (groundedCheck.nearGround)
+            velocity.y += -Physics2D.gravity.y * 3 * Time.deltaTime;
+            if (velocity.y > 3f)
             {
-                hoverPower = _hoverTime;
-
-                if(hoverJumping)
-                {
-                    hoverJumping = false;
-                    hoverParticles.Stop();
-                    hoverSound.Stop();
-                }
+                velocity.y = 3;
             }
-            else if (hoverPower > 0 && !morphBall)
-            {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    hoverParticles.Play();
-                    hoverSound.Play();
-                    hoverJumping = true;
-                    pogo = false;
-                }
-
-                if (hoverJumping && Input.GetButton("Jump"))
-                {
-                    hoverPower -= Time.deltaTime;
-
-                    velocity.y += -Physics2D.gravity.y * 3 * Time.deltaTime;
-                    if (velocity.y > 3f)
-                    {
-                        velocity.y = 3;
-                    }
-                }
-                else if (hoverJumping)
-                {
-                    hoverParticles.Stop();
-                    hoverSound.Stop();
-                    hoverJumping = false;
-                }
-            }
-            else if (hoverJumping)
-            {
-                hoverParticles.Stop();
-                hoverSound.Stop();
-                hoverJumping = false;
-            }
-        }
-
+        }        
         #endregion
 
         if (pogo && groundedCheck.onGround)
@@ -489,6 +449,50 @@ public class Player : Damagable
         {
             ToggleMorphball(!morphBall);
         }
+
+        #region Hover Jumping
+        if (hasHoverBoots)
+        {
+            if (groundedCheck.onGround || (pogo && groundedCheck.nearGround))
+            {
+                hoverPower = _hoverTime;
+
+                if (hoverJumping)
+                {
+                    hoverJumping = false;
+                    hoverParticles.Stop();
+                    hoverSound.Stop();
+                }
+            }
+            else if (hoverPower > 0 && !morphBall)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    hoverParticles.Play();
+                    hoverSound.Play();
+                    hoverJumping = true;
+                    pogo = false;
+                }
+
+                if (hoverJumping && Input.GetButton("Jump"))
+                {
+                    hoverPower -= Time.deltaTime;
+                }
+                else if (hoverJumping)
+                {
+                    hoverParticles.Stop();
+                    hoverSound.Stop();
+                    hoverJumping = false;
+                }
+            }
+            else if (hoverJumping)
+            {
+                hoverParticles.Stop();
+                hoverSound.Stop();
+                hoverJumping = false;
+            }
+        }
+        #endregion
     }
 
     public void LateUpdate()

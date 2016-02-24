@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Core.unity
   - enabled: 1
+    path: Assets/Scenes/TheEnd.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/AfterMorphBall.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/AltPurpleLazerPath.unity
@@ -16,11 +18,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/BackToPogo.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/FungusMushroomJumps.unity
-  - enabled: 1
     path: Assets/Scenes/Rooms/ColdSuitRoom.unity
-  - enabled: 1
-    path: Assets/Scenes/Rooms/FungusPreColdSuit.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/EarlyHealthUpgrade.unity
   - enabled: 1
@@ -31,6 +29,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/FirstColdRoom.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/FungusAreaSaveRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/FungusMushroomJumps.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/FungusPreColdSuit.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/HallIntoPowerArmorArea.unity
   - enabled: 1
@@ -44,11 +46,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/HoverBootHealthUpgrade.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/HoverBootLazerUpgrade.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/HoverBootRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/MorphballBombs.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/MorphballLazerUpgrade.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/MorphballRoom.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/MorphballLazerUpgrade.unity
+    path: Assets/Scenes/Rooms/MorphballSave.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PogoRedDoorHealthTank.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/PostMorphballCold.unity
   - enabled: 1
@@ -64,6 +74,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/PowerSuitHeartTank.unity
   - enabled: 1
+    path: Assets/Scenes/Rooms/PowerSuitLazerUpgrade.unity
+  - enabled: 1
     path: Assets/Scenes/Rooms/PowerSuitLock.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/PowerSuitRestock.unity
@@ -71,6 +83,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/PreviewOfFinalLair.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/PurpleChallengeHall.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/PurpleLazerHealthTank.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/PurpleLazerRoom.unity
   - enabled: 1
@@ -87,9 +101,3 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/RedLazerRoom.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/RedLazerSave.unity
-  - enabled: 1
-    path: Assets/Scenes/Rooms/MorphballSave.unity
-  - enabled: 1
-    path: Assets/Scenes/Rooms/MorphballBombs.unity
-  - enabled: 1
-    path: Assets/Scenes/TheEnd.unity

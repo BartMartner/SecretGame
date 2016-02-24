@@ -101,7 +101,7 @@ public class Player : Damagable
     public float hoverPower;
     public AudioSource hoverSound;
     //How long the player can hold jump and still get the hover effect
-    private float _hoverTime = 3;
+    private float _hoverTime = 3.25f;
 
     [Header("Cold Suit")]
     public bool hasColdSuit;

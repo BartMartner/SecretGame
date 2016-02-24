@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 95069f0f7cfaf8644991765147a60b31
-timeCreated: 1456010085
+timeCreated: 1456275743
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -40,6 +40,7 @@ TextureImporter:
     21300066: BottomLeftInnerCornerSingle
     21300068: TopBreakableSingle
     21300070: TopLeftInnerCorner2x1
+    21300072: TopRightSingle1x2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -562,6 +563,22 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: TopRightSingle1x2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 32
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -48}
+        - {x: 15, y: -48}
+        - {x: 26, y: -32}
+        - {x: 26, y: 0}
     outline: []
   spritePackingTag: 
   userData: 

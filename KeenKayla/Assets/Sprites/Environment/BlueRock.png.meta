@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3bd997b6582d4964d80a94af12abf2e8
-timeCreated: 1456097834
+timeCreated: 1456272764
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,6 +63,8 @@ TextureImporter:
     21300112: Bottom2x1A
     21300114: TopRightSingle
     21300116: Right2x1
+    21300118: Top2x2Bomb
+    21300120: RightEdgeBomb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -14483,6 +14485,32 @@ TextureImporter:
         x: 64
         y: 32
         width: 48
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Top2x2Bomb
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
+    - name: RightEdgeBomb
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 32
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}

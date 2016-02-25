@@ -2701,7 +2701,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1631701953
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300006, guid: 1c8825034ecc1974cace6bc4765e072a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5061,10 +5061,6 @@ Prefab:
     - target: {fileID: 418512, guid: ba0dc381efa482b438ffbe08a1c2f925, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11467576, guid: ba0dc381efa482b438ffbe08a1c2f925, type: 2}
-      propertyPath: targetScene
-      value: HallToHoverBoots
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba0dc381efa482b438ffbe08a1c2f925, type: 2}

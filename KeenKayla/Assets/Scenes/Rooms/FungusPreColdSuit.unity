@@ -7048,6 +7048,10 @@ Prefab:
       propertyPath: targetScene
       value: ColdSuitRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 186306, guid: 6301a64144093014b87ba563f5c04b1f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6301a64144093014b87ba563f5c04b1f, type: 2}
   m_IsPrefabParent: 0
@@ -9708,6 +9712,10 @@ Prefab:
     - target: {fileID: 11445854, guid: af7e111a690fca24d9530f8beef8781a, type: 2}
       propertyPath: targetScene
       value: FungusMushroomJumps
+      objectReference: {fileID: 0}
+    - target: {fileID: 195306, guid: af7e111a690fca24d9530f8beef8781a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7e111a690fca24d9530f8beef8781a, type: 2}

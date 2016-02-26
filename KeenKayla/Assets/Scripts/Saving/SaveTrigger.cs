@@ -4,6 +4,7 @@ using System.Collections;
 public class SaveTrigger : MonoBehaviour
 {
     public bool playerPresent;
+    public AudioClip sound;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,10 +32,11 @@ public class SaveTrigger : MonoBehaviour
     {
         playerPresent = false;
 
-        UIMain.instance.ShowTextBar("Save Successful");
 
-        //TODO: Play Some Animation For the Save Station
-        //TODO: Play Some Animation For the Player
+        UIMain.instance.ShowTextBar("Saving");
+
+        AudioSource.PlayClipAtPoint(sound, transform.position);
+        Player.instance.DisableMovement();
         var newPosition = Player.instance.transform.position;
         newPosition.x = transform.position.x;
         Player.instance.transform.position = newPosition;
@@ -44,8 +46,11 @@ public class SaveTrigger : MonoBehaviour
         SaveGameManager.instance.saveGameData.lastRoom = transform.root.name;
         SaveGameManager.instance.SaveGame();
 
-        yield return null;
+        yield return StartCoroutine(Player.instance.Flash(8, 0.1f, Color.cyan, 0.5f));
 
+        yield return null;
+        UIMain.instance.ShowTextBar("Save Successful");
+        Player.instance.EnableMovement();
         Player.instance.preventAttack = false;
     }
 }

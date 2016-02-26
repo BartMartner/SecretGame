@@ -613,6 +613,52 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &830515835
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1035975151}
+    m_Modifications:
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &830515836 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 479818, guid: bcd688329751aeb4b9c3b71d5a9709fe, type: 2}
+  m_PrefabInternal: {fileID: 830515835}
 --- !u!1 &835819046
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1028,7 @@ Transform:
   - {fileID: 1113527282}
   - {fileID: 1025279047}
   - {fileID: 976372335}
+  - {fileID: 830515836}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &1113527281

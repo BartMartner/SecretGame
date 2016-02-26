@@ -7,6 +7,7 @@ public class RefillEnemy : Enemy
     public float riseSpeed = 1f;
     private Vector3 _riseTarget;
     // Use this for initialization
+    private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
 
     protected override void Start()
     {
@@ -30,9 +31,9 @@ public class RefillEnemy : Enemy
         {
             transform.rotation = Quaternion.identity;
         }
-        else
+        else if (direction < 0 && transform.rotation != _flippedFacing)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = _flippedFacing;
         }
 
         var timer = 0f;

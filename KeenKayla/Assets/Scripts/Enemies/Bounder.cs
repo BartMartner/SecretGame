@@ -13,6 +13,8 @@ public class Bounder : Enemy
     private float _time = 1.25f;
     private LockPlayerOnCollide _lockPlayer;
 
+    public bool stunned;
+
     protected override void Awake()
     {
         base.Awake();
@@ -21,37 +23,39 @@ public class Bounder : Enemy
         _collider2D = GetComponent<Collider2D>();
     }
 
-    protected override void Update()
+    protected override void UpdateAlive()
     {
-        base.Update();
+        base.UpdateAlive();
 
-        if (state == DamagableState.Alive)
+        if(stunned)
         {
-            groundedCheck.UpdateRaycasts();
+            return;
+        }
 
-            if (_timer < _time)
+        groundedCheck.UpdateRaycasts();
+
+        if (_timer < _time)
+        {
+            _timer += Time.deltaTime;
+            var hit = Physics2D.Raycast(transform.position, _directionX * Vector3.right, _collider2D.bounds.extents.x, LayerMask.GetMask("Default", "DamagableTerrain"));
+
+            if (!hit.collider)
             {
-                _timer += Time.deltaTime;
-                var hit = Physics2D.Raycast(transform.position, _directionX * Vector3.right, _collider2D.bounds.extents.x, LayerMask.GetMask("Default", "DamagableTerrain"));
-
-                if (!hit.collider)
-                {
-                    transform.position += _directionX * Vector3.right * speedX * Time.deltaTime;
-                }
-
-                if (_timer < _time * 0.5f)
-                {
-                    transform.position += Vector3.up * speedY * (_time * 0.5f - _timer) / (_time * 0.5f) * Time.deltaTime;
-                }
-                else
-                {
-                    _rigidbody2D.isKinematic = false;
-                }
+                transform.position += _directionX * Vector3.right * speedX * Time.deltaTime;
             }
-            else if (groundedCheck.onGround)
+
+            if (_timer < _time * 0.5f)
             {
-                SetupJump();
+                transform.position += Vector3.up * speedY * (_time * 0.5f - _timer) / (_time * 0.5f) * Time.deltaTime;
             }
+            else
+            {
+                _rigidbody2D.isKinematic = false;
+            }
+        }
+        else if (groundedCheck.onGround)
+        {
+            SetupJump();
         }
     }
 
@@ -88,10 +92,26 @@ public class Bounder : Enemy
 
     public override void OnImmune(DamageType damageType)
     {
-        if(damageType == DamageType.Generic)
+        if (damageType == DamageType.Generic)
         {
             StartCoroutine(Flash(2, 0.1f, Color.green, 0.5f));
         }
+        else if (damageType == DamageType.RedLazer)
+        {
+            StartCoroutine(Flash(2, 0.1f, Color.red, 0.5f));
+        }
+
+        StartCoroutine(Stunned());
+    }
+
+    private IEnumerator Stunned()
+    {
+        _rigidbody2D.isKinematic = false;
+        _animator.SetTrigger("Death1");
+        stunned = true;
+        yield return new WaitForSeconds(4);
+        stunned = false;
+        _animator.SetTrigger("Recover");
     }
 
     public override void Die()

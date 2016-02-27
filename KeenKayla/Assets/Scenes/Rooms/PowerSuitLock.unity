@@ -8210,6 +8210,52 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1436185887
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2048164999}
+    m_Modifications:
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1436185888 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 492852, guid: b535e0aab617ce7418476c477fb526a4, type: 2}
+  m_PrefabInternal: {fileID: 1436185887}
 --- !u!1 &1439614081
 GameObject:
   m_ObjectHideFlags: 0
@@ -11866,6 +11912,7 @@ Transform:
   - {fileID: 541860526}
   - {fileID: 998219653}
   - {fileID: 60532230}
+  - {fileID: 1436185888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &2080897462

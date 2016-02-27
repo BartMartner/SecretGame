@@ -37,6 +37,7 @@ public class RefillEnemy : Enemy
         }
 
         var timer = 0f;
+        animator.SetTrigger("Fly");
         while (timer < 8 || _renderers[0].isVisible)
         {
             timer += Time.deltaTime;

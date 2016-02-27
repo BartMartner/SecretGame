@@ -350,7 +350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_Name
@@ -466,7 +466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_Name
@@ -545,64 +545,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &155459583
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1223678275}
-    m_Modifications:
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_Name
-      value: MadMushroom (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: offset
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &155459584 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_PrefabInternal: {fileID: 155459583}
 --- !u!1 &187028476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,7 +1914,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_Name
@@ -2950,64 +2892,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &703977373
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1223678275}
-    m_Modifications:
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_Name
-      value: MadMushroom (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: offset
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &703977374 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_PrefabInternal: {fileID: 703977373}
 --- !u!1 &723815274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,64 +3356,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &795712282
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1223678275}
-    m_Modifications:
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_Name
-      value: MadMushroom (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: offset
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &795712283 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_PrefabInternal: {fileID: 795712282}
 --- !u!1 &833269997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,64 +3563,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &882730776
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1223678275}
-    m_Modifications:
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_Name
-      value: MadMushroom (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438552, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-      propertyPath: offset
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &882730777 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
-  m_PrefabInternal: {fileID: 882730776}
 --- !u!1 &891506993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,7 +4180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_Name
@@ -5080,7 +4848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 138906, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_Name
@@ -5949,15 +5717,11 @@ Transform:
   m_Children:
   - {fileID: 281092664}
   - {fileID: 15175356}
-  - {fileID: 703977374}
   - {fileID: 1083125610}
   - {fileID: 107141787}
-  - {fileID: 155459584}
-  - {fileID: 882730777}
+  - {fileID: 502422112}
   - {fileID: 993194628}
   - {fileID: 82087332}
-  - {fileID: 795712283}
-  - {fileID: 502422112}
   - {fileID: 2102941243}
   m_Father: {fileID: 1127180451}
   m_RootOrder: 3
@@ -9819,7 +9583,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 478504, guid: ac4bcc075b901594994d8e35d5683121, type: 2}
       propertyPath: m_LocalScale.x

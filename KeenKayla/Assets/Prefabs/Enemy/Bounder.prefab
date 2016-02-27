@@ -227,10 +227,10 @@ MonoBehaviour:
   state: 0
   health: 1
   maxHealth: 0
-  defaultAegisTime: 0.25
-  deathTime: 1
-  immunities: 00000000
-  gibs: 0
+  defaultAegisTime: 0
+  deathTime: 0
+  immunities: 0000000002000000
+  gibs: 2
   gibAmount: 10
   destroyOnDeath: 0
   audioSource: {fileID: 0}
@@ -243,6 +243,7 @@ MonoBehaviour:
   dropChance: 0.75
   speedX: 2
   speedY: 3.5
+  stunned: 0
 --- !u!114 &11482540
 MonoBehaviour:
   m_ObjectHideFlags: 1

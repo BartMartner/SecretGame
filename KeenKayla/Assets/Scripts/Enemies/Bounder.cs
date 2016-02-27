@@ -92,15 +92,7 @@ public class Bounder : Enemy
 
     public override void OnImmune(DamageType damageType)
     {
-        if (damageType == DamageType.Generic)
-        {
-            StartCoroutine(Flash(2, 0.1f, Color.green, 0.5f));
-        }
-        else if (damageType == DamageType.RedLazer)
-        {
-            StartCoroutine(Flash(2, 0.1f, Color.red, 0.5f));
-        }
-
+        base.OnImmune(damageType);
         StartCoroutine(Stunned());
     }
 

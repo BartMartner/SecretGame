@@ -66,6 +66,7 @@
     <Compile Include="Assets\Arachnut.cs" />
     <Compile Include="Assets\CouncilMember.cs" />
     <Compile Include="Assets\EndingController.cs" />
+    <Compile Include="Assets\MiniArachnut.cs" />
     <Compile Include="Assets\MushroomBoss.cs" />
     <Compile Include="Assets\MusicManager.cs" />
     <Compile Include="Assets\PlayTimeText.cs" />

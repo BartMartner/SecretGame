@@ -189,7 +189,14 @@ public class Damagable : MonoBehaviour
 
     public virtual void OnImmune(DamageType damageType)
     {
-
+        if (damageType == DamageType.Generic)
+        {
+            StartCoroutine(Flash(2, 0.1f, Color.green, 0.5f));
+        }
+        else if (damageType == DamageType.RedLazer)
+        {
+            StartCoroutine(Flash(2, 0.1f, Color.red, 0.5f));
+        }
     }
 
     public virtual void Die()

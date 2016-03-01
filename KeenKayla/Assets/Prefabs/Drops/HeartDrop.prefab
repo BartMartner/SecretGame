@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11497348}
   - 50: {fileID: 5045072}
   - 61: {fileID: 6108044}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: HeartDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6108044
 BoxCollider2D:
   m_ObjectHideFlags: 1

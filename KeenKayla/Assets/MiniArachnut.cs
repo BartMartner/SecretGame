@@ -9,6 +9,7 @@ public class MiniArachnut : Enemy
     public float speed = 0.5f;
     public AudioClip shoot;
 
+    private bool _justShot;
     private bool _shooting;
     private Vector3 _startingPosition;
     private Vector3 _targetPosition;
@@ -51,7 +52,15 @@ public class MiniArachnut : Enemy
             var result = Physics2D.Raycast(transform.position, Vector3.down, 100, Player.instance.playerLayerMask);
             if (result)
             {
-                StartCoroutine(Shoot());
+                if (!_justShot)
+                {
+                    _justShot = true;
+                    StartCoroutine(Shoot());
+                }
+            }
+            else
+            {
+                _justShot = false;
             }
         }
     }

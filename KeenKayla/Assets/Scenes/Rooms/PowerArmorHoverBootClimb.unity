@@ -6990,6 +6990,10 @@ Prefab:
       propertyPath: m_Size.y
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 11411212, guid: 0673dff6e0c712d4ba842b1450c00a47, type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 95b1d20319ab2d148aacc908a429e367, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0673dff6e0c712d4ba842b1450c00a47, type: 2}
   m_IsPrefabParent: 0

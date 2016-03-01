@@ -68,6 +68,7 @@ public class Player : Damagable
 
     [Header("Shooting")]
     public AudioClip attackSound;
+    public AudioClip clickSound;
     public float aiming;
     public GameObject shootPoint;
     public GameObject shootPointUp;
@@ -431,13 +432,20 @@ public class Player : Damagable
             ToggleMorphball(false);
         }
 
-        if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack") && lazerPower >= 1)
+        if (!preventAttack && !attacking && !morphBall && Input.GetButtonDown("Attack"))
         {
-            if (ToggleMorphball(false))
+            if (lazerPower >= 1)
             {
-                StartCoroutine(Attack());
+                if (ToggleMorphball(false))
+                {
+                    StartCoroutine(Attack());
+                }
+                lazerPower -= 1;
             }
-            lazerPower -= 1;
+            else
+            {
+                audioSource.PlayOneShot(clickSound);
+            }
         }
 
         if(!attacking && lazerPower < maxLazerPower)

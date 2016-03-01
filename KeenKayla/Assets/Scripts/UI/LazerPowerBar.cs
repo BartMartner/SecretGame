@@ -19,6 +19,7 @@ public class LazerPowerBar : MonoBehaviour
     public void Start()
     {
         Player.instance.onRefreshPowerUps += OnRefreshPowerUp;
+        OnRefreshPowerUp();
     }
 
     public void Update()
@@ -64,6 +65,8 @@ public class LazerPowerBar : MonoBehaviour
 
     public void OnRefreshPowerUp()
     {
+        _flashing = false;
+        StopAllCoroutines();
         if (SaveGameManager.instance.saveGameData.powerUpsCollected.Contains(PowerUpID.PurpleLazer))
         {
             lazer.sprite = purpleLazer;

@@ -10830,7 +10830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421786, guid: 1cb5eb8e0226d704ba4bb5912be82d8d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]

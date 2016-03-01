@@ -438,7 +438,7 @@ MonoBehaviour:
   destroyOnDeath: 0
   audioSource: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: deb9fdf7149f2584ca4ccd7bb0308abe, type: 3}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 4770544a9a5adf04f89e7ab12fd1b90c, type: 3}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   flashOnHurt: 1
@@ -460,6 +460,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 1dcd23659b8314b40a21715d9b865cf1, type: 3}
   jumpPower: 0.5
   attackSound: {fileID: 8300000, guid: c65e168ac165b614dbdab2424b1a7b1d, type: 3}
+  clickSound: {fileID: 8300000, guid: 01a83612bbaf95943b6b139b1032ed23, type: 3}
   aiming: 0
   shootPoint: {fileID: 183466}
   shootPointUp: {fileID: 125988}

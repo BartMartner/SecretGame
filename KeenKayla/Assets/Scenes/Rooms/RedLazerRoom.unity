@@ -2880,7 +2880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 1
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 95b1d20319ab2d148aacc908a429e367, type: 3}
 --- !u!61 &758238795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3967,7 +3967,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.51
+      value: 11.01
       objectReference: {fileID: 0}
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3995,7 +3995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 197112, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_Name
@@ -4003,7 +4003,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467508, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: wanderRange
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
@@ -5289,7 +5289,6 @@ Transform:
   - {fileID: 1735102245}
   - {fileID: 1620421049}
   - {fileID: 1820568044}
-  - {fileID: 1795614914}
   - {fileID: 1198671624}
   - {fileID: 1162146914}
   m_Father: {fileID: 0}
@@ -6450,60 +6449,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &1795614913
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1563230648}
-    m_Modifications:
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 197112, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_Name
-      value: MiniArachnut (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 11467508, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: wanderRange
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1795614914 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-  m_PrefabInternal: {fileID: 1795614913}
 --- !u!1 &1796953156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,7 +6544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 197112, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_Name

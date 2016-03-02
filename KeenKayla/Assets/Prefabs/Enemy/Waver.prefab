@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  health: 4
+  health: 3
   maxHealth: 0
   defaultAegisTime: 0
   deathTime: 0
@@ -249,6 +249,7 @@ MonoBehaviour:
   destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: e28de6e3ed75862439705a763150e340, type: 3}
+  immuneSound: {fileID: 0}
   deathSound: {fileID: 8300000, guid: ad960ffa470af69468e72a40ddeae987, type: 3}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}

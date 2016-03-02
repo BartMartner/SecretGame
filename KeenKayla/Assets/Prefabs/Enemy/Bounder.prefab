@@ -235,6 +235,7 @@ MonoBehaviour:
   destroyOnDeath: 0
   audioSource: {fileID: 0}
   hurtSound: {fileID: 0}
+  immuneSound: {fileID: 8300000, guid: a411e8ddab0a1bf4b967d93f957d7a7a, type: 3}
   deathSound: {fileID: 0}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}

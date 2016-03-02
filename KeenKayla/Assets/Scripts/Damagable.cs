@@ -32,6 +32,7 @@ public class Damagable : MonoBehaviour
     [Header("Sounds")]
     public AudioSource audioSource;
     public AudioClip hurtSound;
+    public AudioClip immuneSound;
     public AudioClip deathSound;
 
     [Header("Visuals")]
@@ -196,6 +197,11 @@ public class Damagable : MonoBehaviour
         else if (damageType == DamageType.RedLazer)
         {
             StartCoroutine(Flash(2, 0.1f, Color.red, 0.5f));
+        }
+
+        if(immuneSound)
+        {
+            audioSource.PlayOneShot(immuneSound);
         }
     }
 

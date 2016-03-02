@@ -35,14 +35,6 @@ public class MadMushroom : Enemy
         }
     }
 
-    public override void OnImmune(DamageType damageType)
-    {
-        if (damageType == DamageType.Generic)
-        {
-            StartCoroutine(Flash(2, 0.1f, Color.green, 0.5f));
-        }
-    }
-
     public IEnumerator Bounce()
     {
         yield return new WaitForSeconds(offset);

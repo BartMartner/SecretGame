@@ -135,4 +135,9 @@ public class UIMain : MonoBehaviour
         textBar.CrossFadeAlpha(0, 1, true);
         _textBarText.CrossFadeAlpha(0, 1, true);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

@@ -702,7 +702,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 0.33
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1028,6 +1028,8 @@ MonoBehaviour:
   dropChance: 0.75
   lazer: {fileID: 153096}
   push: {fileID: 24944436}
+  chargeSound: {fileID: 8300000, guid: 7e3e71c269f33dc4a8ef78a98bbb4594, type: 3}
+  lazerSound: {fileID: 8300000, guid: dfb7d7b4c1317d54c898b8617febc442, type: 3}
 --- !u!212 &21202968
 SpriteRenderer:
   m_ObjectHideFlags: 1

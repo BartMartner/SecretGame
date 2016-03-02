@@ -7,6 +7,8 @@ public class LazerEye : Enemy
     public GameObject lazer;
     public AreaEffector2D push;
     private bool _firingLazer;
+    public AudioClip chargeSound;
+    public AudioClip lazerSound;
 
     protected override void Awake()
     {
@@ -37,6 +39,7 @@ public class LazerEye : Enemy
         _firingLazer = true;
         yield return new WaitForSeconds(3);
         animator.SetTrigger("Charge");
+        audioSource.PlayOneShot(chargeSound);
         yield return StartCoroutine(Flash(1, 0.1f, new Color32(252,84,252,255), 0.1f));
         yield return StartCoroutine(Flash(1, 0.1f, new Color32(252, 84, 252, 255), 0.2f));
         yield return StartCoroutine(Flash(1, 0.1f, new Color32(252, 84, 252, 255), 0.3f));
@@ -44,6 +47,7 @@ public class LazerEye : Enemy
         yield return StartCoroutine(Flash(1, 0.1f, new Color32(252, 84, 252, 255), 0.5f));
         lazer.SetActive(true);
         animator.SetBool("Firing", true);
+        audioSource.PlayOneShot(lazerSound);
         yield return StartCoroutine(Flash(15, 0.05f, new Color32(252, 84, 252, 255), 0.25f));
         animator.SetBool("Firing", false);
         lazer.SetActive(false);

@@ -36,7 +36,7 @@ public static class Constants
         damage = 3,
         damageType = DamageType.PurpleLazer,
         speed = 10,
-        homing = 0.05f,
+        homing = 0.02f,
         lifeSpan = 10,
     };
 }

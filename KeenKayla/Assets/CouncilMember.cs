@@ -52,6 +52,7 @@ public class CouncilMember : MonoBehaviour
 
     public IEnumerator GoToEnding()
     {
+        SaveGameManager.instance.SaveGame();
         UIMain.instance.ShowTextBar("Thank You For Rescuing Me!");
         Time.timeScale = 0;
         var timer = 0f;

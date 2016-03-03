@@ -3626,6 +3626,7 @@ GameObject:
   - 61: {fileID: 269750030}
   - 251: {fileID: 269750029}
   - 114: {fileID: 269750028}
+  - 114: {fileID: 269750031}
   m_Layer: 0
   m_Name: BreakableWall (1)
   m_TagString: Untagged
@@ -3705,6 +3706,23 @@ BoxCollider2D:
   m_Offset: {x: 0.5, y: -0.5}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &269750031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269750026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b990299cba5acda4b91b47404062c7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 10
+  damagable: {fileID: 269750028}
+  fromTop: 0
+  fromLeft: 0
+  fromBottom: 1
+  fromRight: 0
 --- !u!1 &271207526
 GameObject:
   m_ObjectHideFlags: 0

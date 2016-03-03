@@ -27,6 +27,17 @@ public class SaveGameData
         var collected = bombUpgradesCollected.Count + healthUpgradesCollected.Count + lazerPowerUpgradesCollected.Count + powerUpsCollected.Count;
         return (int)((collected/totalItems) * 100);
     }
+
+    public string ItemCount()
+    {
+        //7 Power Ups;
+        //9 Heart Tanks;
+        //7 Lazer Upgrades;
+        //4 Bomb Upgrade;
+        var totalItems = 7f + 9f + 7f + 4f;
+        var collected = bombUpgradesCollected.Count + healthUpgradesCollected.Count + lazerPowerUpgradesCollected.Count + powerUpsCollected.Count;
+        return collected +"/"+totalItems;
+    }
 }
 
 [Serializable]

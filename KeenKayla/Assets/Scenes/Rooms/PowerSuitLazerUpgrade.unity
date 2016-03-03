@@ -680,45 +680,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 345087753}
     m_Modifications:
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 143010, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_Name
-      value: MiniArachnut (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
@@ -3186,45 +3158,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 345087753}
     m_Modifications:
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 13.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471384, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 143010, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
-      propertyPath: m_Name
-      value: MiniArachnut (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 490448, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ac660777372eea4f96a59df8ba25213, type: 2}

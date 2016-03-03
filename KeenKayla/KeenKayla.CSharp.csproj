@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Arachnut.cs" />
+    <Compile Include="Assets\CollectionRateText.cs" />
     <Compile Include="Assets\CouncilMember.cs" />
     <Compile Include="Assets\EndingController.cs" />
     <Compile Include="Assets\MiniArachnut.cs" />

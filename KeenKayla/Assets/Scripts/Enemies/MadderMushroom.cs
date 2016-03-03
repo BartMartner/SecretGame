@@ -35,7 +35,6 @@ public class MadderMushroom : Enemy
             }
             else
             {
-
                 v.y = 6;
                 audioSource.PlayOneShot(jumpSound);
             }

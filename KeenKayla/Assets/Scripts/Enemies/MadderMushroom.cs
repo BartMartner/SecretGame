@@ -5,6 +5,8 @@ public class MadderMushroom : Enemy
 {
     [HideInInspector]
     new public Rigidbody2D rigidbody2D;
+    public AudioClip jumpSound;
+    public AudioClip bigJumpSound;
 
     protected override void Start()
     {
@@ -29,10 +31,13 @@ public class MadderMushroom : Enemy
             if (shouldJump)
             {
                 v.y = 9;
+                audioSource.PlayOneShot(bigJumpSound);
             }
             else
             {
+
                 v.y = 6;
+                audioSource.PlayOneShot(jumpSound);
             }
 
             rigidbody2D.velocity = v;

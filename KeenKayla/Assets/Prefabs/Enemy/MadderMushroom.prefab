@@ -226,6 +226,8 @@ MonoBehaviour:
   groundedCheck: {fileID: 0}
   dropChance: 0.75
   rigidbody2D: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: c3ba4fb9a10467646a6df312efdfb061, type: 3}
+  bigJumpSound: {fileID: 8300000, guid: fc0b81265aecc4747962a94e33e4f5db, type: 3}
 --- !u!114 &11426182
 MonoBehaviour:
   m_ObjectHideFlags: 1

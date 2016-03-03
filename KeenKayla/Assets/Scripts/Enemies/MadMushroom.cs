@@ -6,6 +6,8 @@ public class MadMushroom : Enemy
     public float offset = 0f;
     private Quaternion _flippedFacing = Quaternion.Euler(0, 180, 0);
     private Rigidbody2D _rigidBody2D;
+    public AudioClip jumpSound;
+    public AudioClip bigJumpSound;
 
     protected override void Start()
     {
@@ -47,6 +49,11 @@ public class MadMushroom : Enemy
                 if (i == 2)
                 {
                     bouncePower = 1.75f;
+                    audioSource.PlayOneShot(bigJumpSound);
+                }
+                else
+                {
+                    audioSource.PlayOneShot(jumpSound);
                 }
 
                 _rigidBody2D.velocity = Vector3.zero;

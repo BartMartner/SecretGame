@@ -12404,7 +12404,7 @@ MonoBehaviour:
   defaultAegisTime: 0.25
   deathTime: 0
   immunities: 0000000002000000
-  gibs: 1
+  gibs: 3
   gibAmount: 6
   destroyOnDeath: 1
   audioSource: {fileID: 0}

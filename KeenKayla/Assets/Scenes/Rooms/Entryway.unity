@@ -13258,6 +13258,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11407246, guid: b8f75914835834d47a18f3083c183a07, type: 2}
+      propertyPath: gibs
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b8f75914835834d47a18f3083c183a07, type: 2}
@@ -23882,6 +23886,10 @@ Prefab:
     - target: {fileID: 186818, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_Name
       value: BreakableWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407246, guid: b8f75914835834d47a18f3083c183a07, type: 2}
+      propertyPath: gibs
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}
@@ -49853,6 +49861,10 @@ Prefab:
     - target: {fileID: 401738, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407246, guid: b8f75914835834d47a18f3083c183a07, type: 2}
+      propertyPath: gibs
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}
@@ -100978,6 +100990,10 @@ Prefab:
       propertyPath: m_Name
       value: BreakableWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11407246, guid: b8f75914835834d47a18f3083c183a07, type: 2}
+      propertyPath: gibs
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b8f75914835834d47a18f3083c183a07, type: 2}
@@ -111187,6 +111203,10 @@ Prefab:
     - target: {fileID: 186818, guid: b8f75914835834d47a18f3083c183a07, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407246, guid: b8f75914835834d47a18f3083c183a07, type: 2}
+      propertyPath: gibs
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21277256, guid: b8f75914835834d47a18f3083c183a07, type: 2}

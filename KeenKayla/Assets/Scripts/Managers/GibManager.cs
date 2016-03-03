@@ -8,8 +8,10 @@ public class GibManager : MonoBehaviour
 {
     public static GibManager instance;
 
+    public List<Gib> BlueRockGibs;
     public List<Gib> BrownRockGibs;
     public List<Gib> MeatGibs;
+    public List<Gib> MetalGibs;
     public Dictionary<GibType, List<Gib>> _gibs = new Dictionary<GibType, List<Gib>>();
     public Dictionary<GibType, int> _gibPrefabIndex = new Dictionary<GibType, int>();
 
@@ -45,11 +47,17 @@ public class GibManager : MonoBehaviour
 
         switch (gType)
         {
+            case GibType.BlueRock:
+                newGib = Instantiate(BlueRockGibs[_gibPrefabIndex[gType]]) as Gib;
+                break;
             case GibType.BrownRock:
                 newGib = Instantiate(BrownRockGibs[_gibPrefabIndex[gType]]) as Gib;
                 break;
             case GibType.Meat:
                 newGib = Instantiate(MeatGibs[_gibPrefabIndex[gType]]) as Gib;
+                break;
+            case GibType.Metal:
+                newGib = Instantiate(MetalGibs[_gibPrefabIndex[gType]]) as Gib;
                 break;
         }
 
@@ -64,11 +72,17 @@ public class GibManager : MonoBehaviour
 
         switch (gType)
         {
+            case GibType.BlueRock:
+                gibCount = BlueRockGibs.Count;
+                break;
             case GibType.BrownRock:
                 gibCount = BrownRockGibs.Count;
                 break;
             case GibType.Meat:
                 gibCount = MeatGibs.Count;
+                break;
+            case GibType.Metal:
+                gibCount = MetalGibs.Count;
                 break;
         }
 

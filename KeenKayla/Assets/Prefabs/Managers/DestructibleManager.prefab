@@ -39,6 +39,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a804976d96a045479f29222ba8180dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlueRockGibs:
+  - {fileID: 11417786, guid: 8862cc1d699f77d498e4c5b2bbc9b515, type: 2}
+  - {fileID: 11488200, guid: cc9af9b417d0b55449193897c00816e7, type: 2}
+  - {fileID: 11411784, guid: 255309fc9f008b94986cb508480cc9fe, type: 2}
+  - {fileID: 11454938, guid: 50e76f54d344d50418e717898fc5afd7, type: 2}
+  - {fileID: 11435990, guid: 3d700918aca25474a88d1e271956588a, type: 2}
+  - {fileID: 11495398, guid: 9941885ffb36c04498401f5e4674ff12, type: 2}
+  - {fileID: 11407964, guid: 9d71a83d115bac94d86c866b2393d927, type: 2}
   BrownRockGibs:
   - {fileID: 11433880, guid: e03ba25b7fe8de04782eb65cc542c5fe, type: 2}
   - {fileID: 11406756, guid: 832ff99511a6c074589fc12228c5137c, type: 2}
@@ -58,6 +66,14 @@ MonoBehaviour:
   - {fileID: 11490002, guid: 58e5f583c7406864bb0a567a94c07629, type: 2}
   - {fileID: 11482686, guid: 4f3ecf5018711044fb653938866e7384, type: 2}
   - {fileID: 11496056, guid: 4a89cd8a5df0aaa4a9038e6b071a8f65, type: 2}
+  MetalGibs:
+  - {fileID: 11417942, guid: 700e1860a23f3d74eafd4d9f0f2f2e49, type: 2}
+  - {fileID: 11425338, guid: 7b76a44a4c4d6a249a25741c3255720b, type: 2}
+  - {fileID: 11474156, guid: c80c84f0619258e48b5de49f873d9942, type: 2}
+  - {fileID: 11483414, guid: a5697a2f663a5ba47ab1c4ad47b287bb, type: 2}
+  - {fileID: 11468154, guid: 2227f86bee6feb142a81983530ad9862, type: 2}
+  - {fileID: 11466628, guid: 2a9e60c9456f85a46be07192334d7fd5, type: 2}
+  - {fileID: 11404738, guid: 94a0dc972c6501741b8ea02f432681e8, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

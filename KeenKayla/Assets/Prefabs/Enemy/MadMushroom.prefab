@@ -125,7 +125,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 194
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -154,7 +154,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.5
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -248,6 +248,8 @@ MonoBehaviour:
   groundedCheck: {fileID: 0}
   dropChance: 0.75
   offset: 0.33
+  jumpSound: {fileID: 8300000, guid: c3ba4fb9a10467646a6df312efdfb061, type: 3}
+  bigJumpSound: {fileID: 8300000, guid: fc0b81265aecc4747962a94e33e4f5db, type: 3}
 --- !u!114 &11491742
 MonoBehaviour:
   m_ObjectHideFlags: 1

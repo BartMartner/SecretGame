@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 344270a49d55e8e4b82acd1091649d5a
-timeCreated: 1456012815
+timeCreated: 1457016061
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,7 @@ TextureImporter:
     21300026: Right
     21300028: BottomLeft
     21300030: TopLeftEdge
+    21300032: BottomLeftInnerCornerBomb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2568,6 +2569,22 @@ TextureImporter:
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: BottomLeftInnerCornerBomb
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -48}
+        - {x: 32, y: -48}
+        - {x: 32, y: -13}
+        - {x: 26, y: 0}
     outline: []
   spritePackingTag: 
   userData: 

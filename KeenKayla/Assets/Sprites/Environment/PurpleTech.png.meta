@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c8825034ecc1974cace6bc4765e072a
-timeCreated: 1455925870
+timeCreated: 1457016391
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,7 @@ TextureImporter:
     21300026: Right
     21300028: BottomLeft
     21300030: TopLeftEdge
+    21300032: TopBomb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2643,6 +2644,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: TopBomb
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 0}
+        - {x: 0, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 0}
     outline: []
   spritePackingTag: 
   userData: 

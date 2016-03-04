@@ -15,6 +15,7 @@ public class SaveGameData
     public List<int> healthUpgradesCollected = new List<int>();
     public List<int> lazerPowerUpgradesCollected = new List<int>();
     public List<PowerUpID> powerUpsCollected = new List<PowerUpID>();
+    public List<MapRoom> mapRooms = new List<MapRoom>();
     public TimeSpan playTime;
 
     public int CompletionRate()
@@ -41,6 +42,32 @@ public class SaveGameData
 }
 
 [Serializable]
+public struct MapRoom
+{
+    public Vector3Data position;
+    public Vector3Data size;
+
+    public override bool Equals(object obj)
+    {
+        return obj is MapRoom && this == (MapRoom)obj;
+    }
+
+    public override int GetHashCode()
+    {
+        return position.GetHashCode() ^ size.GetHashCode();
+    }
+
+    public static bool operator ==(MapRoom a, MapRoom b)
+    {
+        return a.position == b.position && a.size == b.size;
+    }
+    public static bool operator !=(MapRoom a, MapRoom b)
+    {
+        return !(a == b);
+    }
+}
+
+[Serializable]
 public struct Vector3Data
 {
     public Vector3Data(float x, float y, float z)
@@ -53,6 +80,26 @@ public struct Vector3Data
     public float x;
     public float y;
     public float z;
+
+    public override bool Equals(object obj)
+    {
+        return obj is Vector3Data && this == (Vector3Data)obj;
+    }
+
+    public override int GetHashCode()
+    {
+        return x.GetHashCode() + y.GetHashCode() + z.GetHashCode();
+    }
+
+    public static bool operator ==(Vector3Data a, Vector3Data b)
+    {
+        return a.x == b.x && a.y == b.y && a.z == b.z;
+    }
+
+    public static bool operator !=(Vector3Data a, Vector3Data b)
+    {
+        return !(a == b);
+    }
 }
 
 public class SaveGameManager : MonoBehaviour
@@ -98,9 +145,14 @@ public class SaveGameManager : MonoBehaviour
             saveGameData = (SaveGameData)bf.Deserialize(file);
             file.Close();
 
-            if(saveGameData.lazerPowerUpgradesCollected == null)
+            if (saveGameData.lazerPowerUpgradesCollected == null)
             {
                 saveGameData.lazerPowerUpgradesCollected = new List<int>();
+            }
+
+            if (saveGameData.mapRooms == null)
+            {
+                saveGameData.mapRooms = new List<MapRoom>();
             }
         }
         else
@@ -115,6 +167,7 @@ public class SaveGameManager : MonoBehaviour
         saveGameData.savePosition = new Vector3Data(0, 3, 0);
         saveGameData.lastRoom = "Entryway";
         SaveGame();
+        Time.timeScale = 1;
     }
 
     public void SaveGame()
@@ -127,3 +180,4 @@ public class SaveGameManager : MonoBehaviour
         file.Close();
     }
 }
+

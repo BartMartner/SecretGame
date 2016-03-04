@@ -24,6 +24,15 @@ public class CameraBoundsTrigger : MonoBehaviour
         {
             MusicManager.instance.SetSong(music);
         }
+
+        var roomInfo = new MapRoom();
+        roomInfo.position = _boxCollider2D.bounds.center.ToVector3Data();
+        roomInfo.size = _boxCollider2D.bounds.size.ToVector3Data();
+
+        if (!SaveGameManager.instance.saveGameData.mapRooms.Contains(roomInfo))
+        {
+            SaveGameManager.instance.saveGameData.mapRooms.Add(roomInfo);
+        }
     }
 
     public void OnPlayerSpawn()

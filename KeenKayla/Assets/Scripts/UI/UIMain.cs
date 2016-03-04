@@ -18,6 +18,7 @@ public class UIMain : MonoBehaviour
     public GameObject heartPopUp;
     public GameObject bombPopUp;
     public GameObject lazerPopUp;
+    public GameObject pauseMenu;
     public AudioClip itemCollectJingle;
 
     public void Awake()
@@ -26,6 +27,14 @@ public class UIMain : MonoBehaviour
         _textBarText = textBar.GetComponentInChildren<Text>();
         textBar.canvasRenderer.SetAlpha(0);
         _textBarText.canvasRenderer.SetAlpha(0);
+    }
+
+    public void Update()
+    {
+        if (Input.GetButtonDown("Pause"))
+        {
+            TogglePauseMenu();
+        }
     }
 
     public void NewGame()
@@ -98,6 +107,12 @@ public class UIMain : MonoBehaviour
     public void ShowLazerPopup()
     {
         StartCoroutine(ItemCollect(lazerPopUp));
+    }
+
+    public void TogglePauseMenu()
+    {
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+        Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
     }
 
     private IEnumerator ItemCollect(GameObject popUp)

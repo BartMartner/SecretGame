@@ -144,6 +144,7 @@
   <ItemGroup>
     <None Include="Assets\Shaders\SpritesDefaultFlash.shader" />
     <None Include="Assets\Shaders\SpritesDefaultFlashUI.shader" />
+    <None Include="Assets\Shaders\SpritesDiffuseFlash.shader" />
     <None Include="Assets\Shaders\SpritesTile.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

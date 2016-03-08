@@ -109,7 +109,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -143,7 +143,6 @@ MonoBehaviour:
   destroyOnDeath: 1
   audioSource: {fileID: 0}
   hurtSound: {fileID: 0}
-  immuneSound: {fileID: 0}
   deathSound: {fileID: 8300000, guid: c9c93c0f8405dd24ea9ec6af2a4d455e, type: 3}
   animator: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
